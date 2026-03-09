@@ -14,14 +14,7 @@
             <Hyperlink text="View Detailed Booking &amp; Cancellation Policy" style="-fx-text-fill: #d4af37; -fx-font-size: 14px; -fx-underline: true;" />
         </VBox>
 
-        <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
-            <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
-            <DatePicker promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
-            <DatePicker promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
-            <TextField promptText="Adults" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
-            <TextField promptText="Children" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
-            <Button text="UPDATE SEARCH" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
-        </HBox>
+
 
         <HBox alignment="CENTER" spacing="60.0">
             <VBox prefHeight="500.0" prefWidth="420.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c; -fx-border-width: 1; -fx-padding: 0 0 35 0; -fx-background-radius: 15; -fx-border-radius: 15;">

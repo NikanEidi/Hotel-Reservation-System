@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+
+    <VBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <VBox alignment="CENTER" spacing="15.0">
+            <Label text="FIND YOUR STAY" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
+            <Label text="Step 1: Enter your travel details" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+        </VBox>
+
+        <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
+            <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
+            <DatePicker promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+            <DatePicker promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+            <TextField promptText="Adults" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
+            <TextField promptText="Children" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
+            <Button onAction="#goToRoomSelection" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
+        </HBox>
+
+        <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </VBox>
+
+    <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-border-width: 0.5; -fx-cursor: hand; -fx-padding: 10 20;" />
+
+</AnchorPane>

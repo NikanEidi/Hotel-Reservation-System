@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "reservation")
+@SuppressWarnings({ "unused", "JpaDataSourceORMInspection" })
 public class Reservation {
 
     @Id
@@ -18,11 +19,7 @@ public class Reservation {
     private Guest guest;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "reservation_room",
-            joinColumns = @JoinColumn(name = "reservation_id"),
-            inverseJoinColumns = @JoinColumn(name = "room_id")
-    )
+    @JoinTable(name = "reservation_room", joinColumns = @JoinColumn(name = "reservation_id"), inverseJoinColumns = @JoinColumn(name = "room_id"))
     private List<Room> rooms;
 
     @Column(name = "check_in_date", nullable = false)
@@ -40,9 +37,11 @@ public class Reservation {
     @Column(name = "status", nullable = false)
     private String status;
 
-    public Reservation() {}
+    public Reservation() {
+    }
 
-    public Reservation(Guest guest, List<Room> rooms, LocalDate checkInDate, LocalDate checkOutDate, int adultCount, int childCount) {
+    public Reservation(Guest guest, List<Room> rooms, LocalDate checkInDate, LocalDate checkOutDate, int adultCount,
+            int childCount) {
         this.guest = guest;
         this.rooms = rooms;
         this.checkInDate = checkInDate;
@@ -52,27 +51,67 @@ public class Reservation {
         this.status = "PENDING";
     }
 
-    public Long getReservationId() { return reservationId; }
-    public void setReservationId(Long reservationId) { this.reservationId = reservationId; }
+    public Long getReservationId() {
+        return reservationId;
+    }
 
-    public Guest getGuest() { return guest; }
-    public void setGuest(Guest guest) { this.guest = guest; }
+    public void setReservationId(Long reservationId) {
+        this.reservationId = reservationId;
+    }
 
-    public List<Room> getRooms() { return rooms; }
-    public void setRooms(List<Room> rooms) { this.rooms = rooms; }
+    public Guest getGuest() {
+        return guest;
+    }
 
-    public LocalDate getCheckInDate() { return checkInDate; }
-    public void setCheckInDate(LocalDate checkInDate) { this.checkInDate = checkInDate; }
+    public void setGuest(Guest guest) {
+        this.guest = guest;
+    }
 
-    public LocalDate getCheckOutDate() { return checkOutDate; }
-    public void setCheckOutDate(LocalDate checkOutDate) { this.checkOutDate = checkOutDate; }
+    public List<Room> getRooms() {
+        return rooms;
+    }
 
-    public int getAdultCount() { return adultCount; }
-    public void setAdultCount(int adultCount) { this.adultCount = adultCount; }
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
 
-    public int getChildCount() { return childCount; }
-    public void setChildCount(int childCount) { this.childCount = childCount; }
+    public LocalDate getCheckInDate() {
+        return checkInDate;
+    }
 
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public void setCheckInDate(LocalDate checkInDate) {
+        this.checkInDate = checkInDate;
+    }
+
+    public LocalDate getCheckOutDate() {
+        return checkOutDate;
+    }
+
+    public void setCheckOutDate(LocalDate checkOutDate) {
+        this.checkOutDate = checkOutDate;
+    }
+
+    public int getAdultCount() {
+        return adultCount;
+    }
+
+    public void setAdultCount(int adultCount) {
+        this.adultCount = adultCount;
+    }
+
+    public int getChildCount() {
+        return childCount;
+    }
+
+    public void setChildCount(int childCount) {
+        this.childCount = childCount;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

@@ -12,7 +12,7 @@
             <HBox><Label text="Tax (13%)" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="58.50 USD" style="-fx-text-fill: white;" /></HBox>
             <Separator style="-fx-opacity: 0.2;" />
             <HBox><Label text="TOTAL DUE" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" /><Region HBox.hgrow="ALWAYS" /><Label text="508.50 USD" style="-fx-text-fill: #d4af37; -fx-font-size: 20px;" /></HBox>
-            <Button onAction="#goToWelcome" text="CONFIRM &amp; FINISH" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 55; -fx-pref-width: 380; -fx-cursor: hand;" />
+            <Button onAction="#goToSummary" text="CONFIRM &amp; FINISH" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 55; -fx-pref-width: 380; -fx-cursor: hand;" />
         </VBox>
     </VBox>
     <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-cursor: hand;" />

@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "room")
+@SuppressWarnings({"unused", "JpaDataSourceORMInspection"})
 public class Room {
 
     @Id
@@ -57,7 +58,7 @@ public class Room {
     public void setMaxCapacity(int maxCapacity) { this.maxCapacity = maxCapacity; }
 
     public boolean isAvailable() { return isAvailable; }
-    public void setAvailable(boolean available) { isAvailable = available; }
+    public void setAvailable(boolean available) { this.isAvailable = available; }
 
     public List<Reservation> getReservations() { return reservations; }
     public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }

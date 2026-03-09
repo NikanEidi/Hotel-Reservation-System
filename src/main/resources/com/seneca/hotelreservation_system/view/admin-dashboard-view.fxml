@@ -5,6 +5,13 @@
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
     <VBox prefWidth="280.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40 25; -fx-border-color: #d4af37; -fx-border-width: 0 1 0 0;">
         <Label text="GRAND PLAZA" style="-fx-text-fill: #d4af37; -fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <Region prefHeight="30.0" />
+        <Button text="DASHBOARD" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+        <Button text="FEEDBACK" style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+        <Button text="BILLING" style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+        <Button text="WAITLIST" style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+
         <Region VBox.vgrow="ALWAYS" />
         <Button onAction="#goToWelcome" text="SECURE LOGOUT" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-border-color: #ef4444; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
     </VBox>

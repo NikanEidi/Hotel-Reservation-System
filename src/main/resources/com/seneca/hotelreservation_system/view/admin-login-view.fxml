@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+
+    <VBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <VBox alignment="CENTER" spacing="15.0">
+            <Label text="ADMINISTRATOR LOGIN" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
+            <Label text="Authorized Personnel Only" style="-fx-text-fill: #ef4444; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+        </VBox>
+
+        <VBox alignment="CENTER" maxWidth="500.0" spacing="30.0" style="-fx-background-color: #0a0a0a; -fx-padding: 50; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 10; -fx-border-radius: 10;">
+            <effect><DropShadow color="#d4af371a" radius="20.0" /></effect>
+
+            <VBox spacing="10.0" prefWidth="400.0">
+                <Label text="USERNAME" style="-fx-text-fill: #a8a29e; -fx-font-size: 14px; -fx-font-weight: bold;" />
+                <TextField promptText="Enter Admin Username" style="-fx-font-size: 16px; -fx-pref-height: 45;" />
+            </VBox>
+
+            <VBox spacing="10.0" prefWidth="400.0">
+                <Label text="PASSWORD" style="-fx-text-fill: #a8a29e; -fx-font-size: 14px; -fx-font-weight: bold;" />
+                <PasswordField promptText="Enter Admin Password" style="-fx-font-size: 16px; -fx-pref-height: 45;" />
+            </VBox>
+
+            <Region prefHeight="10.0" />
+
+            <Button onAction="#goToAdminDashboard" text="LOGIN" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 400; -fx-pref-height: 50; -fx-font-weight: bold; -fx-cursor: hand;" />
+
+            <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #78716c; -fx-font-size: 14px; -fx-cursor: hand;" />
+        </VBox>
+
+    </VBox>
+
+</AnchorPane>

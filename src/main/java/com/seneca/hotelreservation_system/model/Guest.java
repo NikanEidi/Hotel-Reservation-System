@@ -5,6 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "guest")
+@SuppressWarnings({"unused", "JpaDataSourceORMInspection"})
 public class Guest {
 
     @Id

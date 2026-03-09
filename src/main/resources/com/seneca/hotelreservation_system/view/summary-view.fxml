@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+
+    <VBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <VBox alignment="CENTER" spacing="15.0">
+            <Label text="BOOKING SUMMARY" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
+            <Label text="Step 4: Review Your Reservation" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+        </VBox>
+
+        <VBox alignment="CENTER" maxWidth="600.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 10; -fx-border-radius: 10;">
+            <effect><DropShadow color="#d4af3733" radius="20.0" /></effect>
+
+            <HBox spacing="20.0">
+                <Label text="Subtotal:" style="-fx-text-fill: #a8a29e; -fx-font-size: 18px; -fx-pref-width: 250;" />
+                <Label text="450.00 USD" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-alignment: center-right;" />
+            </HBox>
+
+            <HBox spacing="20.0">
+                <Label text="13% Tax:" style="-fx-text-fill: #a8a29e; -fx-font-size: 18px; -fx-pref-width: 250;" />
+                <Label text="58.50 USD" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-alignment: center-right;" />
+            </HBox>
+
+            <HBox spacing="20.0">
+                <Label text="Add-ons Total:" style="-fx-text-fill: #a8a29e; -fx-font-size: 18px; -fx-pref-width: 250;" />
+                <Label text="75.00 USD" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-alignment: center-right;" />
+            </HBox>
+
+            <HBox spacing="20.0">
+                <Label text="Loyalty Discounts:" style="-fx-text-fill: #a8a29e; -fx-font-size: 18px; -fx-pref-width: 250;" />
+                <Label text="-25.00 USD" style="-fx-text-fill: #10b981; -fx-font-size: 18px; -fx-alignment: center-right;" />
+            </HBox>
+
+            <Region prefHeight="10.0" style="-fx-background-color: #44403c;" />
+
+            <HBox spacing="20.0">
+                <Label text="Total Due:" style="-fx-text-fill: #d4af37; -fx-font-size: 24px; -fx-font-weight: bold; -fx-pref-width: 250;" />
+                <Label text="558.50 USD" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center-right;" />
+            </HBox>
+
+        </VBox>
+
+        <HBox alignment="CENTER" spacing="40.0">
+            <Button onAction="#goToAddons" text="BACK" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 200; -fx-pref-height: 50; -fx-font-weight: bold; -fx-cursor: hand;" />
+            <Button onAction="#goToConfirmation" text="CONFIRM BOOKING" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 250; -fx-pref-height: 50; -fx-font-weight: bold; -fx-cursor: hand;" />
+        </HBox>
+
+    </VBox>
+
+    <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-border-width: 0.5; -fx-cursor: hand; -fx-padding: 10 20;" />
+
+</AnchorPane>
