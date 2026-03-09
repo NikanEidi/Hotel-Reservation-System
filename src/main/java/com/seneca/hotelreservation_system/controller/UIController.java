@@ -14,7 +14,7 @@ public class UIController {
 
     @FXML private TextField adminSearchField;
 
-    // Navigation methods - ActionEvent used here to identify the source stage
+    // Navigation methods - ActionEvent used here to identify the source stage.
     @FXML public void goToWelcome(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/welcome-view.fxml"); }
     @FXML public void goToRoomSelection(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml"); }
     @FXML public void goToGuestDetails(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/guest-details-view.fxml"); }
