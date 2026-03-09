@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+    <VBox prefWidth="280.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40 25; -fx-border-color: #d4af37; -fx-border-width: 0 1 0 0;">
+        <Label text="GRAND PLAZA" style="-fx-text-fill: #d4af37; -fx-font-size: 22px; -fx-font-weight: bold;" />
+        <Region VBox.vgrow="ALWAYS" />
+        <Button onAction="#goToWelcome" text="SECURE LOGOUT" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-border-color: #ef4444; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+    </VBox>
+
+    <VBox spacing="30.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
+        <HBox alignment="CENTER_LEFT">
+            <Label text="System Overview" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Authenticated: Admin (Nikan Eidi)" style="-fx-text-fill: #d4af37;" />
+        </HBox>
+
+        <HBox spacing="15.0" style="-fx-background-color: #0a0a0a; -fx-padding: 15; -fx-border-color: #44403c;">
+            <TextField fx:id="adminSearchField" promptText="Search Guest Name or Phone..." style="-fx-pref-width: 350;" />
+            <ComboBox promptText="All Statuses" style="-fx-pref-width: 150;" />
+            <Button onAction="#handleSearch" text="FILTER" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 120; -fx-cursor: hand;" />
+        </HBox>
+
+        <TableView VBox.vgrow="ALWAYS" style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c;">
+            <columns>
+                <TableColumn text="REF ID" prefWidth="150.0" />
+                <TableColumn text="GUEST NAME" prefWidth="250.0" />
+                <TableColumn text="CHECK-IN" prefWidth="200.0" />
+                <TableColumn text="STATUS" prefWidth="200.0" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

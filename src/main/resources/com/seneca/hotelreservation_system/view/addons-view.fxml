@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+    <VBox alignment="CENTER" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label text="ENHANCE YOUR STAY" style="-fx-text-fill: #d4af37; -fx-font-size: 32px; -fx-font-weight: bold;" />
+        <VBox maxWidth="450.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40; -fx-border-color: #d4af37; -fx-border-radius: 10;">
+            <Label text="BOOKING SUMMARY" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" />
+            <Separator style="-fx-opacity: 0.2;" />
+            <HBox><Label text="Subtotal" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="450.00 USD" style="-fx-text-fill: white;" /></HBox>
+            <HBox><Label text="Tax (13%)" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="58.50 USD" style="-fx-text-fill: white;" /></HBox>
+            <Separator style="-fx-opacity: 0.2;" />
+            <HBox><Label text="TOTAL DUE" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" /><Region HBox.hgrow="ALWAYS" /><Label text="508.50 USD" style="-fx-text-fill: #d4af37; -fx-font-size: 20px;" /></HBox>
+            <Button onAction="#goToWelcome" text="CONFIRM &amp; FINISH" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 55; -fx-pref-width: 380; -fx-cursor: hand;" />
+        </VBox>
+    </VBox>
+    <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-cursor: hand;" />
+</AnchorPane>
