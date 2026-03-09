@@ -6,9 +6,9 @@
     <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <VBox alignment="CENTER" maxWidth="500.0" spacing="30.0" style="-fx-background-color: #0a0a0a; -fx-padding: 50; -fx-border-color: #d4af37; -fx-border-radius: 15;">
             <Label text="GUEST DETAILS" style="-fx-text-fill: #d4af37; -fx-font-size: 28px; -fx-font-weight: bold;" />
-            <TextField promptText="Full Name *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
-            <TextField promptText="Email Address *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
-            <TextField promptText="Phone Number *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
+            <TextField fx:id="phoneField" onKeyReleased="#checkLoyaltyStatus" promptText="Phone Number *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
+            <TextField fx:id="nameField" promptText="Full Name *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
+            <TextField fx:id="emailField" promptText="Email Address *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
             <Button onAction="#goToAddons" text="CONTINUE TO AMENITIES" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 50; -fx-pref-width: 400; -fx-cursor: hand;" />
         </VBox>
     </StackPane>
