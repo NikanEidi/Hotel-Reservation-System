@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
-    <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <VBox alignment="CENTER" maxWidth="500.0" spacing="30.0" style="-fx-background-color: #0a0a0a; -fx-padding: 50; -fx-border-color: #d4af37; -fx-border-radius: 15;">
-            <Label text="GUEST DETAILS" style="-fx-text-fill: #d4af37; -fx-font-size: 28px; -fx-font-weight: bold;" />
-            <TextField fx:id="phoneField" onKeyReleased="#checkLoyaltyStatus" promptText="Phone Number *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
-            <TextField fx:id="nameField" promptText="Full Name *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
-            <TextField fx:id="emailField" promptText="Email Address *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
-            <Button onAction="#goToAddons" text="CONTINUE TO AMENITIES" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 50; -fx-pref-width: 400; -fx-cursor: hand;" />
+
+    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <Label text="① ── ② ── ③ ──" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+        <Label text=" ④ " style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold; -fx-border-color: #d4af37; -fx-border-radius: 50; -fx-padding: 5;"/>
+        <Label text=" ── ⑤ ── ⑥ ── ⑦" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="GUEST REGISTRATION" style="-fx-text-fill: #d4af37; -fx-font-size: 32px; -fx-font-weight: bold;" />
+            <Label text="Step 4: Enter details or lookup loyalty account" style="-fx-text-fill: #78716c; -fx-font-size: 14px;" />
         </VBox>
-    </StackPane>
+
+        <HBox alignment="CENTER" spacing="40">
+            <VBox maxWidth="500.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40; -fx-border-color: #44403c; -fx-border-radius: 15;">
+                <Label text="CONTACT INFORMATION" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" />
+
+                <VBox spacing="5">
+                    <Label text="Phone Number (Lookup)" style="-fx-text-fill: #a8a29e; -fx-font-size: 12px;" />
+                    <TextField fx:id="phoneField" promptText="e.g. 1234567890" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45; -fx-border-color: #44403c;" />
+                </VBox>
+
+                <TextField fx:id="nameField" promptText="Full Name *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
+                <TextField fx:id="emailField" promptText="Email Address *" style="-fx-background-color: #1c1917; -fx-text-fill: white; -fx-pref-height: 45;" />
+
+                <Button onAction="#goToAddons" text="CONTINUE TO AMENITIES →" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 55; -fx-pref-width: 420; -fx-cursor: hand;" />
+            </VBox>
+
+            <VBox fx:id="loyaltyBox" spacing="20" alignment="TOP_CENTER" prefWidth="300" style="-fx-background-color: #0a0a0a; -fx-padding: 30; -fx-border-color: #d4af37; -fx-border-radius: 10; -fx-opacity: 0.8;">
+                <Label text="LOYALTY STATUS" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" />
+                <Circle radius="40" fill="#1c1917" stroke="#d4af37" />
+                <Label fx:id="lblLoyaltyPoints" text="0 Points" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+                <Label text="Enter phone to check rewards" style="-fx-text-fill: #78716c; -fx-font-size: 12px; -fx-text-alignment: CENTER;" wrapText="true" />
+            </VBox>
+        </HBox>
+    </VBox>
+
     <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-cursor: hand;" />
 </AnchorPane>
