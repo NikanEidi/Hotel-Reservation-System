@@ -6,21 +6,33 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
 
-    <VBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <Label text="①" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+        <Label text="──" style="-fx-text-fill: #44403c;"/>
+        <Label text=" ② " style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold; -fx-border-color: #d4af37; -fx-border-radius: 50; -fx-padding: 5;"/>
+        <Label text="── ③ ── ④ ── ⑤ ── ⑥ ── ⑦" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
         <VBox alignment="CENTER" spacing="15.0">
             <Label text="FIND YOUR STAY" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
-            <Label text="Step 1: Enter your travel details" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+            <Label text="Step 2: Enter your travel details" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
         </VBox>
 
-        <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
-            <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
-            <DatePicker promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
-            <DatePicker promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
-            <TextField promptText="Adults" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
-            <TextField promptText="Children" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
-            <Button onAction="#goToRoomSelection" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
-        </HBox>
+        <VBox alignment="CENTER" spacing="20.0">
+            <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
+                <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
+                <DatePicker fx:id="checkInDate" promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+                <DatePicker fx:id="checkOutDate" promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+                <TextField fx:id="adultsCount" promptText="Adults" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
+                <TextField fx:id="childrenCount" promptText="Children" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
+                <Button onAction="#goToRoomSelection" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
+            </HBox>
+
+            <Label text="* Maximum occupancy: 4 guests for Double suites, 2 for Deluxe/Single suites."
+                   style="-fx-text-fill: #44403c; -fx-font-size: 12px; -fx-font-style: italic;" />
+        </VBox>
 
         <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" />
     </VBox>
