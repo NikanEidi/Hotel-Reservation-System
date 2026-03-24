@@ -6,8 +6,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "room")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "room_type", discriminatorType = DiscriminatorType.STRING)
 @SuppressWarnings({"unused", "JpaDataSourceORMInspection"})
-public class Room {
+public abstract class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +19,7 @@ public class Room {
     @Column(name = "room_number", nullable = false, unique = true)
     private String roomNumber;
 
-    @Column(name = "room_type", nullable = false)
+    @Column(name = "room_type", insertable = false, updatable = false)
     private String roomType;
 
     @Column(name = "base_price", nullable = false)
@@ -29,14 +31,13 @@ public class Room {
     @Column(name = "is_available", nullable = false)
     private boolean isAvailable;
 
-    @ManyToMany(mappedBy = "rooms")
+    @ManyToMany(mappedBy = "rooms", fetch = FetchType.LAZY)
     private List<Reservation> reservations;
 
     public Room() {}
 
-    public Room(String roomNumber, String roomType, BigDecimal basePrice, int maxCapacity) {
+    public Room(String roomNumber, BigDecimal basePrice, int maxCapacity) {
         this.roomNumber = roomNumber;
-        this.roomType = roomType;
         this.basePrice = basePrice;
         this.maxCapacity = maxCapacity;
         this.isAvailable = true;
@@ -49,7 +50,6 @@ public class Room {
     public void setRoomNumber(String roomNumber) { this.roomNumber = roomNumber; }
 
     public String getRoomType() { return roomType; }
-    public void setRoomType(String roomType) { this.roomType = roomType; }
 
     public BigDecimal getBasePrice() { return basePrice; }
     public void setBasePrice(BigDecimal basePrice) { this.basePrice = basePrice; }
