@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3986c7-c95b-446c-8c07-63309cf8dd82" name="Changes" comment=" ms1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="5f3986c7-c95b-446c-8c07-63309cf8dd82" name="Changes" comment=" ms2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HotelApp.executor": "Debug",
-    "Application.Launcher.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HotelApp.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Launcher">
     <configuration name="HotelApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.seneca.hotelreservation_system.app.HotelApp" />
@@ -153,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773111159275</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=" ms2">
+      <option name="closed" value="true" />
+      <created>1774319619967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774319619967</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -161,6 +161,7 @@
     <MESSAGE value="addons ms1" />
     <MESSAGE value="guestdetails ms1" />
     <MESSAGE value=" ms1" />
-    <option name="LAST_COMMIT_MESSAGE" value=" ms1" />
+    <MESSAGE value=" ms2" />
+    <option name="LAST_COMMIT_MESSAGE" value=" ms2" />
   </component>
 </project>

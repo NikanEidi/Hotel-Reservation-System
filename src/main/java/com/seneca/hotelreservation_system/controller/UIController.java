@@ -202,4 +202,19 @@ public class UIController {
         alert.setContentText(content);
         alert.showAndWait();
     }
+
+    public void setSearchData(int adults, int children,
+                              java.time.LocalDate checkIn, java.time.LocalDate checkOut,
+                              String name, String email, String phone) {
+
+        // Temporary storage / debug output
+        System.out.println("Search Data Received:");
+        System.out.println("Adults: " + adults);
+        System.out.println("Children: " + children);
+        System.out.println("Check-in: " + checkIn);
+        System.out.println("Check-out: " + checkOut);
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone: " + phone);
+    }
 }
