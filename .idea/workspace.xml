@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5f3986c7-c95b-446c-8c07-63309cf8dd82" name="Changes" comment=" ms1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nkhanal6&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NikanEidi/Hotel-Reservation-System.git&quot;,
+    &quot;accountId&quot;: &quot;c0695cbc-4c5f-4a8c-995f-cb2dd3666dc5&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3AjQG4dOPfoPtRMfINmuqMeOGRY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HotelApp.executor": "Debug",
+    "Application.Launcher.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="HotelApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.seneca.hotelreservation_system.app.HotelApp" />
+      <module name="HotelReservation_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.seneca.hotelreservation_system.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.seneca.hotelreservation_system.app.Launcher" />
+      <module name="HotelReservation_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.seneca.hotelreservation_system.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.HotelApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f3986c7-c95b-446c-8c07-63309cf8dd82" name="Changes" comment="" />
+      <created>1773103401387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773103401387</updated>
+    </task>
+    <task id="LOCAL-00001" summary="addons ms1">
+      <option name="closed" value="true" />
+      <created>1773106841325</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773106841325</updated>
+    </task>
+    <task id="LOCAL-00002" summary="addons ms1">
+      <option name="closed" value="true" />
+      <created>1773106848685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773106848685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="guestdetails ms1">
+      <option name="closed" value="true" />
+      <created>1773110278133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773110278133</updated>
+    </task>
+    <task id="LOCAL-00004" summary=" ms1">
+      <option name="closed" value="true" />
+      <created>1773111159275</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773111159275</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="addons" />
+    <MESSAGE value="addons ms1" />
+    <MESSAGE value="guestdetails ms1" />
+    <MESSAGE value=" ms1" />
+    <option name="LAST_COMMIT_MESSAGE" value=" ms1" />
+  </component>
+</project>

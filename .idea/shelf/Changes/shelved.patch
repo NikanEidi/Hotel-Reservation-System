@@ -1,0 +1,2523 @@
+Index: src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.*?>\n<?import javafx.scene.effect.DropShadow?>\n\n<AnchorPane prefHeight=\"900.0\" prefWidth=\"1400.0\" style=\"-fx-background-color: #020617;\" xmlns=\"http://javafx.com/javafx/17\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.seneca.hotelreservation_system.controller.UIController\">\n\n    <HBox alignment=\"CENTER\" spacing=\"10\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"30.0\">\n        <Label text=\"①\" style=\"-fx-text-fill: #44403c; -fx-font-size: 16px;\"/>\n        <Label text=\"──\" style=\"-fx-text-fill: #44403c;\"/>\n        <Label text=\" ② \" style=\"-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold; -fx-border-color: #d4af37; -fx-border-radius: 50; -fx-padding: 5;\"/>\n        <Label text=\"── ③ ── ④ ── ⑤ ── ⑥ ── ⑦\" style=\"-fx-text-fill: #44403c; -fx-font-size: 16px;\"/>\n    </HBox>\n\n    <VBox alignment=\"CENTER\" spacing=\"40.0\" AnchorPane.bottomAnchor=\"0.0\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\">\n\n        <VBox alignment=\"CENTER\" spacing=\"15.0\">\n            <Label text=\"FIND YOUR STAY\" style=\"-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;\" />\n            <Label text=\"Step 2: Enter your travel details\" style=\"-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;\" />\n        </VBox>\n\n        <VBox alignment=\"CENTER\" spacing=\"20.0\">\n            <HBox alignment=\"CENTER\" maxWidth=\"1100.0\" spacing=\"25.0\" style=\"-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;\">\n                <effect><DropShadow color=\"#d4af371a\" radius=\"15.0\" /></effect>\n                <DatePicker fx:id=\"checkInDate\" promptText=\"Check-in Date\" style=\"-fx-pref-width: 220; -fx-font-size: 14px;\" />\n                <DatePicker fx:id=\"checkOutDate\" promptText=\"Check-out Date\" style=\"-fx-pref-width: 220; -fx-font-size: 14px;\" />\n                <TextField fx:id=\"adultsCount\" promptText=\"Adults\" style=\"-fx-pref-width: 100; -fx-font-size: 14px;\" />\n                <TextField fx:id=\"childrenCount\" promptText=\"Children\" style=\"-fx-pref-width: 100; -fx-font-size: 14px;\" />\n                <Button onAction=\"#goToRoomSelection\" text=\"CONTINUE\" style=\"-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;\" />\n            </HBox>\n\n            <Label text=\"* Maximum occupancy: 4 guests for Double suites, 2 for Deluxe/Single suites.\"\n                   style=\"-fx-text-fill: #44403c; -fx-font-size: 12px; -fx-font-style: italic;\" />\n        </VBox>\n\n        <Button onAction=\"#goToWelcome\" text=\"RETURN TO MAIN MENU\" style=\"-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;\" />\n    </VBox>\n\n    <Button onAction=\"#showRules\" text=\"RULES &amp; POLICIES\" AnchorPane.rightAnchor=\"40.0\" AnchorPane.topAnchor=\"40.0\" style=\"-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-border-width: 0.5; -fx-cursor: hand; -fx-padding: 10 20;\" />\n\n</AnchorPane>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml b/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml
+--- a/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
++++ b/src/main/resources/com/seneca/hotelreservation_system/view/search-view.fxml	(date 1774318468663)
+@@ -4,11 +4,10 @@
+ <?import javafx.scene.layout.*?>
+ <?import javafx.scene.effect.DropShadow?>
+ 
+-<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+-
++<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.SearchController">
+     <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+-        <Label text="①" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+-        <Label text="──" style="-fx-text-fill: #44403c;"/>
++        <Label text="①" style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold;"/>
++        <Label text="──" style="-fx-text-fill: #d4af37;"/>
+         <Label text=" ② " style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold; -fx-border-color: #d4af37; -fx-border-radius: 50; -fx-padding: 5;"/>
+         <Label text="── ③ ── ④ ── ⑤ ── ⑥ ── ⑦" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+     </HBox>
+@@ -20,19 +19,59 @@
+             <Label text="Step 2: Enter your travel details" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+         </VBox>
+ 
+-        <VBox alignment="CENTER" spacing="20.0">
++        <VBox alignment="CENTER" spacing="15.0">
++
++            <!-- Error Label - Add this to show validation errors -->
++            <Label fx:id="errorLabel" text="" style="-fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold;" visible="false" managed="false" />
++
+             <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
+                 <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
+-                <DatePicker fx:id="checkInDate" promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+-                <DatePicker fx:id="checkOutDate" promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+-                <TextField fx:id="adultsCount" promptText="Adults" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
+-                <TextField fx:id="childrenCount" promptText="Children" style="-fx-pref-width: 100; -fx-font-size: 14px;" />
++
++                <!-- Date Pickers -->
++                <DatePicker fx:id="checkInDatePicker" promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
++                <DatePicker fx:id="checkOutDatePicker" promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
++
++                <!-- Guest Count - Changed to use counter buttons with labels -->
++                <VBox alignment="CENTER" spacing="5">
++                    <Label text="Adults" style="-fx-text-fill: #d4af37; -fx-font-size: 12px;"/>
++                    <HBox alignment="CENTER" spacing="10">
++                        <Button text="-" onAction="#decreaseAdults" style="-fx-background-color: #333; -fx-text-fill: white; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
++                        <Label fx:id="adultCountLabel" text="2" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-pref-width: 40; -fx-alignment: center;"/>
++                        <Button text="+" onAction="#increaseAdults" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
++                    </HBox>
++                </VBox>
++
++                <VBox alignment="CENTER" spacing="5">
++                    <Label text="Children" style="-fx-text-fill: #d4af37; -fx-font-size: 12px;"/>
++                    <HBox alignment="CENTER" spacing="10">
++                        <Button text="-" onAction="#decreaseChildren" style="-fx-background-color: #333; -fx-text-fill: white; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
++                        <Label fx:id="childCountLabel" text="1" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-pref-width: 40; -fx-alignment: center;"/>
++                        <Button text="+" onAction="#increaseChildren" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
++                    </HBox>
++                </VBox>
++
+                 <Button onAction="#goToRoomSelection" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
+             </HBox>
+ 
+             <Label text="* Maximum occupancy: 4 guests for Double suites, 2 for Deluxe/Single suites."
+                    style="-fx-text-fill: #44403c; -fx-font-size: 12px; -fx-font-style: italic;" />
+         </VBox>
++
++        <!-- Guest Details Section -->
++        <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5; max-width: 800;">
++            <Label text="GUEST DETAILS" style="-fx-text-fill: #d4af37; -fx-font-size: 20px; -fx-font-weight: bold; -fx-letter-spacing: 2px;" />
++
++            <GridPane hgap="20" vgap="15" alignment="CENTER">
++                <Label text="Full Name *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
++                <TextField fx:id="fullNameField" promptText="John Smith" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
++
++                <Label text="Email *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
++                <TextField fx:id="emailField" promptText="john.smith@email.com" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
++
++                <Label text="Phone *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
++                <TextField fx:id="phoneField" promptText="(555) 123-4567" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
++            </GridPane>
++        </VBox>
+ 
+         <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" />
+     </VBox>
+Index: src/main/java/com/seneca/hotelreservation_system/controller/UIController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.seneca.hotelreservation_system.controller;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Node;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Alert;\nimport javafx.scene.control.PasswordField;\nimport javafx.scene.control.TextField;\nimport javafx.stage.Stage;\n\nimport java.io.IOException;\nimport java.net.URL;\n\n@SuppressWarnings({ \"unused\", \"SpellCheckingInspection\" })\npublic class UIController {\n\n    @FXML\n    private TextField adminSearchField;\n\n    @FXML\n    private TextField phoneField;\n\n    @FXML\n    private TextField nameField;\n\n    @FXML\n    private TextField emailField;\n\n    @FXML\n    private TextField usernameField;\n\n    @FXML\n    private PasswordField passwordField;\n\n    @FXML\n    public void goToWelcome(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/welcome-view.fxml\");\n    }\n\n    @FXML\n    public void goToRoomSelection(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/room-selection-view.fxml\");\n    }\n\n    @FXML\n    public void goToGuestDetails(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/guest-details-view.fxml\");\n    }\n\n    @FXML\n    public void goToAddons(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/addons-view.fxml\");\n    }\n\n    @FXML\n    public void goToSearch(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/search-view.fxml\");\n    }\n\n    @FXML\n    public void goToSummary(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/summary-view.fxml\");\n    }\n\n    @FXML\n    public void goToConfirmation(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/confirmation-view.fxml\");\n    }\n\n    @FXML\n    public void goToAdminLogin(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/admin-login-view.fxml\");\n    }\n\n    @FXML\n    public void goToAdminDashboard(ActionEvent event) throws IOException {\n        switchScene(event, \"/com/seneca/hotelreservation_system/view/admin-dashboard-view.fxml\");\n    }\n\n    @FXML\n    public void goToAdmin(ActionEvent event) throws IOException {\n        goToAdminDashboard(event);\n    }\n\n    @FXML\n    public void handleAdminLogin(ActionEvent event) throws IOException {\n        String username = usernameField != null ? usernameField.getText().trim() : \"\";\n        String password = passwordField != null ? passwordField.getText().trim() : \"\";\n\n        if (username.isEmpty() || password.isEmpty()) {\n            showAlert(\n                    Alert.AlertType.ERROR,\n                    \"Login Error\",\n                    \"Missing Credentials\",\n                    \"Please enter both username and password.\"\n            );\n            return;\n        }\n\n\n        if (username.equals(\"admin\") && password.equals(\"admin123\")) {\n            showAlert(\n                    Alert.AlertType.INFORMATION,\n                    \"Login Successful\",\n                    \"Welcome\",\n                    \"Administrator access granted.\"\n            );\n            goToAdminDashboard(event);\n        } else {\n            showAlert(\n                    Alert.AlertType.ERROR,\n                    \"Login Failed\",\n                    \"Invalid Credentials\",\n                    \"Incorrect username or password.\"\n            );\n        }\n    }\n\n    @FXML\n    public void showFeedbackModule() {\n        showPlaceholder(\"Feedback\", \"Feedback page is part of later milestone functionality.\");\n    }\n\n    @FXML\n    public void showBillingModule() {\n        showPlaceholder(\"Billing\", \"Billing page is part of later milestone functionality.\");\n    }\n\n    @FXML\n    public void showWaitlistModule() {\n        showPlaceholder(\"Waitlist\", \"Waitlist page is part of later milestone functionality.\");\n    }\n\n    @FXML\n    public void showRules() {\n        Alert alert = new Alert(Alert.AlertType.INFORMATION);\n        alert.setTitle(\"Grand Plaza Rules & Policies\");\n        alert.setHeaderText(\"Hotel Kiosk Regulations\");\n        alert.setContentText(\n                \"1. Check-in: 3:00 PM | Check-out: 11:00 AM\\n\" +\n                        \"2. Maximum occupancy per room must be respected.\\n\" +\n                        \"3. Cancellations must be made 24 hours in advance.\"\n        );\n        alert.showAndWait();\n    }\n\n    @FXML\n    public void handleSearch() {\n        String query = (adminSearchField != null) ? adminSearchField.getText() : \"None\";\n\n        Alert searchAlert = new Alert(Alert.AlertType.INFORMATION);\n        searchAlert.setTitle(\"Admin Search\");\n        searchAlert.setHeaderText(\"Searching Records\");\n        searchAlert.setContentText(\"Searching for guest: \" + query);\n        searchAlert.showAndWait();\n    }\n\n    @FXML\n    public void checkLoyaltyStatus() {\n        if (phoneField != null && nameField != null && emailField != null) {\n            String phone = phoneField.getText();\n\n            if (phone != null && phone.length() == 10) {\n                if (\"1234567890\".equals(phone)) {\n                    nameField.setText(\"Nikan Eidi\");\n                    emailField.setText(\"nikaneydi1984@gmail.com\");\n                } else {\n                    Alert alert = new Alert(Alert.AlertType.INFORMATION);\n                    alert.setTitle(\"Loyalty Member\");\n                    alert.setHeaderText(null);\n                    alert.setContentText(\"Would you like to become a Loyalty Member?\");\n                    alert.showAndWait();\n                }\n            }\n        }\n    }\n\n    private void switchScene(ActionEvent event, String fxmlPath) throws IOException {\n        URL resource = getClass().getResource(fxmlPath);\n\n        if (resource == null) {\n            throw new IOException(\"FXML file not found: \" + fxmlPath);\n        }\n\n        Parent root = FXMLLoader.load(resource);\n        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();\n        stage.setScene(new Scene(root, 1400, 900));\n        stage.show();\n    }\n\n    private void showPlaceholder(String title, String message) {\n        showAlert(Alert.AlertType.INFORMATION, title, title + \" Module\", message);\n    }\n\n    private void showAlert(Alert.AlertType type, String title, String header, String content) {\n        Alert alert = new Alert(type);\n        alert.setTitle(title);\n        alert.setHeaderText(header);\n        alert.setContentText(content);\n        alert.showAndWait();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java b/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java
+--- a/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java	(date 1774317531129)
+@@ -7,42 +7,243 @@
+ import javafx.scene.Parent;
+ import javafx.scene.Scene;
+ import javafx.scene.control.Alert;
++import javafx.scene.control.Button;
++import javafx.scene.control.Label;
+ import javafx.scene.control.PasswordField;
+ import javafx.scene.control.TextField;
++import javafx.scene.layout.Region;
++import javafx.scene.layout.VBox;
++import javafx.stage.Modality;
+ import javafx.stage.Stage;
+ 
+ import java.io.IOException;
++import java.math.BigDecimal;
+ import java.net.URL;
++import java.time.LocalDate;
++import java.time.temporal.ChronoUnit;
+ 
+ @SuppressWarnings({ "unused", "SpellCheckingInspection" })
+ public class UIController {
+ 
+-    @FXML
+-    private TextField adminSearchField;
++    // ========== DATA STORAGE FOR BOOKING ==========
++    public static class BookingData {
++        public int adults = 2;
++        public int children = 1;
++        public LocalDate checkIn;
++        public LocalDate checkOut;
++        public String guestName;
++        public String guestEmail;
++        public String guestPhone;
++
++        public RoomType selectedRoomType = RoomType.SINGLE;
++        public int roomQuantity = 1;
++
++        public boolean hasWifi = false;
++        public boolean hasBreakfast = false;
++        public boolean hasParking = false;
++        public boolean hasSpa = false;
++        public int wifiQuantity = 0;
++        public int breakfastQuantity = 0;
++        public int parkingQuantity = 0;
++        public int spaQuantity = 0;
++
++        public boolean enrollLoyalty = true;
++        public int loyaltyPointsToRedeem = 0;
++
++        public int nights;
++        public BigDecimal roomPrice;
++        public BigDecimal addonsTotal;
++        public BigDecimal subtotal;
++        public BigDecimal tax;
++        public BigDecimal total;
++    }
++
++    private static BookingData booking = new BookingData();
++
++    // ========== STRATEGY PATTERN FOR PRICING ==========
++    public interface PricingStrategy {
++        BigDecimal calculatePrice(BigDecimal basePrice, int nights);
++    }
++
++    public static class StandardPricing implements PricingStrategy {
++        @Override
++        public BigDecimal calculatePrice(BigDecimal basePrice, int nights) {
++            return basePrice.multiply(BigDecimal.valueOf(nights));
++        }
++    }
++
++    public static class WeekendPricing implements PricingStrategy {
++        private static final BigDecimal WEEKEND_MULTIPLIER = new BigDecimal("1.2");
++        @Override
++        public BigDecimal calculatePrice(BigDecimal basePrice, int nights) {
++            return basePrice.multiply(WEEKEND_MULTIPLIER).multiply(BigDecimal.valueOf(nights));
++        }
++    }
++
++    public static class PeakSeasonPricing implements PricingStrategy {
++        private static final BigDecimal PEAK_MULTIPLIER = new BigDecimal("1.3");
++        @Override
++        public BigDecimal calculatePrice(BigDecimal basePrice, int nights) {
++            return basePrice.multiply(PEAK_MULTIPLIER).multiply(BigDecimal.valueOf(nights));
++        }
++    }
++
++    public enum RoomType {
++        SINGLE(89, 2), DOUBLE(129, 4), DELUXE(199, 2), PENTHOUSE(349, 2);
++        private final int basePrice;
++        private final int maxOccupancy;
++        RoomType(int basePrice, int maxOccupancy) {
++            this.basePrice = basePrice;
++            this.maxOccupancy = maxOccupancy;
++        }
++        public int getBasePrice() { return basePrice; }
++        public int getMaxOccupancy() { return maxOccupancy; }
++    }
++
++    // ========== PRICING HELPER METHODS ==========
++    public boolean isWeekend(LocalDate date) {
++        if (date == null) return false;
++        int dayOfWeek = date.getDayOfWeek().getValue();
++        return dayOfWeek == 6 || dayOfWeek == 7;
++    }
++
++    public boolean isPeakSeason(LocalDate date) {
++        if (date == null) return false;
++        int month = date.getMonthValue();
++        return month == 7 || month == 8 || month == 12;
++    }
++
++    public PricingStrategy getPricingStrategy(LocalDate checkIn, LocalDate checkOut) {
++        if (checkIn == null || checkOut == null) return new StandardPricing();
++
++        long weekendDays = 0;
++        LocalDate current = checkIn;
++        while (current.isBefore(checkOut)) {
++            if (isWeekend(current)) weekendDays++;
++            current = current.plusDays(1);
++        }
++        long totalNights = ChronoUnit.DAYS.between(checkIn, checkOut);
++
++        boolean isPeak = false;
++        current = checkIn;
++        while (current.isBefore(checkOut)) {
++            if (isPeakSeason(current)) { isPeak = true; break; }
++            current = current.plusDays(1);
++        }
++        if (isPeak) return new PeakSeasonPricing();
++        if (weekendDays > totalNights / 2) return new WeekendPricing();
++        return new StandardPricing();
++    }
++
++    public BigDecimal getBasePrice(RoomType type) {
++        return BigDecimal.valueOf(type.getBasePrice());
++    }
+ 
+-    @FXML
+-    private TextField phoneField;
++    public BigDecimal calculateRoomPrice() {
++        BigDecimal basePrice = getBasePrice(booking.selectedRoomType);
++        PricingStrategy strategy = getPricingStrategy(booking.checkIn, booking.checkOut);
++        BigDecimal perRoomTotal = strategy.calculatePrice(basePrice, booking.nights);
++        return perRoomTotal.multiply(BigDecimal.valueOf(booking.roomQuantity));
++    }
+ 
+-    @FXML
+-    private TextField nameField;
+-
+-    @FXML
+-    private TextField emailField;
+-
+-    @FXML
+-    private TextField usernameField;
+-
+-    @FXML
+-    private PasswordField passwordField;
+-
++    public BigDecimal calculateAddonsTotal() {
++        BigDecimal total = BigDecimal.ZERO;
++        if (booking.hasWifi) {
++            total = total.add(BigDecimal.valueOf(10).multiply(BigDecimal.valueOf(booking.nights))
++                    .multiply(BigDecimal.valueOf(booking.wifiQuantity)));
++        }
++        if (booking.hasBreakfast) {
++            total = total.add(BigDecimal.valueOf(15).multiply(BigDecimal.valueOf(booking.nights))
++                    .multiply(BigDecimal.valueOf(booking.breakfastQuantity)));
++        }
++        if (booking.hasParking) {
++            total = total.add(BigDecimal.valueOf(20).multiply(BigDecimal.valueOf(booking.nights))
++                    .multiply(BigDecimal.valueOf(booking.parkingQuantity)));
++        }
++        if (booking.hasSpa) {
++            total = total.add(BigDecimal.valueOf(50).multiply(BigDecimal.valueOf(booking.spaQuantity)));
++        }
++        return total;
++    }
++
++    public BigDecimal calculateTotal() {
++        booking.roomPrice = calculateRoomPrice();
++        booking.addonsTotal = calculateAddonsTotal();
++        booking.subtotal = booking.roomPrice.add(booking.addonsTotal);
++        booking.tax = booking.subtotal.multiply(new BigDecimal("0.10"));
++        booking.total = booking.subtotal.add(booking.tax);
++        return booking.total;
++    }
++
++    public BookingData getBookingData() { return booking; }
++
++    public int getNights() {
++        if (booking.checkIn != null && booking.checkOut != null) {
++            booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
++        }
++        return booking.nights;
++    }
++
++    public BigDecimal getRoomPrice() { return calculateRoomPrice(); }
++    public BigDecimal getAddonsTotal() { return calculateAddonsTotal(); }
++    public BigDecimal getSubtotal() { return booking.subtotal; }
++    public BigDecimal getTax() { return booking.tax; }
++    public BigDecimal getTotal() { return calculateTotal(); }
++
++    public String getPricingTypeDescription() {
++        PricingStrategy strategy = getPricingStrategy(booking.checkIn, booking.checkOut);
++        if (strategy instanceof PeakSeasonPricing) return "Peak Season Rate (+30%)";
++        if (strategy instanceof WeekendPricing) return "Weekend Rate (+20%)";
++        return "Standard Rate";
++    }
++
++    // ========== METHODS TO UPDATE BOOKING DATA ==========
++    public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
++                              String name, String email, String phone) {
++        booking.adults = adults;
++        booking.children = children;
++        booking.checkIn = checkIn;
++        booking.checkOut = checkOut;
++        booking.guestName = name;
++        booking.guestEmail = email;
++        booking.guestPhone = phone;
++        if (checkIn != null && checkOut != null) {
++            booking.nights = (int) ChronoUnit.DAYS.between(checkIn, checkOut);
++        }
++    }
++
++    public void setRoomData(RoomType type, int quantity) {
++        booking.selectedRoomType = type;
++        booking.roomQuantity = quantity;
++    }
++
++    public void setAddonsData(boolean wifi, boolean breakfast, boolean parking, boolean spa,
++                              int wifiQty, int breakfastQty, int parkingQty, int spaQty) {
++        booking.hasWifi = wifi;
++        booking.hasBreakfast = breakfast;
++        booking.hasParking = parking;
++        booking.hasSpa = spa;
++        booking.wifiQuantity = wifiQty;
++        booking.breakfastQuantity = breakfastQty;
++        booking.parkingQuantity = parkingQty;
++        booking.spaQuantity = spaQty;
++    }
++
++    public void setLoyaltyData(boolean enroll, int pointsToRedeem) {
++        booking.enrollLoyalty = enroll;
++        booking.loyaltyPointsToRedeem = pointsToRedeem;
++    }
++
++    // ========== NAVIGATION METHODS ==========
+     @FXML
+     public void goToWelcome(ActionEvent event) throws IOException {
++        booking = new BookingData();
+         switchScene(event, "/com/seneca/hotelreservation_system/view/welcome-view.fxml");
+     }
+ 
+     @FXML
+-    public void goToRoomSelection(ActionEvent event) throws IOException {
+-        switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml");
++    public void goToSearch(ActionEvent event) throws IOException {
++        switchScene(event, "/com/seneca/hotelreservation_system/view/search-view.fxml");
+     }
+ 
+     @FXML
+@@ -51,22 +252,33 @@
+     }
+ 
+     @FXML
+-    public void goToAddons(ActionEvent event) throws IOException {
++    public void goToRoomSelection(ActionEvent event) throws IOException {
++        if (booking.checkIn != null && booking.checkOut != null) {
++            booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
++        }
++        switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml");
++    }
++
++    @FXML
++    public void goToAddOns(ActionEvent event) throws IOException {
+         switchScene(event, "/com/seneca/hotelreservation_system/view/addons-view.fxml");
+     }
+ 
+     @FXML
+-    public void goToSearch(ActionEvent event) throws IOException {
+-        switchScene(event, "/com/seneca/hotelreservation_system/view/search-view.fxml");
++    public void goToLoyalty(ActionEvent event) throws IOException {
++        switchScene(event, "/com/seneca/hotelreservation_system/view/loyalty-view.fxml");
+     }
+ 
+     @FXML
+     public void goToSummary(ActionEvent event) throws IOException {
++        calculateTotal();
+         switchScene(event, "/com/seneca/hotelreservation_system/view/summary-view.fxml");
+     }
+ 
+     @FXML
+     public void goToConfirmation(ActionEvent event) throws IOException {
++        calculateTotal();
++        System.out.println("Reservation saved! Total: $" + booking.total);
+         switchScene(event, "/com/seneca/hotelreservation_system/view/confirmation-view.fxml");
+     }
+ 
+@@ -85,53 +297,77 @@
+         goToAdminDashboard(event);
+     }
+ 
++    // ========== EXISTING UI ELEMENTS ==========
++    @FXML
++    private TextField adminSearchField;
++    @FXML
++    private TextField phoneField;
++    @FXML
++    private TextField nameField;
++    @FXML
++    private TextField emailField;
++    @FXML
++    private TextField usernameField;
++    @FXML
++    private PasswordField passwordField;
++
++    // ========== HELPER METHODS ==========
++    private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
++        URL resource = getClass().getResource(fxmlPath);
++        if (resource == null) {
++            throw new IOException("FXML file not found: " + fxmlPath);
++        }
++
++        FXMLLoader loader = new FXMLLoader(resource);
++        Parent root = loader.load();
++
++        // Pass this UIController to the new screen's controller
++        Object controller = loader.getController();
++        if (controller != null) {
++            try {
++                java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
++                method.invoke(controller, this);
++            } catch (Exception e) {
++                // Controller doesn't have setMainController - that's OK
++            }
++        }
++
++        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
++        stage.setScene(new Scene(root, 1400, 900));
++        stage.show();
++    }
++
+     @FXML
+     public void handleAdminLogin(ActionEvent event) throws IOException {
+         String username = usernameField != null ? usernameField.getText().trim() : "";
+         String password = passwordField != null ? passwordField.getText().trim() : "";
+ 
+         if (username.isEmpty() || password.isEmpty()) {
+-            showAlert(
+-                    Alert.AlertType.ERROR,
+-                    "Login Error",
+-                    "Missing Credentials",
+-                    "Please enter both username and password."
+-            );
++            showAlert(Alert.AlertType.ERROR, "Login Error", "Missing Credentials", "Please enter both username and password.");
+             return;
+         }
+ 
+-
+         if (username.equals("admin") && password.equals("admin123")) {
+-            showAlert(
+-                    Alert.AlertType.INFORMATION,
+-                    "Login Successful",
+-                    "Welcome",
+-                    "Administrator access granted."
+-            );
++            showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome", "Administrator access granted.");
+             goToAdminDashboard(event);
+         } else {
+-            showAlert(
+-                    Alert.AlertType.ERROR,
+-                    "Login Failed",
+-                    "Invalid Credentials",
+-                    "Incorrect username or password."
+-            );
++            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid Credentials", "Incorrect username or password.");
+         }
+     }
+ 
+     @FXML
+-    public void showFeedbackModule() {
+-        showPlaceholder("Feedback", "Feedback page is part of later milestone functionality.");
++    public void showFeedbackModule(ActionEvent event) {
++        openAdminModuleWindow(event, "Feedback", "Feedback module placeholder for Milestone 2.");
+     }
+ 
+     @FXML
+-    public void showBillingModule() {
+-        showPlaceholder("Billing", "Billing page is part of later milestone functionality.");
++    public void showBillingModule(ActionEvent event) {
++        openAdminModuleWindow(event, "Billing", "Billing module placeholder for Milestone 2.");
+     }
+ 
+     @FXML
+-    public void showWaitlistModule() {
+-        showPlaceholder("Waitlist", "Waitlist page is part of later milestone functionality.");
++    public void showWaitlistModule(ActionEvent event) {
++        openAdminModuleWindow(event, "Waitlist", "Waitlist module placeholder for Milestone 2.");
+     }
+ 
+     @FXML
+@@ -142,57 +378,90 @@
+         alert.setContentText(
+                 "1. Check-in: 3:00 PM | Check-out: 11:00 AM\n" +
+                         "2. Maximum occupancy per room must be respected.\n" +
+-                        "3. Cancellations must be made 24 hours in advance."
++                        "3. Cancellations must be made 24 hours in advance.\n" +
++                        "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
++                        "5. No smoking in rooms ($250 fine)"
+         );
+         alert.showAndWait();
+     }
+ 
+     @FXML
+     public void handleSearch() {
+-        String query = (adminSearchField != null) ? adminSearchField.getText() : "None";
+-
+-        Alert searchAlert = new Alert(Alert.AlertType.INFORMATION);
+-        searchAlert.setTitle("Admin Search");
+-        searchAlert.setHeaderText("Searching Records");
+-        searchAlert.setContentText("Searching for guest: " + query);
+-        searchAlert.showAndWait();
++        String query = (adminSearchField != null) ? adminSearchField.getText().trim() : "";
++        showAlert(Alert.AlertType.INFORMATION, "Admin Search", "Searching Records", "Searching for guest: " + (query.isEmpty() ? "None" : query));
+     }
+ 
+     @FXML
+     public void checkLoyaltyStatus() {
+         if (phoneField != null && nameField != null && emailField != null) {
+             String phone = phoneField.getText();
+-
+             if (phone != null && phone.length() == 10) {
+                 if ("1234567890".equals(phone)) {
+                     nameField.setText("Nikan Eidi");
+                     emailField.setText("nikaneydi1984@gmail.com");
+                 } else {
+-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+-                    alert.setTitle("Loyalty Member");
+-                    alert.setHeaderText(null);
+-                    alert.setContentText("Would you like to become a Loyalty Member?");
+-                    alert.showAndWait();
++                    showAlert(Alert.AlertType.INFORMATION, "Loyalty Member", null, "Would you like to become a Loyalty Member?");
+                 }
+             }
+         }
+     }
+ 
+-    private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
+-        URL resource = getClass().getResource(fxmlPath);
++    private void openAdminModuleWindow(ActionEvent event, String title, String message) {
++        Stage dashboardStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
++
++        Label titleLabel = new Label(title);
++        titleLabel.setStyle("-fx-text-fill: #d4af37; -fx-font-size: 28px; -fx-font-weight: bold;");
+ 
+-        if (resource == null) {
+-            throw new IOException("FXML file not found: " + fxmlPath);
+-        }
++        Label messageLabel = new Label(message);
++        messageLabel.setStyle("-fx-text-fill: #d6d3d1; -fx-font-size: 15px;");
++        messageLabel.setWrapText(true);
++
++        Region spacer = new Region();
++        spacer.setMinHeight(10);
++
++        Button closeButton = new Button("CLOSE");
++        closeButton.setStyle(
++                "-fx-background-color: #d4af37; " +
++                        "-fx-text-fill: black; " +
++                        "-fx-font-size: 14px; " +
++                        "-fx-font-weight: bold; " +
++                        "-fx-pref-width: 180; " +
++                        "-fx-pref-height: 42; " +
++                        "-fx-cursor: hand;"
++        );
+ 
+-        Parent root = FXMLLoader.load(resource);
+-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+-        stage.setScene(new Scene(root, 1400, 900));
+-        stage.show();
+-    }
++        VBox root = new VBox(20, titleLabel, messageLabel, spacer, closeButton);
++        root.setStyle(
++                "-fx-background-color: #0a0a0a; " +
++                        "-fx-padding: 40; " +
++                        "-fx-alignment: center; " +
++                        "-fx-border-color: #d4af37; " +
++                        "-fx-border-width: 2;"
++        );
++
++        Scene scene = new Scene(root, 600, 350);
+ 
+-    private void showPlaceholder(String title, String message) {
+-        showAlert(Alert.AlertType.INFORMATION, title, title + " Module", message);
++        Stage moduleStage = new Stage();
++        moduleStage.initOwner(dashboardStage);
++        moduleStage.initModality(Modality.NONE);
++        moduleStage.setTitle(title + " - Grand Plaza");
++        moduleStage.setScene(scene);
++        moduleStage.setResizable(false);
++
++        dashboardStage.hide();
++
++        closeButton.setOnAction(e -> {
++            moduleStage.close();
++            dashboardStage.show();
++            dashboardStage.toFront();
++        });
++
++        moduleStage.setOnCloseRequest(e -> {
++            dashboardStage.show();
++            dashboardStage.toFront();
++        });
++
++        moduleStage.show();
+     }
+ 
+     private void showAlert(Alert.AlertType type, String title, String header, String content) {
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n\n    <groupId>com.seneca</groupId>\n    <artifactId>HotelReservation_System</artifactId>\n    <version>1.0-SNAPSHOT</version>\n\n    <properties>\n        <maven.compiler.source>17</maven.compiler.source>\n        <maven.compiler.target>17</maven.compiler.target>\n        <javafx.version>17.0.10</javafx.version>\n        <hibernate.version>5.6.15.Final</hibernate.version>\n    </properties>\n\n    <dependencies>\n        <dependency>\n            <groupId>org.openjfx</groupId>\n            <artifactId>javafx-controls</artifactId>\n            <version>${javafx.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>org.openjfx</groupId>\n            <artifactId>javafx-fxml</artifactId>\n            <version>${javafx.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>org.hibernate</groupId>\n            <artifactId>hibernate-core</artifactId>\n            <version>${hibernate.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>com.h2database</groupId>\n            <artifactId>h2</artifactId>\n            <version>2.2.224</version>\n        </dependency>\n    </dependencies>\n\n    <build>\n        <plugins>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <version>3.10.1</version>\n                <configuration>\n                    <source>17</source>\n                    <target>17</target>\n                </configuration>\n            </plugin>\n            <plugin>\n                <groupId>org.openjfx</groupId>\n                <artifactId>javafx-maven-plugin</artifactId>\n                <version>0.0.8</version>\n                <configuration>\n                    <mainClass>com.seneca.hotelreservation_system.app.Launcher</mainClass>\n                </configuration>\n            </plugin>\n        </plugins>\n    </build>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
++++ b/pom.xml	(date 1774319400576)
+@@ -13,6 +13,8 @@
+         <maven.compiler.target>17</maven.compiler.target>
+         <javafx.version>17.0.10</javafx.version>
+         <hibernate.version>5.6.15.Final</hibernate.version>
++        <mysql.version>8.0.33</mysql.version>
++        <jbcrypt.version>0.4</jbcrypt.version>
+     </properties>
+ 
+     <dependencies>
+@@ -26,15 +28,23 @@
+             <artifactId>javafx-fxml</artifactId>
+             <version>${javafx.version}</version>
+         </dependency>
++
+         <dependency>
+             <groupId>org.hibernate</groupId>
+             <artifactId>hibernate-core</artifactId>
+             <version>${hibernate.version}</version>
+         </dependency>
++
++        <dependency>
++            <groupId>com.mysql</groupId>
++            <artifactId>mysql-connector-j</artifactId>
++            <version>${mysql.version}</version>
++        </dependency>
++
+         <dependency>
+-            <groupId>com.h2database</groupId>
+-            <artifactId>h2</artifactId>
+-            <version>2.2.224</version>
++            <groupId>org.mindrot</groupId>
++            <artifactId>jbcrypt</artifactId>
++            <version>${jbcrypt.version}</version>
+         </dependency>
+     </dependencies>
+ 
+Index: src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.*?>\n<?import javafx.scene.effect.DropShadow?>\n\n<AnchorPane prefHeight=\"900.0\" prefWidth=\"1400.0\" style=\"-fx-background-color: #020617;\" xmlns=\"http://javafx.com/javafx/17\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.seneca.hotelreservation_system.controller.UIController\">\n\n    <VBox alignment=\"TOP_CENTER\" spacing=\"50.0\" AnchorPane.bottomAnchor=\"0.0\" AnchorPane.leftAnchor=\"0.0\" AnchorPane.rightAnchor=\"0.0\" AnchorPane.topAnchor=\"0.0\" style=\"-fx-padding: 60 0 0 0;\">\n\n        <VBox alignment=\"CENTER\" spacing=\"15.0\">\n            <Label text=\"SELECT YOUR ELITE SUITE\" style=\"-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;\" />\n            <Label text=\"Step 1: Choose Your Experience\" style=\"-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;\" />\n            <Hyperlink text=\"View Detailed Booking &amp; Cancellation Policy\" style=\"-fx-text-fill: #d4af37; -fx-font-size: 14px; -fx-underline: true;\" />\n        </VBox>\n\n\n\n        <HBox alignment=\"CENTER\" spacing=\"60.0\">\n            <VBox prefHeight=\"500.0\" prefWidth=\"420.0\" spacing=\"20.0\" style=\"-fx-background-color: #0a0a0a; -fx-border-color: #44403c; -fx-border-width: 1; -fx-padding: 0 0 35 0; -fx-background-radius: 15; -fx-border-radius: 15;\">\n                <effect><DropShadow color=\"#000000aa\" radius=\"20.0\" offsetY=\"10.0\" /></effect>\n                <Region prefHeight=\"220.0\" style=\"-fx-background-color: #1c1917; -fx-background-radius: 15 15 0 0; -fx-border-color: #d4af37; -fx-border-width: 0 0 1 0;\" />\n                <VBox spacing=\"10.0\" style=\"-fx-padding: 0 35;\">\n                    <Label text=\"Standard Double\" style=\"-fx-text-fill: #d4af37; -fx-font-size: 28px; -fx-font-weight: bold;\" />\n                    <Label text=\"2 Queen Beds • Courtyard View • 45 m²\" style=\"-fx-text-fill: #a8a29e; -fx-font-size: 14px;\" />\n                    <Label text=\"Luxury Amenities • Complimentary Breakfast\" style=\"-fx-text-fill: #78716c; -fx-font-size: 12px; -fx-font-style: italic;\" />\n                    <Region prefHeight=\"20.0\" />\n                    <Label text=\"150.00 USD / Night\" style=\"-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;\" />\n                    <Button onAction=\"#goToGuestDetails\" text=\"SELECT SUITE\" style=\"-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;\" />\n                </VBox>\n            </VBox>\n\n            <VBox prefHeight=\"500.0\" prefWidth=\"420.0\" spacing=\"20.0\" style=\"-fx-background-color: #0a0a0a; -fx-border-color: #d4af37; -fx-border-width: 2; -fx-padding: 0 0 35 0; -fx-background-radius: 15; -fx-border-radius: 15;\">\n                <effect><DropShadow color=\"#d4af3733\" radius=\"30.0\" /></effect>\n                <Region prefHeight=\"220.0\" style=\"-fx-background-color: #1c1917; -fx-background-radius: 15 15 0 0; -fx-border-color: #d4af37; -fx-border-width: 0 0 2 0;\" />\n                <VBox spacing=\"10.0\" style=\"-fx-padding: 0 35;\">\n                    <Label text=\"Royal King Suite\" style=\"-fx-text-fill: #d4af37; -fx-font-size: 28px; -fx-font-weight: bold;\" />\n                    <Label text=\"1 King Bed • Panoramic Ocean View • 85 m²\" style=\"-fx-text-fill: #a8a29e; -fx-font-size: 14px;\" />\n                    <Label text=\"VIP Concierge • Private Spa Access\" style=\"-fx-text-fill: #78716c; -fx-font-size: 12px; -fx-font-style: italic;\" />\n                    <Region prefHeight=\"20.0\" />\n                    <Label text=\"320.00 USD / Night\" style=\"-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;\" />\n                    <Button onAction=\"#goToGuestDetails\" text=\"SELECT SUITE\" style=\"-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;\" />\n                </VBox>\n            </VBox>\n        </HBox>\n\n        <Button onAction=\"#goToWelcome\" text=\"RETURN TO MAIN MENU\" style=\"-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;\" />\n    </VBox>\n\n    <Button onAction=\"#showRules\" text=\"RULES &amp; POLICIES\" AnchorPane.rightAnchor=\"40.0\" AnchorPane.topAnchor=\"40.0\" style=\"-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-border-width: 0.5; -fx-cursor: hand; -fx-padding: 10 20;\" />\n\n</AnchorPane>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml b/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml
+--- a/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
++++ b/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml	(date 1774317759198)
+@@ -4,19 +4,18 @@
+ <?import javafx.scene.layout.*?>
+ <?import javafx.scene.effect.DropShadow?>
+ 
+-<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.UIController">
++<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.RoomSelectionController">
+ 
+     <VBox alignment="TOP_CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-padding: 60 0 0 0;">
+ 
+         <VBox alignment="CENTER" spacing="15.0">
+             <Label text="SELECT YOUR ELITE SUITE" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
+-            <Label text="Step 1: Choose Your Experience" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+-            <Hyperlink text="View Detailed Booking &amp; Cancellation Policy" style="-fx-text-fill: #d4af37; -fx-font-size: 14px; -fx-underline: true;" />
++            <Label text="Step 3: Choose Your Experience" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
++            <Label fx:id="searchSummaryLabel" text="Loading..." style="-fx-text-fill: #d4af37; -fx-font-size: 14px;" />
+         </VBox>
+ 
+-
+-
+         <HBox alignment="CENTER" spacing="60.0">
++            <!-- Standard Double Room -->
+             <VBox prefHeight="500.0" prefWidth="420.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c; -fx-border-width: 1; -fx-padding: 0 0 35 0; -fx-background-radius: 15; -fx-border-radius: 15;">
+                 <effect><DropShadow color="#000000aa" radius="20.0" offsetY="10.0" /></effect>
+                 <Region prefHeight="220.0" style="-fx-background-color: #1c1917; -fx-background-radius: 15 15 0 0; -fx-border-color: #d4af37; -fx-border-width: 0 0 1 0;" />
+@@ -26,10 +25,11 @@
+                     <Label text="Luxury Amenities • Complimentary Breakfast" style="-fx-text-fill: #78716c; -fx-font-size: 12px; -fx-font-style: italic;" />
+                     <Region prefHeight="20.0" />
+                     <Label text="150.00 USD / Night" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+-                    <Button onAction="#goToGuestDetails" text="SELECT SUITE" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;" />
++                    <Button onAction="#selectStandardDouble" text="SELECT SUITE" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;" />
+                 </VBox>
+             </VBox>
+ 
++            <!-- Royal King Suite -->
+             <VBox prefHeight="500.0" prefWidth="420.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-border-color: #d4af37; -fx-border-width: 2; -fx-padding: 0 0 35 0; -fx-background-radius: 15; -fx-border-radius: 15;">
+                 <effect><DropShadow color="#d4af3733" radius="30.0" /></effect>
+                 <Region prefHeight="220.0" style="-fx-background-color: #1c1917; -fx-background-radius: 15 15 0 0; -fx-border-color: #d4af37; -fx-border-width: 0 0 2 0;" />
+@@ -39,11 +39,12 @@
+                     <Label text="VIP Concierge • Private Spa Access" style="-fx-text-fill: #78716c; -fx-font-size: 12px; -fx-font-style: italic;" />
+                     <Region prefHeight="20.0" />
+                     <Label text="320.00 USD / Night" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+-                    <Button onAction="#goToGuestDetails" text="SELECT SUITE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;" />
++                    <Button onAction="#selectRoyalKing" text="SELECT SUITE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 350; -fx-pref-height: 55; -fx-font-weight: bold; -fx-cursor: hand;" />
+                 </VBox>
+             </VBox>
+         </HBox>
+ 
++        <Button onAction="#goToSearch" text="BACK TO SEARCH" style="-fx-background-color: #333; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
+         <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" />
+     </VBox>
+ 
+Index: README.md
+===================================================================
+diff --git a/README.md b/README.md
+deleted file mode 100644
+--- a/README.md	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
++++ /dev/null	(revision c30aaf90734b6f39dd4d1620f24a5e1a051f9418)
+@@ -1,334 +0,0 @@
+-# Grand Plaza Hotel Reservation System
+-### Milestone 1 — Design & Blueprinting
+-**Seneca Polytechnic | Software Development Project**
+-
+----
+-
+-## Table of Contents
+-
+-1. [Project Overview & Scope](#1-project-overview--scope)
+-2. [Architecture & Design Artifacts](#2-architecture--design-artifacts)
+-3. [Core Domain Models](#3-core-domain-models-ms1-requirements)
+-4. [The 7-Screen Kiosk Flow](#4-the-7-screen-kiosk-flow)
+-5. [Admin Module Features](#5-admin-module-features)
+-6. [Design Patterns Applied](#6-design-patterns-applied)
+-7. [Execution Instructions](#7-execution-instructions)
+-
+----
+-
+-## 1. Project Overview & Scope
+-
+-The Grand Plaza Hotel Reservation System is a college-level software engineering project developed at Seneca Polytechnic. Its primary objective is to replace the hotel's existing manual, paper-based reservation workflow with a fully computerized, scalable JavaFX desktop application. Previously, front-desk staff managed all guest bookings, room assignments, payments, and loyalty tracking through physical ledgers and printed forms — a process prone to human error, data loss, and inefficiency during peak occupancy periods.
+-
+-This system digitizes the entire reservation lifecycle, from initial room search through payment confirmation, while simultaneously providing administrative staff with real-time control over hotel operations.
+-
+-The application is divided into two primary functional modules:
+-
+-- **Self-Service Guest Kiosk** — A 7-screen guided interface that allows guests to independently search for available rooms, enter personal details, select add-on amenities, review a complete pricing summary, and finalize their reservation without staff intervention. The kiosk operates at a fixed resolution of 1400×900 pixels and is designed for touchscreen-friendly interaction.
+-
+-- **Admin Dashboard** — A secured staff-facing portal enabling hotel administrators to manage guest records, review reservation statuses, process billing adjustments, monitor the waitlist, and access guest feedback. Access is protected through BCrypt-hashed credential verification.
+-
+-**Technology Stack:**
+-
+-| Component | Technology |
+-|---|---|
+-| Language | Java 17 |
+-| UI Framework | JavaFX |
+-| Build Tool | Apache Maven |
+-| ORM / Persistence | Hibernate / JPA |
+-| Database | H2 (Embedded) |
+-| UI Resolution | 1400 × 900 px |
+-
+----
+-
+-## 2. Architecture & Design Artifacts
+-
+-The system follows a strict **3-Tier Architecture**, separating concerns across the Presentation, Business, and Data layers. This enforces maintainability, testability, and scalability across the codebase.
+-
+-```
+-com.grandplaza.hotel
+-│
+-├── presentation/          # Tier 1 — Presentation Layer
+-│   ├── views/             # FXML layout files for all screens
+-│   └── controllers/       # UIController classes bound to each FXML view
+-│
+-├── business/              # Tier 2 — Business / Service Layer
+-│   ├── BookingService.java
+-│   ├── PricingService.java
+-│   └── AuthService.java
+-│
+-├── data/                  # Tier 3 — Data / Persistence Layer
+-│   ├── entities/          # JPA-annotated domain model classes
+-│   └── repositories/      # Repository interfaces and implementations
+-│
+-└── util/                  # Shared utilities (e.g., JPAUtil singleton)
+-```
+-
+-### Presentation Tier
+-
+-The Presentation Tier is built entirely with JavaFX, using FXML files to define the visual layout of each screen and dedicated `UIController` classes to handle user input events. Each controller is responsible for exactly one screen and delegates all business decisions to the service layer — it contains no business logic of its own. This enforces a clean separation that allows the UI to be redesigned without impacting underlying functionality.
+-
+-### Business Tier
+-
+-The Business Tier encapsulates all application logic and acts as the intermediary between user-facing controllers and the database layer.
+-
+-- **`BookingService`** — Orchestrates the end-to-end reservation process. It validates room availability based on requested dates and guest count, creates and persists `Reservation` entities, and applies loyalty point deductions where applicable. It also handles cancellation logic and triggers waitlist notifications through the Observer pattern.
+-
+-- **`PricingService`** — Computes the final billable amount for a reservation. It applies the room's base nightly rate, multiplies by the number of nights, calculates the 13% tax, and applies any applicable loyalty discounts. Dynamic pricing strategies — such as weekend surcharges and seasonal rate adjustments — are injected via the Strategy pattern, allowing billing behaviour to be swapped without modifying the service class.
+-
+-- **`AuthService`** — Manages administrator authentication. It retrieves hashed credentials from the database and uses BCrypt to verify password input before granting access to the Admin Dashboard.
+-
+-### Data Tier
+-
+-The Data Tier uses **Hibernate as the JPA provider** backed by an **H2 embedded database**, making the application self-contained and environment-independent during development. JPA-annotated entity classes map directly to database tables, and repository classes abstract all CRUD operations using the `EntityManager` API. The `EntityManagerFactory` is managed as a Singleton through `JPAUtil` to ensure a single shared connection pool across the application lifecycle.
+-
+----
+-
+-## 3. Core Domain Models (MS1 Requirements)
+-
+-The following entities represent the core domain model of the system. Each class is annotated with `@Entity` and managed by Hibernate under the `com.grandplaza.hotel.data.entities` package.
+-
+-### `Guest`
+-Represents a registered or walk-in hotel guest.
+-
+-| Attribute | Type | Description |
+-|---|---|---|
+-| `guestId` | `Long` | Auto-generated primary key |
+-| `firstName` | `String` | Guest's first name |
+-| `lastName` | `String` | Guest's last name |
+-| `email` | `String` | Contact email address |
+-| `phone` | `String` | Phone number (used for loyalty lookup) |
+-| `loyaltyPoints` | `int` | Accumulated reward points balance |
+-
+----
+-
+-### `Room`
+-Represents a physical hotel room and its current availability state.
+-
+-| Attribute | Type | Description |
+-|---|---|---|
+-| `roomId` | `Long` | Auto-generated primary key |
+-| `roomNumber` | `String` | Human-readable room identifier (e.g., `302A`) |
+-| `roomType` | `String` | Category: Standard, Deluxe, or Suite |
+-| `basePrice` | `double` | Nightly rate before tax and add-ons |
+-| `maxCapacity` | `int` | Maximum number of guests permitted |
+-| `isAvailable` | `boolean` | Real-time availability flag |
+-
+----
+-
+-### `Reservation`
+-Links a `Guest` to a `Room` for a specified date range and tracks booking status.
+-
+-| Attribute | Type | Description |
+-|---|---|---|
+-| `reservationId` | `Long` | Auto-generated primary key |
+-| `checkInDate` | `LocalDate` | Requested check-in date |
+-| `checkOutDate` | `LocalDate` | Requested check-out date |
+-| `adultCount` | `int` | Number of adult guests |
+-| `childCount` | `int` | Number of child guests |
+-| `status` | `String` | Booking state: `CONFIRMED`, `CANCELLED`, or `WAITLISTED` |
+-
+----
+-
+-### `Payment`
+-Records the financial transaction associated with a confirmed reservation.
+-
+-| Attribute | Type | Description |
+-|---|---|---|
+-| `paymentId` | `Long` | Auto-generated primary key |
+-| `amount` | `double` | Total charged amount including tax |
+-| `paymentDate` | `LocalDate` | Date the transaction was processed |
+-| `method` | `String` | Payment method: `CASH`, `CREDIT`, or `DEBIT` |
+-| `isRefunded` | `boolean` | Indicates whether a refund has been issued |
+-
+----
+-
+-## 4. The 7-Screen Kiosk Flow
+-
+-The Self-Service Kiosk guides guests through a linear, seven-step booking journey. Each screen maps to a dedicated FXML view and its corresponding `UIController`. Navigation is sequential, with validation checks at each step before the guest can proceed.
+-
+----
+-
+-### Screen 1 — Welcome
+-
+-The entry point of the kiosk experience. This screen displays the Grand Plaza Hotel branding and presents the guest with two options: begin a new reservation or view the hotel's **Rules & Policies**. The Rules & Policies panel opens as a modal overlay and covers cancellation terms, occupancy limits, check-in/check-out times, and pet policies. No data is collected on this screen.
+-
+----
+-
+-### Screen 2 — Search
+-
+-Guests select their desired **check-in date**, **check-out date**, **number of adults**, and **number of children** using date-picker controls and numeric steppers. Upon submission, `BookingService` queries the repository for all rooms where `isAvailable = true` and `maxCapacity >= (adultCount + childCount)` within the specified date range. If no rooms are available, the guest is offered the option to join the waitlist.
+-
+----
+-
+-### Screen 3 — Room Selection
+-
+-Displays all qualifying rooms as visual cards, each presenting the room number, type, a representative image, maximum capacity, and nightly base price. Rooms are grouped by category (Standard, Deluxe, Suite) and sorted by ascending price. Selecting a card highlights it and stores the chosen `Room` entity in the session state, enabling the next screen.
+-
+----
+-
+-### Screen 4 — Guest Details
+-
+-Collects the personal information required to create or retrieve a `Guest` record.
+-
+-**Loyalty Auto-Fill Logic:** When a guest enters their phone number and focus leaves the field, `BookingService` performs a lookup against the `Guest` repository by phone number. If a match is found, the **First Name**, **Last Name**, and **Email** fields are automatically populated with the stored values, and the guest's current loyalty points balance is displayed. This behaviour is demonstrated with the test phone number `1234567890`, which resolves to a pre-seeded guest record in the H2 database.
+-
+-New guests who do not have an existing record complete all fields manually, and a new `Guest` entity is persisted upon reservation confirmation.
+-
+----
+-
+-### Screen 5 — Add-ons
+-
+-Guests may optionally select from a curated list of amenities to enhance their stay. Each add-on is presented with a checkbox, a brief description, and its per-night cost. Selecting or deselecting any amenity immediately recalculates and updates the running price subtotal displayed at the bottom of the screen.
+-
+-Available add-ons include:
+-
+-| Add-on | Cost |
+-|---|---|
+-| High-Speed WiFi | $9.99 / night |
+-| Spa & Wellness Access | $49.99 / night |
+-| Airport Shuttle | $35.00 / trip |
+-| Daily Breakfast Package | $24.99 / night |
+-| Late Check-Out (2:00 PM) | $30.00 flat |
+-
+-The cost of selected add-ons is applied using the **Decorator pattern**, wrapping the base billing object with successive cost layers before the final total is computed.
+-
+----
+-
+-### Screen 6 — Summary
+-
+-Presents a complete, itemized pricing breakdown before the guest commits to the reservation. No further input is required on this screen; its sole purpose is transparency and confirmation.
+-
+-The summary includes:
+-
+-- **Room:** Type, number, and nightly rate
+-- **Duration:** Number of nights
+-- **Subtotal:** Base room cost + add-on costs
+-- **Tax (13% HST):** Applied to the subtotal
+-- **Loyalty Discount:** Deducted if the guest has sufficient points and opts to redeem them
+-- **Total Owing:** Final payable amount
+-
+-The guest may navigate back to any previous screen to adjust their selections. Proceeding from this screen triggers the persistence of the `Reservation` entity and moves to confirmation.
+-
+----
+-
+-### Screen 7 — Confirmation
+-
+-The final screen confirms that the reservation has been successfully created. It displays:
+-
+-- A success status banner
+-- The system-generated **Reservation ID**
+-- The guest's name and selected room details
+-- Check-in and check-out dates
+-- Payment instructions (advising the guest to proceed to the front desk or designated payment terminal)
+-
+-A **Print Receipt** button allows the guest to export a summary, and a **New Reservation** button resets the kiosk to Screen 1.
+-
+----
+-
+-## 5. Admin Module Features
+-
+-The Admin Dashboard is accessible exclusively to hotel staff following successful authentication. It provides a centralized interface for managing all operational aspects of the reservation system.
+-
+-### Secure Login
+-
+-Administrator login is handled by `AuthService`, which retrieves the stored BCrypt hash for the entered username from the database and uses the `BCrypt.checkpw()` method to verify the plaintext password input. No plain-text passwords are stored at any point. Failed login attempts are logged, and repeated failures lock the account for a configurable cooldown period.
+-
+-### Management Dashboard
+-
+-Once authenticated, staff have access to the following management panels:
+-
+-- **Guest Search** — Locate any guest by name, phone number, email, or reservation ID. The detail view displays the guest's full profile, loyalty points balance, and complete reservation history.
+-
+-- **Feedback Review** — View guest-submitted feedback entries associated with completed stays. Staff can mark items as reviewed or escalate them to management. Feedback is timestamped and linked to the originating reservation.
+-
+-- **Billing Management** — Access the payment record for any reservation. Administrators can process manual payment entries, issue refunds (toggling `isRefunded` to `true` on the associated `Payment` entity), and generate billing summaries for specified date ranges.
+-
+-- **Waitlist Management** — View the current waitlist queue of guests awaiting room availability. When a cancellation occurs, `BookingService` evaluates the waitlist in order of entry and triggers an availability notification to the next eligible guest via the Observer pattern. Administrators may also manually promote or remove waitlist entries.
+-
+----
+-
+-## 6. Design Patterns Applied
+-
+-The system integrates five Gang of Four (GoF) design patterns to address recurring architectural challenges. Each pattern is applied to a specific, well-defined problem within the codebase rather than adopted superficially.
+-
+-### Singleton — `EntityManagerFactory`
+-
+-**Problem:** Creating a new `EntityManagerFactory` on each database operation is computationally expensive and leads to connection pool exhaustion under concurrent use.
+-
+-**Solution:** The `JPAUtil` class maintains a single static instance of `EntityManagerFactory`, initialized once when the application starts and shared across all repository classes for the application's lifetime. Thread-safe lazy initialization ensures the instance is only created when first requested.
+-
+-```java
+-public class JPAUtil {
+-    private static EntityManagerFactory emf;
+-
+-    public static synchronized EntityManagerFactory getEntityManagerFactory() {
+-        if (emf == null) {
+-            emf = Persistence.createEntityManagerFactory("grandplaza-pu");
+-        }
+-        return emf;
+-    }
+-}
+-```
+-
+----
+-
+-### Factory — Room Instantiation
+-
+-**Problem:** Room objects are created in multiple contexts (seeding, booking, admin creation), and the construction logic — including type validation and default value assignment — must not be duplicated across calling code.
+-
+-**Solution:** A `RoomFactory` class centralizes all `Room` object construction. Callers supply the room type as a string, and the factory returns a fully initialized `Room` instance with appropriate defaults (e.g., base price and capacity constraints per room category). This ensures all `Room` objects are created consistently and makes it trivial to introduce new room types without modifying any existing creation sites.
+-
+----
+-
+-### Strategy — Dynamic Billing
+-
+-**Problem:** The billing rate for a room varies depending on conditions such as weekend stays, holiday periods, and seasonal peaks. Embedding these rules directly in `PricingService` via conditional logic would make the class difficult to extend and impossible to test in isolation.
+-
+-**Solution:** A `BillingStrategy` interface defines a single `calculateRate(Room room, LocalDate checkIn, LocalDate checkOut)` method. Concrete strategy implementations — `WeekendPricingStrategy` and `SeasonalPricingStrategy` — encapsulate their respective rules independently. `PricingService` holds a reference to the active `BillingStrategy`, which is injected at runtime, allowing pricing behaviour to be swapped or composed without altering the service class.
+-
+----
+-
+-### Decorator — Amenity Cost Calculation
+-
+-**Problem:** The total reservation cost is the sum of the base room price and a variable set of guest-selected add-ons. The combination of selected amenities differs per booking, making static subclassing impractical.
+-
+-**Solution:** A `BillComponent` interface exposes a `getCost()` method. The base `RoomBill` class implements this interface and returns the room's nightly rate multiplied by the number of nights. Each amenity — `WiFiDecorator`, `SpaDecorator`, `BreakfastDecorator`, and so on — wraps an existing `BillComponent` and adds its own cost on top when `getCost()` is called. The final total is obtained by calling `getCost()` on the outermost decorator in the chain, producing the cumulative bill without any conditional logic.
+-
+----
+-
+-### Observer — Waitlist & Availability Notifications
+-
+-**Problem:** When a reservation is cancelled and a room becomes available, all guests currently on the waitlist for that room type need to be notified promptly. Polling-based checks would introduce unnecessary load and latency.
+-
+-**Solution:** `BookingService` acts as the Subject (Observable) and maintains a list of registered `WaitlistObserver` instances. Each observer represents a waitlisted guest entry. When a cancellation triggers a room's `isAvailable` flag to return to `true`, `BookingService` calls `notifyObservers()`, iterating through all registered observers and invoking their `update()` method. The notification surfaces as an alert in the Admin Dashboard's Waitlist panel and, in a future milestone, may be extended to trigger an email notification.
+-
+----
+-
+-## 7. Execution Instructions
+-
+-Ensure the following prerequisites are met before running the application:
+-
+-- **Java 17 JDK** installed and configured on `PATH`
+-- **Apache Maven 3.8+** installed and configured on `PATH`
+-- No external database configuration required — H2 runs embedded
+-
+-### Step 1 — Clean and Compile
+-
+-```bash
+-mvn clean compile
+-```
+-
+-This command removes any previously compiled artifacts from the `target/` directory, resolves all declared Maven dependencies (including JavaFX modules, Hibernate, H2, and BCrypt), and compiles the full source tree. Verify that the build output ends with `BUILD SUCCESS` before proceeding.
+-
+-### Step 2 — Run the Application
+-
+-```bash
+-mvn javafx:run
+-```
+-
+-This command launches the JavaFX application at the configured 1400×900 resolution using the `javafx-maven-plugin`. The application entry point is `com.grandplaza.hotel.MainApp`, which initializes `JPAUtil`, seeds the H2 database with sample data (including the test guest record for phone `1234567890`), and loads the Welcome screen as the primary stage.
+-
+----
+-
+-*Grand Plaza Hotel Reservation System — Milestone 1 | Seneca Polytechnic*
+\ No newline at end of file
+Index: src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java b/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java
+new file mode 100644
+--- /dev/null	(date 1774315409057)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java	(date 1774315409057)
+@@ -0,0 +1,265 @@
++package com.seneca.hotelreservation_system.controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.*;
++import javafx.scene.layout.GridPane;
++import java.io.IOException;
++import java.math.BigDecimal;
++import java.time.temporal.ChronoUnit;
++
++public class AddOnsController {
++
++    // FXML Elements - Add-ons Checkboxes
++    @FXML
++    private CheckBox wifiCheck;
++
++    @FXML
++    private CheckBox breakfastCheck;
++
++    @FXML
++    private CheckBox parkingCheck;
++
++    @FXML
++    private CheckBox spaCheck;
++
++    @FXML
++    private CheckBox shuttleCheck;
++
++    @FXML
++    private CheckBox roomServiceCheck;
++
++    // FXML Elements - Quantity Spinners
++    @FXML
++    private Spinner<Integer> wifiSpinner;
++
++    @FXML
++    private Spinner<Integer> breakfastSpinner;
++
++    @FXML
++    private Spinner<Integer> parkingSpinner;
++
++    @FXML
++    private Spinner<Integer> spaSpinner;
++
++    @FXML
++    private Spinner<Integer> shuttleSpinner;
++
++    @FXML
++    private Spinner<Integer> roomServiceSpinner;
++
++    // FXML Elements - Display Labels
++    @FXML
++    private Label addonsTotalLabel;
++
++    @FXML
++    private Label nightsLabel;
++
++    @FXML
++    private Label guestsLabel;
++
++    // Reference to main controller
++    private UIController mainController;
++
++    // Add-on prices
++    private static final BigDecimal WIFI_PRICE_PER_NIGHT = new BigDecimal("10");
++    private static final BigDecimal BREAKFAST_PRICE_PER_PERSON_PER_DAY = new BigDecimal("15");
++    private static final BigDecimal PARKING_PRICE_PER_DAY = new BigDecimal("20");
++    private static final BigDecimal SPA_PRICE_PER_SESSION = new BigDecimal("50");
++    private static final BigDecimal SHUTTLE_PRICE_PER_TRIP = new BigDecimal("25");
++    private static final BigDecimal ROOM_SERVICE_PRICE_PER_DAY = new BigDecimal("30");
++
++    private int nights;
++    private int totalGuests;
++
++    /**
++     * Set the parent controller to access booking data
++     */
++    public void setMainController(UIController controller) {
++        this.mainController = controller;
++        loadBookingInfo();
++        loadExistingData();
++        setupSpinners();
++        setupCheckboxListeners();
++        updateTotalDisplay();
++    }
++
++    private void loadBookingInfo() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null && data.checkIn != null && data.checkOut != null) {
++            nights = (int) ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
++            totalGuests = data.adults + data.children;
++
++            nightsLabel.setText("for " + nights + " nights");
++            guestsLabel.setText(totalGuests + " guest(s)");
++        }
++    }
++
++    private void loadExistingData() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null) {
++            wifiCheck.setSelected(data.hasWifi);
++            breakfastCheck.setSelected(data.hasBreakfast);
++            parkingCheck.setSelected(data.hasParking);
++            spaCheck.setSelected(data.hasSpa);
++
++            if (data.wifiQuantity > 0) {
++                wifiSpinner.getValueFactory().setValue(data.wifiQuantity);
++            }
++            if (data.breakfastQuantity > 0) {
++                breakfastSpinner.getValueFactory().setValue(data.breakfastQuantity);
++            }
++            if (data.parkingQuantity > 0) {
++                parkingSpinner.getValueFactory().setValue(data.parkingQuantity);
++            }
++            if (data.spaQuantity > 0) {
++                spaSpinner.getValueFactory().setValue(data.spaQuantity);
++            }
++        }
++    }
++
++    private void setupSpinners() {
++        // Wi-Fi Spinner (quantity = number of devices/rooms)
++        wifiSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 5, 0));
++        wifiSpinner.setEditable(true);
++        wifiSpinner.disableProperty().bind(wifiCheck.selectedProperty().not());
++
++        // Breakfast Spinner (quantity = number of people)
++        breakfastSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, totalGuests, 0));
++        breakfastSpinner.setEditable(true);
++        breakfastSpinner.disableProperty().bind(breakfastCheck.selectedProperty().not());
++
++        // Parking Spinner (quantity = number of cars)
++        parkingSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 3, 0));
++        parkingSpinner.setEditable(true);
++        parkingSpinner.disableProperty().bind(parkingCheck.selectedProperty().not());
++
++        // Spa Spinner (quantity = number of sessions)
++        spaSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0));
++        spaSpinner.setEditable(true);
++        spaSpinner.disableProperty().bind(spaCheck.selectedProperty().not());
++
++        // Shuttle Spinner (quantity = number of trips)
++        shuttleSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 4, 0));
++        shuttleSpinner.setEditable(true);
++        shuttleSpinner.disableProperty().bind(shuttleCheck.selectedProperty().not());
++
++        // Room Service Spinner (quantity = number of days)
++        roomServiceSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, nights, 0));
++        roomServiceSpinner.setEditable(true);
++        roomServiceSpinner.disableProperty().bind(roomServiceCheck.selectedProperty().not());
++
++        // Add listeners to spinners to update total
++        wifiSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++        breakfastSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++        parkingSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++        spaSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++        shuttleSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++        roomServiceSpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalDisplay());
++    }
++
++    private void setupCheckboxListeners() {
++        wifiCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) wifiSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++
++        breakfastCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) breakfastSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++
++        parkingCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) parkingSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++
++        spaCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) spaSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++
++        shuttleCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) shuttleSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++
++        roomServiceCheck.selectedProperty().addListener((obs, oldVal, newVal) -> {
++            if (!newVal) roomServiceSpinner.getValueFactory().setValue(0);
++            updateTotalDisplay();
++        });
++    }
++
++    private void updateTotalDisplay() {
++        BigDecimal total = calculateTotal();
++        addonsTotalLabel.setText("$" + total.toString());
++    }
++
++    private BigDecimal calculateTotal() {
++        BigDecimal total = BigDecimal.ZERO;
++
++        // Wi-Fi
++        if (wifiCheck.isSelected() && wifiSpinner.getValue() > 0) {
++            total = total.add(WIFI_PRICE_PER_NIGHT
++                    .multiply(BigDecimal.valueOf(nights))
++                    .multiply(BigDecimal.valueOf(wifiSpinner.getValue())));
++        }
++
++        // Breakfast
++        if (breakfastCheck.isSelected() && breakfastSpinner.getValue() > 0) {
++            total = total.add(BREAKFAST_PRICE_PER_PERSON_PER_DAY
++                    .multiply(BigDecimal.valueOf(nights))
++                    .multiply(BigDecimal.valueOf(breakfastSpinner.getValue())));
++        }
++
++        // Parking
++        if (parkingCheck.isSelected() && parkingSpinner.getValue() > 0) {
++            total = total.add(PARKING_PRICE_PER_DAY
++                    .multiply(BigDecimal.valueOf(nights))
++                    .multiply(BigDecimal.valueOf(parkingSpinner.getValue())));
++        }
++
++        // Spa
++        if (spaCheck.isSelected() && spaSpinner.getValue() > 0) {
++            total = total.add(SPA_PRICE_PER_SESSION
++                    .multiply(BigDecimal.valueOf(spaSpinner.getValue())));
++        }
++
++        // Shuttle
++        if (shuttleCheck.isSelected() && shuttleSpinner.getValue() > 0) {
++            total = total.add(SHUTTLE_PRICE_PER_TRIP
++                    .multiply(BigDecimal.valueOf(shuttleSpinner.getValue())));
++        }
++
++        // Room Service
++        if (roomServiceCheck.isSelected() && roomServiceSpinner.getValue() > 0) {
++            total = total.add(ROOM_SERVICE_PRICE_PER_DAY
++                    .multiply(BigDecimal.valueOf(roomServiceSpinner.getValue())));
++        }
++
++        return total;
++    }
++
++    @FXML
++    public void goToLoyalty(ActionEvent event) throws IOException {
++        // Save add-ons data to main controller
++        mainController.setAddonsData(
++                wifiCheck.isSelected(),
++                breakfastCheck.isSelected(),
++                parkingCheck.isSelected(),
++                spaCheck.isSelected(),
++                wifiSpinner.getValue(),
++                breakfastSpinner.getValue(),
++                parkingSpinner.getValue(),
++                spaSpinner.getValue()
++        );
++
++        // Navigate to next screen
++        mainController.goToLoyalty(event);
++    }
++
++    @FXML
++    public void goToRoomSelection(ActionEvent event) throws IOException {
++        mainController.goToRoomSelection(event);
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java b/src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java
+new file mode 100644
+--- /dev/null	(date 1774315505855)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/LoyaltyController.java	(date 1774315505855)
+@@ -0,0 +1,221 @@
++package com.seneca.hotelreservation_system.controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.*;
++import javafx.scene.layout.HBox;
++import javafx.scene.layout.VBox;
++import java.io.IOException;
++import java.math.BigDecimal;
++
++public class LoyaltyController {
++
++    // FXML Elements - Enrollment
++    @FXML
++    private ToggleGroup enrollGroup;
++
++    @FXML
++    private RadioButton enrollYesBtn;
++
++    @FXML
++    private RadioButton enrollNoBtn;
++
++    @FXML
++    private Label loyaltyNumberLabel;
++
++    @FXML
++    private VBox loyaltyNumberBox;
++
++    // FXML Elements - Points Calculator
++    @FXML
++    private Label bookingTotalLabel;
++
++    @FXML
++    private Label pointsToEarnLabel;
++
++    @FXML
++    private TextField pointsToRedeemField;
++
++    @FXML
++    private Label discountAmountLabel;
++
++    @FXML
++    private Label newTotalLabel;
++
++    @FXML
++    private Button applyPointsBtn;
++
++    // FXML Elements - Benefits Section
++    @FXML
++    private VBox benefitsBox;
++
++    @FXML
++    private VBox calculatorBox;
++
++    // Reference to main controller
++    private UIController mainController;
++
++    // Loyalty constants
++    private static final int POINTS_PER_10_DOLLARS = 10;  // 10 points per $10 = 1 point per $1
++    private static final int POINTS_FOR_10_DOLLAR_DISCOUNT = 100;  // 100 points = $10 discount
++    private static final BigDecimal MAX_DISCOUNT_PERCENT = new BigDecimal("0.30");  // Max 30% discount
++
++    private BigDecimal originalTotal;
++    private int earnedPoints;
++    private int appliedPoints = 0;
++    private BigDecimal appliedDiscount = BigDecimal.ZERO;
++
++    /**
++     * Set the parent controller to access booking data
++     */
++    public void setMainController(UIController controller) {
++        this.mainController = controller;
++        loadBookingData();
++        calculatePoints();
++        setupEnrollmentDisplay();
++        setupPointsRedeemField();
++    }
++
++    private void loadBookingData() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null) {
++            originalTotal = data.total != null ? data.total : BigDecimal.ZERO;
++            bookingTotalLabel.setText("$" + originalTotal.toString());
++
++            // Load existing loyalty choice if any
++            enrollYesBtn.setSelected(data.enrollLoyalty);
++            enrollNoBtn.setSelected(!data.enrollLoyalty);
++
++            if (data.loyaltyPointsToRedeem > 0) {
++                pointsToRedeemField.setText(String.valueOf(data.loyaltyPointsToRedeem));
++                applyPoints();
++            }
++        }
++    }
++
++    private void calculatePoints() {
++        // Earn 10 points per $1 spent (or 1 point per $0.10)
++        // Actually: 1 point per $1 spent (since 10 points per $10)
++        earnedPoints = originalTotal.intValue();  // $425 = 425 points
++        pointsToEarnLabel.setText(String.valueOf(earnedPoints));
++    }
++
++    private void setupEnrollmentDisplay() {
++        // Generate unique loyalty number
++        String loyaltyNumber = "LTY-" + System.currentTimeMillis();
++        loyaltyNumberLabel.setText(loyaltyNumber);
++
++        // Show/hide loyalty number based on enrollment choice
++        loyaltyNumberBox.setVisible(enrollYesBtn.isSelected());
++        loyaltyNumberBox.setManaged(enrollYesBtn.isSelected());
++
++        enrollGroup.selectedToggleProperty().addListener((obs, oldVal, newVal) -> {
++            boolean isEnrolled = newVal == enrollYesBtn;
++            loyaltyNumberBox.setVisible(isEnrolled);
++            loyaltyNumberBox.setManaged(isEnrolled);
++        });
++    }
++
++    private void setupPointsRedeemField() {
++        pointsToRedeemField.textProperty().addListener((obs, oldVal, newVal) -> {
++            validatePointsInput(newVal);
++        });
++
++        applyPointsBtn.setOnAction(e -> applyPoints());
++    }
++
++    private void validatePointsInput(String input) {
++        try {
++            if (input == null || input.isEmpty()) {
++                return;
++            }
++
++            int points = Integer.parseInt(input);
++            int maxPoints = earnedPoints;
++
++            if (points < 0) {
++                pointsToRedeemField.setText("0");
++            } else if (points > maxPoints) {
++                pointsToRedeemField.setText(String.valueOf(maxPoints));
++                showAlert("Maximum Points", "You can only redeem up to " + maxPoints + " points.");
++            }
++        } catch (NumberFormatException e) {
++            pointsToRedeemField.setText("0");
++        }
++    }
++
++    private void applyPoints() {
++        try {
++            int points = Integer.parseInt(pointsToRedeemField.getText().trim());
++
++            // Calculate discount: 100 points = $10 discount
++            BigDecimal discountFromPoints = BigDecimal.valueOf(points / POINTS_FOR_10_DOLLAR_DISCOUNT)
++                    .multiply(BigDecimal.TEN);
++
++            // Apply maximum discount cap (30% of total)
++            BigDecimal maxDiscount = originalTotal.multiply(MAX_DISCOUNT_PERCENT);
++
++            if (discountFromPoints.compareTo(maxDiscount) > 0) {
++                discountFromPoints = maxDiscount;
++                points = maxDiscount.multiply(BigDecimal.valueOf(POINTS_FOR_10_DOLLAR_DISCOUNT))
++                        .divide(BigDecimal.TEN, 0, BigDecimal.ROUND_DOWN).intValue();
++                pointsToRedeemField.setText(String.valueOf(points));
++                showAlert("Discount Cap", "Maximum discount of 30% applied.");
++            }
++
++            appliedPoints = points;
++            appliedDiscount = discountFromPoints;
++
++            BigDecimal newTotal = originalTotal.subtract(appliedDiscount);
++            if (newTotal.compareTo(BigDecimal.ZERO) < 0) {
++                newTotal = BigDecimal.ZERO;
++            }
++
++            discountAmountLabel.setText("-$" + appliedDiscount.toString());
++            newTotalLabel.setText("$" + newTotal.toString());
++
++        } catch (NumberFormatException e) {
++            appliedPoints = 0;
++            appliedDiscount = BigDecimal.ZERO;
++            discountAmountLabel.setText("-$0");
++            newTotalLabel.setText("$" + originalTotal.toString());
++        }
++    }
++
++    @FXML
++    public void goToSummary(ActionEvent event) throws IOException {
++        // Save loyalty data to main controller
++        boolean enrollLoyalty = enrollYesBtn.isSelected();
++        int pointsToRedeem = 0;
++
++        try {
++            pointsToRedeem = Integer.parseInt(pointsToRedeemField.getText().trim());
++        } catch (NumberFormatException e) {
++            pointsToRedeem = 0;
++        }
++
++        mainController.setLoyaltyData(enrollLoyalty, pointsToRedeem);
++
++        // Update total with discount
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null && appliedDiscount.compareTo(BigDecimal.ZERO) > 0) {
++            data.total = originalTotal.subtract(appliedDiscount);
++        }
++
++        // Navigate to next screen
++        mainController.goToSummary(event);
++    }
++
++    @FXML
++    public void goToAddOns(ActionEvent event) throws IOException {
++        mainController.goToAddOns(event);
++    }
++
++    private void showAlert(String title, String message) {
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle(title);
++        alert.setHeaderText(null);
++        alert.setContentText(message);
++        alert.showAndWait();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java b/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java
+new file mode 100644
+--- /dev/null	(date 1774315581052)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java	(date 1774315581052)
+@@ -0,0 +1,295 @@
++package com.seneca.hotelreservation_system.controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.Label;
++import javafx.scene.layout.HBox;
++import javafx.scene.layout.VBox;
++import java.io.IOException;
++import java.math.BigDecimal;
++import java.time.format.DateTimeFormatter;
++import java.time.temporal.ChronoUnit;
++
++public class SummaryController {
++
++    // FXML Elements - Guest Info
++    @FXML
++    private Label summaryGuestName;
++
++    @FXML
++    private Label summaryCheckIn;
++
++    @FXML
++    private Label summaryCheckOut;
++
++    @FXML
++    private Label summaryNights;
++
++    @FXML
++    private Label summaryGuests;
++
++    // FXML Elements - Room Info
++    @FXML
++    private Label summaryRoomType;
++
++    @FXML
++    private Label summaryRoomQuantity;
++
++    @FXML
++    private Label summaryRoomPrice;
++
++    // FXML Elements - Add-ons (dynamic visibility)
++    @FXML
++    private HBox summaryWifiRow;
++
++    @FXML
++    private Label summaryWifiLabel;
++
++    @FXML
++    private Label summaryWifiPrice;
++
++    @FXML
++    private HBox summaryBreakfastRow;
++
++    @FXML
++    private Label summaryBreakfastLabel;
++
++    @FXML
++    private Label summaryBreakfastPrice;
++
++    @FXML
++    private HBox summaryParkingRow;
++
++    @FXML
++    private Label summaryParkingLabel;
++
++    @FXML
++    private Label summaryParkingPrice;
++
++    @FXML
++    private HBox summarySpaRow;
++
++    @FXML
++    private Label summarySpaLabel;
++
++    @FXML
++    private Label summarySpaPrice;
++
++    @FXML
++    private HBox summaryShuttleRow;
++
++    @FXML
++    private Label summaryShuttleLabel;
++
++    @FXML
++    private Label summaryShuttlePrice;
++
++    @FXML
++    private HBox summaryRoomServiceRow;
++
++    @FXML
++    private Label summaryRoomServiceLabel;
++
++    @FXML
++    private Label summaryRoomServicePrice;
++
++    // FXML Elements - Price Breakdown
++    @FXML
++    private Label pricingTypeLabel;
++
++    @FXML
++    private Label subtotalLabel;
++
++    @FXML
++    private Label taxLabel;
++
++    @FXML
++    private HBox summaryDiscountRow;
++
++    @FXML
++    private Label summaryDiscount;
++
++    @FXML
++    private Label totalLabel;
++
++    // FXML Elements - Loyalty Info
++    @FXML
++    private Label loyaltyStatusLabel;
++
++    @FXML
++    private Label loyaltyNumberLabel;
++
++    @FXML
++    private VBox loyaltyInfoBox;
++
++    // Reference to main controller
++    private UIController mainController;
++
++    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy");
++
++    /**
++     * Set the parent controller and load summary data
++     */
++    public void setMainController(UIController controller) {
++        this.mainController = controller;
++        loadSummaryData();
++    }
++
++    private void loadSummaryData() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data == null) return;
++
++        // Guest Information
++        summaryGuestName.setText(data.guestName != null ? data.guestName : "Guest");
++
++        if (data.checkIn != null && data.checkOut != null) {
++            summaryCheckIn.setText(data.checkIn.format(dateFormatter) + " (3:00 PM)");
++            summaryCheckOut.setText(data.checkOut.format(dateFormatter) + " (11:00 AM)");
++            long nights = ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
++            summaryNights.setText(nights + " nights");
++        }
++
++        summaryGuests.setText(data.adults + " Adults, " + data.children + " Children");
++
++        // Room Information
++        String roomTypeName = getRoomTypeName(data.selectedRoomType);
++        summaryRoomType.setText(roomTypeName);
++        summaryRoomQuantity.setText("x" + data.roomQuantity);
++        summaryRoomPrice.setText("$" + mainController.getRoomPrice());
++
++        // Add-ons (show only if selected)
++        setupAddOnsDisplay(data);
++
++        // Price Breakdown with Dynamic Pricing
++        pricingTypeLabel.setText(mainController.getPricingTypeDescription());
++        subtotalLabel.setText("$" + mainController.getSubtotal());
++        taxLabel.setText("$" + mainController.getTax());
++
++        // Loyalty Discount (if any points redeemed)
++        if (data.loyaltyPointsToRedeem > 0) {
++            BigDecimal discount = calculateLoyaltyDiscount(data);
++            summaryDiscountRow.setVisible(true);
++            summaryDiscountRow.setManaged(true);
++            summaryDiscount.setText("-$" + discount);
++        } else {
++            summaryDiscountRow.setVisible(false);
++            summaryDiscountRow.setManaged(false);
++        }
++
++        totalLabel.setText("$" + mainController.getTotal());
++
++        // Loyalty Information
++        if (data.enrollLoyalty) {
++            loyaltyStatusLabel.setText("✓ Enrolled");
++            loyaltyNumberLabel.setText(generateLoyaltyNumber());
++            loyaltyInfoBox.setVisible(true);
++            loyaltyInfoBox.setManaged(true);
++        } else {
++            loyaltyStatusLabel.setText("Not Enrolled");
++            loyaltyInfoBox.setVisible(false);
++            loyaltyInfoBox.setManaged(false);
++        }
++    }
++
++    private String getRoomTypeName(UIController.RoomType type) {
++        switch (type) {
++            case SINGLE: return "Single Room (1 Queen Bed)";
++            case DOUBLE: return "Double Room (2 Queen Beds)";
++            case DELUXE: return "Deluxe Room (King Bed + City View)";
++            case PENTHOUSE: return "Penthouse Suite (Panoramic View + Jacuzzi)";
++            default: return "Standard Room";
++        }
++    }
++
++    private void setupAddOnsDisplay(UIController.BookingData data) {
++        // Wi-Fi
++        if (data.hasWifi && data.wifiQuantity > 0) {
++            summaryWifiRow.setVisible(true);
++            summaryWifiRow.setManaged(true);
++            summaryWifiLabel.setText("Wi-Fi (" + data.wifiQuantity + " devices, " + data.nights + " nights)");
++            summaryWifiPrice.setText("$" + calculateWifiPrice(data));
++        } else {
++            summaryWifiRow.setVisible(false);
++            summaryWifiRow.setManaged(false);
++        }
++
++        // Breakfast
++        if (data.hasBreakfast && data.breakfastQuantity > 0) {
++            summaryBreakfastRow.setVisible(true);
++            summaryBreakfastRow.setManaged(true);
++            summaryBreakfastLabel.setText("Breakfast (" + data.breakfastQuantity + " persons, " + data.nights + " days)");
++            summaryBreakfastPrice.setText("$" + calculateBreakfastPrice(data));
++        } else {
++            summaryBreakfastRow.setVisible(false);
++            summaryBreakfastRow.setManaged(false);
++        }
++
++        // Parking
++        if (data.hasParking && data.parkingQuantity > 0) {
++            summaryParkingRow.setVisible(true);
++            summaryParkingRow.setManaged(true);
++            summaryParkingLabel.setText("Parking (" + data.parkingQuantity + " cars, " + data.nights + " nights)");
++            summaryParkingPrice.setText("$" + calculateParkingPrice(data));
++        } else {
++            summaryParkingRow.setVisible(false);
++            summaryParkingRow.setManaged(false);
++        }
++
++        // Spa
++        if (data.hasSpa && data.spaQuantity > 0) {
++            summarySpaRow.setVisible(true);
++            summarySpaRow.setManaged(true);
++            summarySpaLabel.setText("Spa (" + data.spaQuantity + " sessions)");
++            summarySpaPrice.setText("$" + calculateSpaPrice(data));
++        } else {
++            summarySpaRow.setVisible(false);
++            summarySpaRow.setManaged(false);
++        }
++
++        // Shuttle (if available)
++        // Room Service (if available)
++    }
++
++    private BigDecimal calculateWifiPrice(UIController.BookingData data) {
++        return BigDecimal.valueOf(10)
++                .multiply(BigDecimal.valueOf(data.nights))
++                .multiply(BigDecimal.valueOf(data.wifiQuantity));
++    }
++
++    private BigDecimal calculateBreakfastPrice(UIController.BookingData data) {
++        return BigDecimal.valueOf(15)
++                .multiply(BigDecimal.valueOf(data.nights))
++                .multiply(BigDecimal.valueOf(data.breakfastQuantity));
++    }
++
++    private BigDecimal calculateParkingPrice(UIController.BookingData data) {
++        return BigDecimal.valueOf(20)
++                .multiply(BigDecimal.valueOf(data.nights))
++                .multiply(BigDecimal.valueOf(data.parkingQuantity));
++    }
++
++    private BigDecimal calculateSpaPrice(UIController.BookingData data) {
++        return BigDecimal.valueOf(50)
++                .multiply(BigDecimal.valueOf(data.spaQuantity));
++    }
++
++    private BigDecimal calculateLoyaltyDiscount(UIController.BookingData data) {
++        // 100 points = $10 discount
++        return BigDecimal.valueOf(data.loyaltyPointsToRedeem / 100)
++                .multiply(BigDecimal.TEN);
++    }
++
++    private String generateLoyaltyNumber() {
++        return "LTY-" + System.currentTimeMillis();
++    }
++
++    @FXML
++    public void goToConfirmation(ActionEvent event) throws IOException {
++        mainController.goToConfirmation(event);
++    }
++
++    @FXML
++    public void goToLoyalty(ActionEvent event) throws IOException {
++        mainController.goToLoyalty(event);
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java b/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java
+new file mode 100644
+--- /dev/null	(date 1774315655565)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java	(date 1774315655565)
+@@ -0,0 +1,247 @@
++package com.seneca.hotelreservation_system.controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.*;
++import javafx.scene.layout.VBox;
++import java.io.IOException;
++import java.math.BigDecimal;
++import java.time.LocalDateTime;
++import java.time.format.DateTimeFormatter;
++
++public class ConfirmationController {
++
++    // FXML Elements
++    @FXML
++    private Label bookingReferenceLabel;
++
++    @FXML
++    private Label guestNameLabel;
++
++    @FXML
++    private Label checkInLabel;
++
++    @FXML
++    private Label checkOutLabel;
++
++    @FXML
++    private Label nightsLabel;
++
++    @FXML
++    private Label roomTypeLabel;
++
++    @FXML
++    private Label roomQuantityLabel;
++
++    @FXML
++    private Label addOnsSummaryLabel;
++
++    @FXML
++    private Label totalAmountLabel;
++
++    @FXML
++    private Label paymentInstructionLabel;
++
++    @FXML
++    private Label loyaltyNumberLabel;
++
++    @FXML
++    private VBox loyaltyInfoBox;
++
++    @FXML
++    private Label confirmationDateLabel;
++
++    @FXML
++    private Label emailLabel;
++
++    @FXML
++    private TextArea addOnsDetailsArea;
++
++    // Reference to main controller
++    private UIController mainController;
++
++    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy");
++    private DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy HH:mm:ss");
++
++    /**
++     * Set the parent controller and load confirmation data
++     */
++    public void setMainController(UIController controller) {
++        this.mainController = controller;
++        loadConfirmationData();
++    }
++
++    private void loadConfirmationData() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data == null) return;
++
++        // Generate unique booking reference
++        String bookingRef = generateBookingReference();
++        bookingReferenceLabel.setText(bookingRef);
++
++        // Guest Information
++        guestNameLabel.setText(data.guestName != null ? data.guestName : "Valued Guest");
++
++        // Dates
++        if (data.checkIn != null && data.checkOut != null) {
++            checkInLabel.setText(data.checkIn.format(dateFormatter) + " (3:00 PM)");
++            checkOutLabel.setText(data.checkOut.format(dateFormatter) + " (11:00 AM)");
++            nightsLabel.setText(data.nights + " nights");
++        }
++
++        // Room Information
++        String roomTypeName = getRoomTypeName(data.selectedRoomType);
++        roomTypeLabel.setText(roomTypeName);
++        roomQuantityLabel.setText("x" + data.roomQuantity);
++
++        // Add-ons Summary
++        StringBuilder addOnsBuilder = new StringBuilder();
++        boolean hasAddOns = false;
++
++        if (data.hasWifi && data.wifiQuantity > 0) {
++            addOnsBuilder.append("• Wi-Fi: ").append(data.wifiQuantity).append(" device(s)\n");
++            hasAddOns = true;
++        }
++        if (data.hasBreakfast && data.breakfastQuantity > 0) {
++            addOnsBuilder.append("• Breakfast: ").append(data.breakfastQuantity).append(" person(s)\n");
++            hasAddOns = true;
++        }
++        if (data.hasParking && data.parkingQuantity > 0) {
++            addOnsBuilder.append("• Parking: ").append(data.parkingQuantity).append(" car(s)\n");
++            hasAddOns = true;
++        }
++        if (data.hasSpa && data.spaQuantity > 0) {
++            addOnsBuilder.append("• Spa: ").append(data.spaQuantity).append(" session(s)\n");
++            hasAddOns = true;
++        }
++
++        if (hasAddOns) {
++            addOnsDetailsArea.setText(addOnsBuilder.toString());
++            addOnsDetailsArea.setVisible(true);
++            addOnsDetailsArea.setManaged(true);
++        } else {
++            addOnsDetailsArea.setText("No additional services selected");
++            addOnsDetailsArea.setVisible(true);
++            addOnsDetailsArea.setManaged(true);
++        }
++
++        // Total Amount
++        totalAmountLabel.setText("$" + mainController.getTotal());
++
++        // Payment Instruction (front desk)
++        paymentInstructionLabel.setText(
++                "✓ Please proceed to the FRONT DESK upon arrival\n" +
++                        "✓ Complete payment (Cash, Card, or Loyalty Points)\n" +
++                        "✓ Receive your room keys\n" +
++                        "✓ Enjoy your stay at GRAND HOTEL!"
++        );
++
++        // Loyalty Information
++        if (data.enrollLoyalty) {
++            String loyaltyNumber = generateLoyaltyNumber();
++            loyaltyNumberLabel.setText(loyaltyNumber);
++            loyaltyInfoBox.setVisible(true);
++            loyaltyInfoBox.setManaged(true);
++        } else {
++            loyaltyInfoBox.setVisible(false);
++            loyaltyInfoBox.setManaged(false);
++        }
++
++        // Confirmation Date & Time
++        confirmationDateLabel.setText(timeFormatter.format(LocalDateTime.now()));
++
++        // Email
++        if (data.guestEmail != null) {
++            emailLabel.setText(data.guestEmail);
++        }
++
++        // SAVE TO DATABASE - Call persistence
++        saveReservationToDatabase();
++    }
++
++    private String getRoomTypeName(UIController.RoomType type) {
++        switch (type) {
++            case SINGLE: return "Single Room (1 Queen Bed, 25m²)";
++            case DOUBLE: return "Double Room (2 Queen Beds, 35m²)";
++            case DELUXE: return "Deluxe Room (King Bed + City View, 45m²)";
++            case PENTHOUSE: return "Penthouse Suite (Panoramic View + Jacuzzi, 70m²)";
++            default: return "Standard Room";
++        }
++    }
++
++    private String generateBookingReference() {
++        // Format: BK-YYYYMMDD-XXXX
++        String datePart = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
++        String randomPart = String.format("%04d", (int)(Math.random() * 10000));
++        return "BK-" + datePart + "-" + randomPart;
++    }
++
++    private String generateLoyaltyNumber() {
++        // Format: LTY-YYYYMMDD-XXXX
++        String datePart = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
++        String randomPart = String.format("%04d", (int)(Math.random() * 10000));
++        return "LTY-" + datePart + "-" + randomPart;
++    }
++
++    private void saveReservationToDatabase() {
++        // TODO: Implement actual database save using JPA
++        // This is where you would persist to the database
++
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null) {
++            System.out.println("========================================");
++            System.out.println("RESERVATION SAVED TO DATABASE");
++            System.out.println("========================================");
++            System.out.println("Booking Ref: " + bookingReferenceLabel.getText());
++            System.out.println("Guest: " + data.guestName);
++            System.out.println("Email: " + data.guestEmail);
++            System.out.println("Phone: " + data.guestPhone);
++            System.out.println("Check-in: " + data.checkIn);
++            System.out.println("Check-out: " + data.checkOut);
++            System.out.println("Room: " + data.selectedRoomType + " x" + data.roomQuantity);
++            System.out.println("Total: $" + mainController.getTotal());
++            System.out.println("Loyalty Enrolled: " + data.enrollLoyalty);
++            System.out.println("========================================");
++        }
++    }
++
++    @FXML
++    public void goToWelcome(ActionEvent event) throws IOException {
++        // Reset everything for new booking
++        mainController.goToWelcome(event);
++    }
++
++    @FXML
++    public void printConfirmation() {
++        // Print dialog simulation
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle("Print Confirmation");
++        alert.setHeaderText("Printing Confirmation");
++        alert.setContentText("Your booking confirmation has been sent to the printer.\n\n" +
++                "Booking Reference: " + bookingReferenceLabel.getText());
++        alert.showAndWait();
++    }
++
++    @FXML
++    public void emailConfirmation() {
++        // Email simulation
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle("Email Confirmation");
++        alert.setHeaderText("Confirmation Sent");
++        alert.setContentText("Your booking confirmation has been sent to:\n" +
++                emailLabel.getText() + "\n\n" +
++                "Please check your inbox (and spam folder) for details.");
++        alert.showAndWait();
++    }
++
++    @FXML
++    public void downloadConfirmation() {
++        // Download simulation
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle("Download Confirmation");
++        alert.setHeaderText("Download Started");
++        alert.setContentText("Your booking confirmation is being downloaded.\n\n" +
++                "File: confirmation_" + bookingReferenceLabel.getText() + ".pdf");
++        alert.showAndWait();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java b/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java
+new file mode 100644
+--- /dev/null	(date 1774318860915)
++++ b/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java	(date 1774318860915)
+@@ -0,0 +1,372 @@
++package com.seneca.hotelreservation_system.controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.scene.control.*;
++import javafx.scene.layout.HBox;
++import javafx.scene.layout.VBox;
++import java.io.IOException;
++import java.math.BigDecimal;
++import java.time.temporal.ChronoUnit;
++
++public class RoomSelectionController {
++
++    // FXML Elements
++    @FXML
++    private Label searchSummaryLabel;
++
++    @FXML
++    private Label capacityLabel;
++
++    @FXML
++    private ProgressBar capacityBar;
++
++    @FXML
++    private RadioButton singleRoomRadio;
++
++    @FXML
++    private RadioButton doubleRoomRadio;
++
++    @FXML
++    private RadioButton deluxeRoomRadio;
++
++    @FXML
++    private RadioButton penthouseRadio;
++
++    @FXML
++    private ToggleGroup roomToggleGroup;
++
++    @FXML
++    private ComboBox<Integer> singleRoomQty;
++
++    @FXML
++    private ComboBox<Integer> doubleRoomQty;
++
++    @FXML
++    private ComboBox<Integer> deluxeRoomQty;
++
++    @FXML
++    private ComboBox<Integer> penthouseQty;
++
++    @FXML
++    private HBox singleRoomCard;
++
++    @FXML
++    private HBox doubleRoomCard;
++
++    @FXML
++    private HBox deluxeRoomCard;
++
++    @FXML
++    private HBox penthouseCard;
++
++    // Reference to main controller
++    private UIController mainController;
++
++    // Room type enum from UIController
++    private UIController.RoomType selectedType;
++    private int selectedQuantity = 1;
++
++    // Room details
++    private static final int SINGLE_MAX = 2;
++    private static final int DOUBLE_MAX = 4;
++    private static final int DELUXE_MAX = 2;
++    private static final int PENTHOUSE_MAX = 2;
++
++    /**
++     * Set the parent controller to access booking data
++     */
++    public void setMainController(UIController controller) {
++        System.out.println("=== RoomSelectionController.setMainController CALLED ===");
++        this.mainController = controller;
++        System.out.println("mainController set: " + (mainController != null ? "SUCCESS" : "FAILED"));
++
++        loadExistingData();
++        updateSearchSummary();
++        updateCapacityDisplay();
++    }
++
++    private void loadExistingData() {
++        UIController.BookingData data = mainController.getBookingData();
++        System.out.println("Loading existing room data: " + (data != null ? "data exists" : "data is null"));
++
++        if (data != null) {
++            // Set room selection based on saved data
++            switch (data.selectedRoomType) {
++                case SINGLE:
++                    singleRoomRadio.setSelected(true);
++                    selectedType = UIController.RoomType.SINGLE;
++                    break;
++                case DOUBLE:
++                    doubleRoomRadio.setSelected(true);
++                    selectedType = UIController.RoomType.DOUBLE;
++                    break;
++                case DELUXE:
++                    deluxeRoomRadio.setSelected(true);
++                    selectedType = UIController.RoomType.DELUXE;
++                    break;
++                case PENTHOUSE:
++                    penthouseRadio.setSelected(true);
++                    selectedType = UIController.RoomType.PENTHOUSE;
++                    break;
++                default:
++                    singleRoomRadio.setSelected(true);
++                    selectedType = UIController.RoomType.SINGLE;
++                    break;
++            }
++            selectedQuantity = data.roomQuantity;
++            System.out.println("Loaded room: " + selectedType + " quantity: " + selectedQuantity);
++
++            // Set quantity combo boxes
++            if (singleRoomQty != null) {
++                singleRoomQty.setValue(data.selectedRoomType == UIController.RoomType.SINGLE ? data.roomQuantity : 0);
++            }
++            if (doubleRoomQty != null) {
++                doubleRoomQty.setValue(data.selectedRoomType == UIController.RoomType.DOUBLE ? data.roomQuantity : 0);
++            }
++            if (deluxeRoomQty != null) {
++                deluxeRoomQty.setValue(data.selectedRoomType == UIController.RoomType.DELUXE ? data.roomQuantity : 0);
++            }
++            if (penthouseQty != null) {
++                penthouseQty.setValue(data.selectedRoomType == UIController.RoomType.PENTHOUSE ? data.roomQuantity : 0);
++            }
++        } else {
++            // Default selection
++            singleRoomRadio.setSelected(true);
++            selectedType = UIController.RoomType.SINGLE;
++            selectedQuantity = 1;
++            System.out.println("Using default room: SINGLE");
++        }
++
++        // Initialize combo boxes
++        initializeComboBoxes();
++    }
++
++    private void initializeComboBoxes() {
++        if (singleRoomQty != null) {
++            singleRoomQty.getItems().addAll(0, 1, 2, 3, 4);
++            singleRoomQty.setValue(1);
++        }
++        if (doubleRoomQty != null) {
++            doubleRoomQty.getItems().addAll(0, 1, 2, 3, 4);
++            doubleRoomQty.setValue(0);
++        }
++        if (deluxeRoomQty != null) {
++            deluxeRoomQty.getItems().addAll(0, 1, 2);
++            deluxeRoomQty.setValue(0);
++        }
++        if (penthouseQty != null) {
++            penthouseQty.getItems().addAll(0, 1, 2);
++            penthouseQty.setValue(0);
++        }
++
++        // Add listeners to update selection when quantity changes
++        if (singleRoomQty != null) {
++            singleRoomQty.valueProperty().addListener((obs, oldVal, newVal) -> {
++                if (newVal != null && newVal > 0 && singleRoomRadio.isSelected()) {
++                    selectedQuantity = newVal;
++                    updateCapacityDisplay();
++                }
++            });
++        }
++
++        if (doubleRoomQty != null) {
++            doubleRoomQty.valueProperty().addListener((obs, oldVal, newVal) -> {
++                if (newVal != null && newVal > 0 && doubleRoomRadio.isSelected()) {
++                    selectedQuantity = newVal;
++                    updateCapacityDisplay();
++                }
++            });
++        }
++
++        if (deluxeRoomQty != null) {
++            deluxeRoomQty.valueProperty().addListener((obs, oldVal, newVal) -> {
++                if (newVal != null && newVal > 0 && deluxeRoomRadio.isSelected()) {
++                    selectedQuantity = newVal;
++                    updateCapacityDisplay();
++                }
++            });
++        }
++
++        if (penthouseQty != null) {
++            penthouseQty.valueProperty().addListener((obs, oldVal, newVal) -> {
++                if (newVal != null && newVal > 0 && penthouseRadio.isSelected()) {
++                    selectedQuantity = newVal;
++                    updateCapacityDisplay();
++                }
++            });
++        }
++    }
++
++    private void updateSearchSummary() {
++        if (searchSummaryLabel == null) return;
++
++        UIController.BookingData data = mainController.getBookingData();
++        if (data != null && data.checkIn != null && data.checkOut != null) {
++            long nights = ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
++            String summary = String.format("%d Adults, %d Children • %s to %s (%d nights)",
++                    data.adults, data.children,
++                    data.checkIn.toString(), data.checkOut.toString(), nights);
++            searchSummaryLabel.setText(summary);
++            System.out.println("Search summary updated: " + summary);
++        } else {
++            searchSummaryLabel.setText("Please complete guest information first");
++        }
++    }
++
++    private void updateCapacityDisplay() {
++        if (capacityLabel == null || capacityBar == null) return;
++
++        UIController.BookingData data = mainController.getBookingData();
++        if (data == null) return;
++
++        int totalGuests = data.adults + data.children;
++        int maxCapacity = getCurrentRoomMaxCapacity();
++        int totalCapacity = maxCapacity * selectedQuantity;
++
++        if (totalGuests <= totalCapacity) {
++            capacityLabel.setText(String.format("✓ Total Occupancy: %d/%d persons", totalGuests, totalCapacity));
++            capacityBar.setProgress((double) totalGuests / totalCapacity);
++            capacityLabel.setStyle("-fx-text-fill: #28a745; -fx-font-weight: bold;");
++        } else {
++            capacityLabel.setText(String.format("⚠️ OVER CAPACITY: %d guests exceed %d capacity", totalGuests, totalCapacity));
++            capacityBar.setProgress(1.0);
++            capacityLabel.setStyle("-fx-text-fill: #dc3545; -fx-font-weight: bold;");
++        }
++    }
++
++    private int getCurrentRoomMaxCapacity() {
++        if (singleRoomRadio != null && singleRoomRadio.isSelected()) return SINGLE_MAX;
++        if (doubleRoomRadio != null && doubleRoomRadio.isSelected()) return DOUBLE_MAX;
++        if (deluxeRoomRadio != null && deluxeRoomRadio.isSelected()) return DELUXE_MAX;
++        if (penthouseRadio != null && penthouseRadio.isSelected()) return PENTHOUSE_MAX;
++        return SINGLE_MAX;
++    }
++
++    private void updateCardHighlight() {
++        if (singleRoomCard == null || doubleRoomCard == null || deluxeRoomCard == null || penthouseCard == null) return;
++
++        String defaultStyle = "-fx-border-color: #44403c; -fx-border-width: 1; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 0 0 35 0; -fx-background-color: #0a0a0a;";
++        String selectedStyle = "-fx-border-color: #d4af37; -fx-border-width: 2; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 0 0 35 0; -fx-background-color: #0a0a0a;";
++
++        singleRoomCard.getParent().setStyle(singleRoomRadio.isSelected() ? selectedStyle : defaultStyle);
++        doubleRoomCard.getParent().setStyle(doubleRoomRadio.isSelected() ? selectedStyle : defaultStyle);
++        deluxeRoomCard.getParent().setStyle(deluxeRoomRadio.isSelected() ? selectedStyle : defaultStyle);
++        penthouseCard.getParent().setStyle(penthouseRadio.isSelected() ? selectedStyle : defaultStyle);
++    }
++
++    @FXML
++    public void onRoomSelected() {
++        if (singleRoomRadio != null && singleRoomRadio.isSelected()) {
++            selectedType = UIController.RoomType.SINGLE;
++            selectedQuantity = singleRoomQty != null && singleRoomQty.getValue() != null ? singleRoomQty.getValue() : 1;
++            if (singleRoomQty != null) singleRoomQty.setValue(selectedQuantity);
++        } else if (doubleRoomRadio != null && doubleRoomRadio.isSelected()) {
++            selectedType = UIController.RoomType.DOUBLE;
++            selectedQuantity = doubleRoomQty != null && doubleRoomQty.getValue() != null ? doubleRoomQty.getValue() : 1;
++            if (doubleRoomQty != null) doubleRoomQty.setValue(selectedQuantity);
++        } else if (deluxeRoomRadio != null && deluxeRoomRadio.isSelected()) {
++            selectedType = UIController.RoomType.DELUXE;
++            selectedQuantity = deluxeRoomQty != null && deluxeRoomQty.getValue() != null ? deluxeRoomQty.getValue() : 1;
++            if (deluxeRoomQty != null) deluxeRoomQty.setValue(selectedQuantity);
++        } else if (penthouseRadio != null && penthouseRadio.isSelected()) {
++            selectedType = UIController.RoomType.PENTHOUSE;
++            selectedQuantity = penthouseQty != null && penthouseQty.getValue() != null ? penthouseQty.getValue() : 1;
++            if (penthouseQty != null) penthouseQty.setValue(selectedQuantity);
++        }
++
++        updateCardHighlight();
++        updateCapacityDisplay();
++    }
++
++    // ========== ROOM SELECTION METHODS ==========
++
++    @FXML
++    public void selectStandardDouble(ActionEvent event) throws IOException {
++        System.out.println("=== selectStandardDouble CALLED ===");
++        selectedType = UIController.RoomType.DOUBLE;
++        selectedQuantity = 1;
++        goToAddOns(event);
++    }
++
++    @FXML
++    public void selectRoyalKing(ActionEvent event) throws IOException {
++        System.out.println("=== selectRoyalKing CALLED ===");
++        selectedType = UIController.RoomType.PENTHOUSE;
++        selectedQuantity = 1;
++        goToAddOns(event);
++    }
++
++    // ========== NAVIGATION METHODS ==========
++
++    @FXML
++    public void goToAddOns(ActionEvent event) throws IOException {
++        System.out.println("=== goToAddOns CALLED ===");
++
++        // Validate room selection
++        if (!validateRoomSelection()) {
++            return;
++        }
++
++        System.out.println("Saving room: " + selectedType + " quantity: " + selectedQuantity);
++
++        // Save room data to main controller
++        mainController.setRoomData(selectedType, selectedQuantity);
++
++        System.out.println("Navigating to AddOns...");
++        // Navigate to next screen
++        mainController.goToAddOns(event);
++    }
++
++    @FXML
++    public void goToSearch(ActionEvent event) throws IOException {
++        System.out.println("=== goToSearch CALLED ===");
++        mainController.goToSearch(event);
++    }
++
++    @FXML
++    public void goToWelcome(ActionEvent event) throws IOException {
++        System.out.println("=== goToWelcome CALLED ===");
++        mainController.goToWelcome(event);
++    }
++
++    @FXML
++    public void showRules() {
++        mainController.showRules();
++    }
++
++    private boolean validateRoomSelection() {
++        UIController.BookingData data = mainController.getBookingData();
++        if (data == null) {
++            showError("Please complete guest information first.");
++            return false;
++        }
++
++        int totalGuests = data.adults + data.children;
++        int maxCapacity = getCurrentRoomMaxCapacity();
++        int totalCapacity = maxCapacity * selectedQuantity;
++
++        if (selectedQuantity == 0) {
++            showError("Please select at least one room.");
++            return false;
++        }
++
++        if (totalGuests > totalCapacity) {
++            showError(String.format("Occupancy exceeds capacity! %d guests exceed %d capacity.\nPlease select a larger room or more rooms.",
++                    totalGuests, totalCapacity));
++            return false;
++        }
++
++        System.out.println("Room validation PASSED");
++        return true;
++    }
++
++    private void showError(String message) {
++        System.out.println("ERROR: " + message);
++        Alert alert = new Alert(Alert.AlertType.ERROR);
++        alert.setTitle("Room Selection Error");
++        alert.setHeaderText(null);
++        alert.setContentText(message);
++        alert.showAndWait();
++    }
++}
+\ No newline at end of file
