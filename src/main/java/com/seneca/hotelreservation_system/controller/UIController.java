@@ -54,7 +54,7 @@ public class UIController {
 
     private static BookingData booking = new BookingData();
 
-    // ========== MS2 ADDITIONS: STRATEGY PATTERN FOR PRICING ==========
+    // ========== STRATEGY PATTERN FOR PRICING ==========
     public interface PricingStrategy {
         BigDecimal calculatePrice(BigDecimal basePrice, int nights);
     }
@@ -82,7 +82,6 @@ public class UIController {
         }
     }
 
-    // ========== MS2 ADDITIONS: ROOM TYPE ENUM ==========
     public enum RoomType {
         SINGLE(89, 2), DOUBLE(129, 4), DELUXE(199, 2), PENTHOUSE(349, 2);
         private final int basePrice;
@@ -95,7 +94,7 @@ public class UIController {
         public int getMaxOccupancy() { return maxOccupancy; }
     }
 
-    // ========== MS2 ADDITIONS: PRICING HELPER METHODS ==========
+    // ========== PRICING HELPER METHODS ==========
     public boolean isWeekend(LocalDate date) {
         if (date == null) return false;
         int dayOfWeek = date.getDayOfWeek().getValue();
@@ -170,7 +169,6 @@ public class UIController {
         return booking.total;
     }
 
-    // ========== MS2 ADDITIONS: GETTERS ==========
     public BookingData getBookingData() { return booking; }
 
     public int getNights() {
@@ -193,7 +191,7 @@ public class UIController {
         return "Standard Rate";
     }
 
-    // ========== MS2 ADDITIONS: METHODS TO UPDATE BOOKING DATA ==========
+    // ========== METHODS TO UPDATE BOOKING DATA ==========
     public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
                               String name, String email, String phone) {
         booking.adults = adults;
@@ -234,10 +232,10 @@ public class UIController {
         System.out.println("Loyalty Saved");
     }
 
-    // ========== MS2 ADDITIONS: UPDATED NAVIGATION ==========
+    // ========== NAVIGATION METHODS ==========
     @FXML
     public void goToWelcome(ActionEvent event) throws IOException {
-        booking = new BookingData(); // Reset booking for new reservation
+        booking = new BookingData();
         switchScene(event, "/com/seneca/hotelreservation_system/view/welcome-view.fxml");
     }
 
@@ -297,7 +295,24 @@ public class UIController {
         goToAdminDashboard(event);
     }
 
-    // ========== MS2 ADDITIONS: UPDATED switchScene (passes controller reference) ==========
+    // ========== ROOM SELECTION BUTTON HANDLERS (ADDED FOR PROFESSOR) ==========
+    @FXML
+    public void selectStandardDouble(ActionEvent event) throws IOException {
+        System.out.println("=== selectStandardDouble called ===");
+        booking.selectedRoomType = RoomType.DOUBLE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectRoyalKing(ActionEvent event) throws IOException {
+        System.out.println("=== selectRoyalKing called ===");
+        booking.selectedRoomType = RoomType.PENTHOUSE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    // ========== HELPER METHODS ==========
     private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
         URL resource = getClass().getResource(fxmlPath);
 
@@ -325,7 +340,6 @@ public class UIController {
         stage.show();
     }
 
-    // ========== MS2 ADDITIONS: UPDATED showRules (more rules) ==========
     @FXML
     public void showRules() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -340,6 +354,8 @@ public class UIController {
         );
         alert.showAndWait();
     }
+
+    // ========== EXISTING UI ELEMENTS ==========
     @FXML
     private TextField adminSearchField;
     @FXML
