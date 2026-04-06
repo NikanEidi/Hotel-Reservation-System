@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c047221-c3f8-4a4f-908f-ecb7a27186d6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/addons-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/addons-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6c047221-c3f8-4a4f-908f-ecb7a27186d6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1775517346927</updated>
-      <workItem from="1775517347994" duration="2103000" />
+      <workItem from="1775517347994" duration="2435000" />
     </task>
     <servers />
   </component>
