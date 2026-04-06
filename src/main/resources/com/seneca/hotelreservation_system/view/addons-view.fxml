@@ -12,21 +12,26 @@
 
             <VBox spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 30; -fx-border-color: #44403c; -fx-border-radius: 10;" prefWidth="500">
                 <Label text="SELECT AMENITIES" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" />
-                <CheckBox text="High-Speed WiFi ($9.99 / night)" style="-fx-text-fill: white;" />
-                <CheckBox text="Spa &amp; Wellness Access ($49.99 / night)" style="-fx-text-fill: white;" />
-                <CheckBox text="Airport Shuttle ($35.00 / trip)" style="-fx-text-fill: white;" />
-                <CheckBox text="Daily Breakfast Package ($24.99 / night)" style="-fx-text-fill: white;" />
-                <CheckBox text="Late Check-Out ($30.00 flat)" style="-fx-text-fill: white;" />
+
+                <CheckBox fx:id="wifiCheck" onAction="#updateTotals" text="High-Speed WiFi ($9.99 / night)" style="-fx-text-fill: white;" />
+                <CheckBox fx:id="spaCheck" onAction="#updateTotals" text="Spa &amp; Wellness Access ($49.99 / night)" style="-fx-text-fill: white;" />
+                <CheckBox fx:id="shuttleCheck" onAction="#updateTotals" text="Airport Shuttle ($35.00 / trip)" style="-fx-text-fill: white;" />
+                <CheckBox fx:id="breakfastCheck" onAction="#updateTotals" text="Daily Breakfast Package ($24.99 / night)" style="-fx-text-fill: white;" />
+                <CheckBox fx:id="lateCheckoutCheck" onAction="#updateTotals" text="Late Check-Out ($30.00 flat)" style="-fx-text-fill: white;" />
             </VBox>
 
             <VBox maxWidth="450.0" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 40; -fx-border-color: #d4af37; -fx-border-radius: 10;">
                 <Label text="RUNNING TOTAL" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" />
                 <Separator style="-fx-opacity: 0.2;" />
-                <HBox><Label text="Subtotal" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="450.00 USD" style="-fx-text-fill: white;" /></HBox>
-                <HBox><Label text="Add-ons Total" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="0.00 USD" style="-fx-text-fill: white;" /></HBox>
-                <HBox><Label text="Tax (13%)" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label text="58.50 USD" style="-fx-text-fill: white;" /></HBox>
+
+                <!-- Added fx:id="subtotalLabel" to fix the 450.00 issue -->
+                <HBox><Label text="Subtotal" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label fx:id="subtotalLabel" text="450.00 USD" style="-fx-text-fill: white;" /></HBox>
+
+                <HBox><Label text="Add-ons Total" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label fx:id="addonsTotalLabel" text="0.00 USD" style="-fx-text-fill: white;" /></HBox>
+                <HBox><Label text="Tax (13%)" style="-fx-text-fill: #a8a29e;" /><Region HBox.hgrow="ALWAYS" /><Label fx:id="taxLabel" text="58.50 USD" style="-fx-text-fill: white;" /></HBox>
+
                 <Separator style="-fx-opacity: 0.2;" />
-                <HBox><Label text="TOTAL DUE" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" /><Region HBox.hgrow="ALWAYS" /><Label text="508.50 USD" style="-fx-text-fill: #d4af37; -fx-font-size: 20px;" /></HBox>
+                <HBox><Label text="TOTAL DUE" style="-fx-text-fill: #d4af37; -fx-font-weight: bold;" /><Region HBox.hgrow="ALWAYS" /><Label fx:id="totalDueLabel" text="508.50 USD" style="-fx-text-fill: #d4af37; -fx-font-size: 20px;" /></HBox>
 
                 <VBox spacing="10">
                     <Button onAction="#goToSummary" text="CONFIRM &amp; FINISH" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-height: 55; -fx-pref-width: 380; -fx-cursor: hand;" />

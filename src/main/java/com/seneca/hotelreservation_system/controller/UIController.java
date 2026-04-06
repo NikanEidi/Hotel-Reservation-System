@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -36,6 +38,9 @@ public class UIController {
         public boolean hasBreakfast = false;
         public boolean hasParking = false;
         public boolean hasSpa = false;
+        public boolean hasShuttle = false;
+        public boolean hasLateCheckout = false;
+
         public int wifiQuantity = 0;
         public int breakfastQuantity = 0;
         public int parkingQuantity = 0;
@@ -54,7 +59,6 @@ public class UIController {
 
     private static BookingData booking = new BookingData();
 
-    // ========== STRATEGY PATTERN FOR PRICING ==========
     public interface PricingStrategy {
         BigDecimal calculatePrice(BigDecimal basePrice, int nights);
     }
@@ -94,7 +98,6 @@ public class UIController {
         public int getMaxOccupancy() { return maxOccupancy; }
     }
 
-    // ========== PRICING HELPER METHODS ==========
     public boolean isWeekend(LocalDate date) {
         if (date == null) return false;
         int dayOfWeek = date.getDayOfWeek().getValue();
@@ -134,28 +137,31 @@ public class UIController {
     }
 
     public BigDecimal calculateRoomPrice() {
+        int n = getNights();
         BigDecimal basePrice = getBasePrice(booking.selectedRoomType);
         PricingStrategy strategy = getPricingStrategy(booking.checkIn, booking.checkOut);
-        BigDecimal perRoomTotal = strategy.calculatePrice(basePrice, booking.nights);
+        BigDecimal perRoomTotal = strategy.calculatePrice(basePrice, n);
         return perRoomTotal.multiply(BigDecimal.valueOf(booking.roomQuantity));
     }
 
     public BigDecimal calculateAddonsTotal() {
         BigDecimal total = BigDecimal.ZERO;
+        int n = getNights();
+
         if (booking.hasWifi) {
-            total = total.add(BigDecimal.valueOf(10).multiply(BigDecimal.valueOf(booking.nights))
-                    .multiply(BigDecimal.valueOf(booking.wifiQuantity)));
+            total = total.add(BigDecimal.valueOf(9.99).multiply(BigDecimal.valueOf(n)));
         }
         if (booking.hasBreakfast) {
-            total = total.add(BigDecimal.valueOf(15).multiply(BigDecimal.valueOf(booking.nights))
-                    .multiply(BigDecimal.valueOf(booking.breakfastQuantity)));
-        }
-        if (booking.hasParking) {
-            total = total.add(BigDecimal.valueOf(20).multiply(BigDecimal.valueOf(booking.nights))
-                    .multiply(BigDecimal.valueOf(booking.parkingQuantity)));
+            total = total.add(BigDecimal.valueOf(24.99).multiply(BigDecimal.valueOf(n)));
         }
         if (booking.hasSpa) {
-            total = total.add(BigDecimal.valueOf(50).multiply(BigDecimal.valueOf(booking.spaQuantity)));
+            total = total.add(BigDecimal.valueOf(49.99).multiply(BigDecimal.valueOf(n)));
+        }
+        if (booking.hasShuttle) {
+            total = total.add(BigDecimal.valueOf(35.00));
+        }
+        if (booking.hasLateCheckout) {
+            total = total.add(BigDecimal.valueOf(30.00));
         }
         return total;
     }
@@ -164,7 +170,7 @@ public class UIController {
         booking.roomPrice = calculateRoomPrice();
         booking.addonsTotal = calculateAddonsTotal();
         booking.subtotal = booking.roomPrice.add(booking.addonsTotal);
-        booking.tax = booking.subtotal.multiply(new BigDecimal("0.10"));
+        booking.tax = booking.subtotal.multiply(new BigDecimal("0.13"));
         booking.total = booking.subtotal.add(booking.tax);
         return booking.total;
     }
@@ -174,6 +180,9 @@ public class UIController {
     public int getNights() {
         if (booking.checkIn != null && booking.checkOut != null) {
             booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
+        }
+        if (booking.nights <= 0) {
+            booking.nights = 1;
         }
         return booking.nights;
     }
@@ -191,7 +200,25 @@ public class UIController {
         return "Standard Rate";
     }
 
-    // ========== METHODS TO UPDATE BOOKING DATA ==========
+    @FXML private TextField adminSearchField;
+    @FXML private TextField phoneField;
+    @FXML private TextField nameField;
+    @FXML private TextField emailField;
+    @FXML private TextField usernameField;
+    @FXML private PasswordField passwordField;
+
+    @FXML private CheckBox wifiCheck;
+    @FXML private CheckBox spaCheck;
+    @FXML private CheckBox shuttleCheck;
+    @FXML private CheckBox breakfastCheck;
+    @FXML private CheckBox lateCheckoutCheck;
+
+    @FXML private Label subtotalLabel;
+    @FXML private Label addonsTotalLabel;
+    @FXML private Label taxLabel;
+    @FXML private Label totalDueLabel;
+
+
     public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
                               String name, String email, String phone) {
         booking.adults = adults;
@@ -204,13 +231,11 @@ public class UIController {
         if (checkIn != null && checkOut != null) {
             booking.nights = (int) ChronoUnit.DAYS.between(checkIn, checkOut);
         }
-        System.out.println("Search Data Saved: " + name);
     }
 
     public void setRoomData(RoomType type, int quantity) {
         booking.selectedRoomType = type;
         booking.roomQuantity = quantity;
-        System.out.println("Room Data Saved: " + type + " x" + quantity);
     }
 
     public void setAddonsData(boolean wifi, boolean breakfast, boolean parking, boolean spa,
@@ -223,16 +248,44 @@ public class UIController {
         booking.breakfastQuantity = breakfastQty;
         booking.parkingQuantity = parkingQty;
         booking.spaQuantity = spaQty;
-        System.out.println("Add-ons Saved");
     }
 
     public void setLoyaltyData(boolean enroll, int pointsToRedeem) {
         booking.enrollLoyalty = enroll;
         booking.loyaltyPointsToRedeem = pointsToRedeem;
-        System.out.println("Loyalty Saved");
     }
 
-    // ========== NAVIGATION METHODS ==========
+
+    @FXML
+    public void updateTotals() {
+        double addonsCost = 0.0;
+        int nightsToCalculate = getNights();
+
+        if (wifiCheck != null) booking.hasWifi = wifiCheck.isSelected();
+        if (spaCheck != null) booking.hasSpa = spaCheck.isSelected();
+        if (breakfastCheck != null) booking.hasBreakfast = breakfastCheck.isSelected();
+        if (shuttleCheck != null) booking.hasShuttle = shuttleCheck.isSelected();
+        if (lateCheckoutCheck != null) booking.hasLateCheckout = lateCheckoutCheck.isSelected();
+
+        if (booking.hasWifi) addonsCost += (9.99 * nightsToCalculate);
+        if (booking.hasSpa) addonsCost += (49.99 * nightsToCalculate);
+        if (booking.hasBreakfast) addonsCost += (24.99 * nightsToCalculate);
+        if (booking.hasShuttle) addonsCost += 35.00;
+        if (booking.hasLateCheckout) addonsCost += 30.00;
+
+        double baseSubtotal = calculateRoomPrice().doubleValue();
+
+        double currentSubtotal = baseSubtotal + addonsCost;
+        double taxAmount = currentSubtotal * 0.13;
+        double finalTotal = currentSubtotal + taxAmount;
+
+        if (subtotalLabel != null) subtotalLabel.setText(String.format("%.2f USD", baseSubtotal));
+        if (addonsTotalLabel != null) addonsTotalLabel.setText(String.format("%.2f USD", addonsCost));
+        if (taxLabel != null) taxLabel.setText(String.format("%.2f USD", taxAmount));
+        if (totalDueLabel != null) totalDueLabel.setText(String.format("%.2f USD", finalTotal));
+    }
+
+
     @FXML
     public void goToWelcome(ActionEvent event) throws IOException {
         booking = new BookingData();
@@ -260,6 +313,11 @@ public class UIController {
     @FXML
     public void goToAddOns(ActionEvent event) throws IOException {
         switchScene(event, "/com/seneca/hotelreservation_system/view/addons-view.fxml");
+    }
+
+    @FXML
+    public void goToAddons(ActionEvent event) throws IOException {
+        goToAddOns(event);
     }
 
     @FXML
@@ -295,10 +353,9 @@ public class UIController {
         goToAdminDashboard(event);
     }
 
-    // ========== ROOM SELECTION BUTTON HANDLERS (ADDED FOR PROFESSOR) ==========
+
     @FXML
     public void selectStandardDouble(ActionEvent event) throws IOException {
-        System.out.println("=== selectStandardDouble called ===");
         booking.selectedRoomType = RoomType.DOUBLE;
         booking.roomQuantity = 1;
         goToAddOns(event);
@@ -306,13 +363,12 @@ public class UIController {
 
     @FXML
     public void selectRoyalKing(ActionEvent event) throws IOException {
-        System.out.println("=== selectRoyalKing called ===");
         booking.selectedRoomType = RoomType.PENTHOUSE;
         booking.roomQuantity = 1;
         goToAddOns(event);
     }
 
-    // ========== HELPER METHODS ==========
+
     private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
         URL resource = getClass().getResource(fxmlPath);
 
@@ -323,15 +379,12 @@ public class UIController {
         FXMLLoader loader = new FXMLLoader(resource);
         Parent root = loader.load();
 
-        // Pass this UIController to the new screen's controller
         Object controller = loader.getController();
         if (controller != null) {
             try {
                 java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
                 method.invoke(controller, this);
-                System.out.println("setMainController called on: " + controller.getClass().getSimpleName());
             } catch (Exception e) {
-                // Controller doesn't have setMainController - that's OK
             }
         }
 
@@ -355,19 +408,6 @@ public class UIController {
         alert.showAndWait();
     }
 
-    // ========== EXISTING UI ELEMENTS ==========
-    @FXML
-    private TextField adminSearchField;
-    @FXML
-    private TextField phoneField;
-    @FXML
-    private TextField nameField;
-    @FXML
-    private TextField emailField;
-    @FXML
-    private TextField usernameField;
-    @FXML
-    private PasswordField passwordField;
 
     @FXML
     public void handleAdminLogin(ActionEvent event) throws IOException {
@@ -435,8 +475,8 @@ public class UIController {
 
             if (phone != null && phone.length() == 10) {
                 if ("1234567890".equals(phone)) {
-                    nameField.setText("Nikan Eidi");
-                    emailField.setText("nikaneydi1984@gmail.com");
+                    nameField.setText("Guest Name Placeholder");
+                    emailField.setText("guest@example.com");
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Loyalty Member");
