@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.LoyaltyController">
+
+    <VBox alignment="CENTER" spacing="30" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <Label text="LOYALTY PROGRAM" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold;" />
+
+        <Label text="Earn points on every stay!" style="-fx-text-fill: white; -fx-font-size: 18px;" />
+
+        <VBox spacing="10" style="-fx-background-color: #0a0a0a; -fx-padding: 30; -fx-border-color: #d4af37; -fx-border-radius: 10;">
+            <Label text="✓ 1 point per $10 spent" style="-fx-text-fill: #a8a29e;" />
+            <Label text="✓ 100 points = $10 discount" style="-fx-text-fill: #a8a29e;" />
+            <Label text="✓ Free room upgrades" style="-fx-text-fill: #a8a29e;" />
+        </VBox>
+
+        <!-- Simple enrollment option -->
+        <HBox alignment="CENTER" spacing="30">
+            <RadioButton fx:id="enrollYesBtn" text="Yes, enroll me" style="-fx-text-fill: white;" />
+            <RadioButton fx:id="enrollNoBtn" text="No, thanks" style="-fx-text-fill: white;" />
+        </HBox>
+
+        <HBox spacing="20">
+            <Button onAction="#goToSummary" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 50; -fx-cursor: hand;" />
+            <Button onAction="#goToAddOns" text="BACK" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 200; -fx-pref-height: 50; -fx-cursor: hand;" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

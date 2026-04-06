@@ -59,10 +59,32 @@ public class SearchController {
 
     @FXML
     public void goToRoomSelection(ActionEvent event) throws IOException {
-        // Validate inputs
-        if (!validateInputs()) {
+        System.out.println("=== STEP 1: goToRoomSelection CALLED! ===");
+
+        if (mainController == null) {
+            System.out.println("ERROR: mainController is NULL!");
+            showError("System error. Please restart.");
             return;
         }
+
+        System.out.println("STEP 2: mainController is NOT null");
+        System.out.println("STEP 3: Validating inputs...");
+
+        // Validate inputs
+        if (!validateInputs()) {
+            System.out.println("STEP 4: Validation FAILED!");
+            return;
+        }
+
+        System.out.println("STEP 5: Validation PASSED!");
+        System.out.println("Adults: " + adults + ", Children: " + children);
+        System.out.println("CheckIn: " + checkInDatePicker.getValue());
+        System.out.println("CheckOut: " + checkOutDatePicker.getValue());
+        System.out.println("Name: " + fullNameField.getText());
+        System.out.println("Email: " + emailField.getText());
+        System.out.println("Phone: " + phoneField.getText());
+
+        System.out.println("STEP 6: Saving data to mainController...");
 
         // Save data to main controller
         mainController.setSearchData(
@@ -75,8 +97,9 @@ public class SearchController {
                 phoneField.getText().trim()
         );
 
-        // Navigate to next screen
+        System.out.println("STEP 7: Data saved! Navigating to room selection...");
         mainController.goToRoomSelection(event);
+        System.out.println("STEP 8: Navigation called!");
     }
 
     @FXML
