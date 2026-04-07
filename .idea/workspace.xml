@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5a3059f-4488-45a1-ab1f-98bcfc0fe79b" name="Changes" comment="ms3" />
+    <list default="true" id="6c047221-c3f8-4a4f-908f-ecb7a27186d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/RoomSelectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="61" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,15 +30,19 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;nkhanal6&quot;
+    &quot;assignee&quot;: &quot;NikanEidi&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/NikanEidi/Hotel-Reservation-System.git&quot;,
-    &quot;accountId&quot;: &quot;c0695cbc-4c5f-4a8c-995f-cb2dd3666dc5&quot;
+    &quot;accountId&quot;: &quot;daa91c6f-dd41-4eec-bc2b-4d73e8aa34a3&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -33,152 +51,51 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3BNGkQ38dm1a2J3lXCvlyTkrRAl" />
+  <component name="ProjectId" id="3C0L487ODlCtuOFtF0WJ93nibI6" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HotelApp.executor": "Run",
-    "Application.Launcher.executor": "Debug",
+    "Application.Launcher.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "ms3-nikan-backend",
     "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
-    ]
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.HotelApp">
-    <configuration name="HotelApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.seneca.hotelreservation_system.app.HotelApp" />
-      <module name="HotelReservation_System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.seneca.hotelreservation_system.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.seneca.hotelreservation_system.app.Launcher" />
-      <module name="HotelReservation_System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.seneca.hotelreservation_system.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.HotelApp" />
-        <item itemvalue="Application.Launcher" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5a3059f-4488-45a1-ab1f-98bcfc0fe79b" name="Changes" comment="" />
-      <created>1774322256516</created>
+      <changelist id="6c047221-c3f8-4a4f-908f-ecb7a27186d6" name="Changes" comment="" />
+      <created>1775517346927</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1774322256516</updated>
+      <updated>1775517346927</updated>
+      <workItem from="1775517347994" duration="2435000" />
     </task>
-    <task id="LOCAL-00001" summary="ms2">
-      <option name="closed" value="true" />
-      <created>1774322465197</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1774322465197</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ms2">
-      <option name="closed" value="true" />
-      <created>1774323306329</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1774323306329</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ms3">
-      <option name="closed" value="true" />
-      <created>1775515362919</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1775515362919</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ms3">
-      <option name="closed" value="true" />
-      <created>1775517591763</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1775517591763</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ms3">
-      <option name="closed" value="true" />
-      <created>1775530865761</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1775530865761</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ms3">
-      <option name="closed" value="true" />
-      <created>1775532763601</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1775532763601</updated>
-    </task>
-    <task id="LOCAL-00007" summary="ms3">
-      <option name="closed" value="true" />
-      <created>1775532824851</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1775532824851</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="ms2" />
-    <MESSAGE value="ms3" />
-    <option name="LAST_COMMIT_MESSAGE" value="ms3" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
