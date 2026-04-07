@@ -108,7 +108,7 @@
                              -fx-padding: 18 20;">
                     <Label text="TOTAL RESERVATIONS"
                            style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
-                    <Label text="Loading..."
+                    <Label fx:id="totalReservationsLabel" text="Loading..."
                            style="-fx-text-fill: #c8a84b; -fx-font-size: 28px; -fx-font-weight: bold;" />
                 </VBox>
                 <VBox spacing="7.0" prefWidth="206.0"
@@ -118,7 +118,7 @@
                              -fx-padding: 18 20;">
                     <Label text="ROOMS OCCUPIED"
                            style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
-                    <Label text="Loading..."
+                    <Label fx:id="roomsOccupiedLabel" text="Loading..."
                            style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
                 </VBox>
                 <VBox spacing="7.0" prefWidth="206.0"
@@ -128,7 +128,7 @@
                              -fx-padding: 18 20;">
                     <Label text="PENDING CHECK-INS"
                            style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
-                    <Label text="Loading..."
+                    <Label fx:id="pendingCheckInsLabel" text="Loading..."
                            style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
                 </VBox>
                 <VBox spacing="7.0" prefWidth="206.0"
@@ -138,7 +138,7 @@
                              -fx-padding: 18 20;">
                     <Label text="WAITLIST"
                            style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
-                    <Label text="Loading..."
+                    <Label fx:id="waitlistLabel" text="Loading..."
                            style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
                 </VBox>
             </HBox>
@@ -176,16 +176,16 @@
                            style="-fx-text-fill: #c8a84b; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
                 </HBox>
 
-                <TableView VBox.vgrow="ALWAYS"
+                <TableView fx:id="reservationTable" VBox.vgrow="ALWAYS"
                            style="-fx-background-color: transparent;
                                   -fx-table-cell-border-color: rgba(200,168,75,0.06);">
                     <columns>
-                        <TableColumn text="REF ID" prefWidth="130.0" />
-                        <TableColumn text="GUEST NAME" prefWidth="220.0" />
-                        <TableColumn text="CHECK-IN" prefWidth="160.0" />
-                        <TableColumn text="CHECK-OUT" prefWidth="160.0" />
-                        <TableColumn text="ROOM TYPE" prefWidth="150.0" />
-                        <TableColumn text="STATUS" prefWidth="120.0" />
+                        <TableColumn fx:id="colRefId" text="REF ID" prefWidth="130.0" />
+                        <TableColumn fx:id="colGuestName" text="GUEST NAME" prefWidth="220.0" />
+                        <TableColumn fx:id="colCheckIn" text="CHECK-IN" prefWidth="160.0" />
+                        <TableColumn fx:id="colCheckOut" text="CHECK-OUT" prefWidth="160.0" />
+                        <TableColumn fx:id="colRoomType" text="ROOMs" prefWidth="150.0" />
+                        <TableColumn fx:id="colStatus" text="STATUS" prefWidth="120.0" />
                     </columns>
                     <placeholder>
                         <Label text="No reservation records found"

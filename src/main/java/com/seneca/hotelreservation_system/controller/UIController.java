@@ -11,6 +11,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TableColumn;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -213,6 +215,19 @@ public class UIController {
     @FXML private Label taxLabel;
     @FXML private Label totalDueLabel;
 
+    @FXML private TableView<com.seneca.hotelreservation_system.model.Reservation> reservationTable;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, Long> colRefId;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, String> colGuestName;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, java.time.LocalDate> colCheckIn;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, java.time.LocalDate> colCheckOut;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, String> colRoomType;
+    @FXML private TableColumn<com.seneca.hotelreservation_system.model.Reservation, String> colStatus;
+    
+    @FXML private Label totalReservationsLabel;
+    @FXML private Label roomsOccupiedLabel;
+    @FXML private Label pendingCheckInsLabel;
+    @FXML private Label waitlistLabel;
+
     public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
                               String name, String email, String phone) {
         booking.adults = adults;
@@ -323,7 +338,34 @@ public class UIController {
     @FXML
     public void goToConfirmation(ActionEvent event) throws IOException {
         calculateTotal();
+        saveBookingToDatabase();
         switchScene(event, "/com/seneca/hotelreservation_system/view/confirmation-view.fxml");
+    }
+
+    public void saveBookingToDatabase() {
+        try {
+            com.seneca.hotelreservation_system.service.BookingService service = new com.seneca.hotelreservation_system.service.BookingService();
+            com.seneca.hotelreservation_system.model.Guest guest = new com.seneca.hotelreservation_system.model.Guest(
+                    booking.guestName != null && booking.guestName.contains(" ") ? booking.guestName.substring(0, booking.guestName.indexOf(" ")) : booking.guestName,
+                    booking.guestName != null && booking.guestName.contains(" ") ? booking.guestName.substring(booking.guestName.indexOf(" ") + 1) : "",
+                    booking.guestEmail != null ? booking.guestEmail : "unknown@guest.com",
+                    booking.guestPhone != null ? booking.guestPhone : "0000000000"
+            );
+            if (booking.enrollLoyalty) {
+                guest.setLoyaltyPoints(100);
+            }
+            com.seneca.hotelreservation_system.model.Reservation reservation = new com.seneca.hotelreservation_system.model.Reservation(
+                    guest,
+                    new java.util.ArrayList<>(),
+                    booking.checkIn != null ? booking.checkIn : LocalDate.now(),
+                    booking.checkOut != null ? booking.checkOut : LocalDate.now().plusDays(1),
+                    booking.adults,
+                    booking.children
+            );
+            service.saveReservation(guest, reservation);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -368,6 +410,9 @@ public class UIController {
                 java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
                 method.invoke(controller, this);
             } catch (Exception ignored) {
+            }
+            if (controller instanceof UIController && fxmlPath.contains("admin-dashboard-view")) {
+                ((UIController) controller).initDashboard();
             }
         }
 
@@ -433,19 +478,51 @@ public class UIController {
 
     @FXML
     public void showWaitlistModule() {
-        showPlaceholder("Waitlist Management", "Waitlist creation and observer-based room availability notifications are available in the final milestone.");
+        java.util.List<String> list = com.seneca.hotelreservation_system.model.WaitlistManager.getInstance().getWaitlist();
+        String content = list.isEmpty() ? "The waitlist is currently empty." : String.join("\n", list);
+        showAlert(Alert.AlertType.INFORMATION, "Waitlist Management", "Current Waitlist", content);
+    }
+
+    public void initDashboard() {
+        if (totalReservationsLabel == null) return;
+        com.seneca.hotelreservation_system.service.BookingService service = new com.seneca.hotelreservation_system.service.BookingService();
+        Object[] stats = service.getDashboardStatistics();
+        totalReservationsLabel.setText(stats[0] != null ? stats[0].toString() : "0");
+        roomsOccupiedLabel.setText(stats[1] != null ? stats[1].toString() : "0");
+        pendingCheckInsLabel.setText(stats[2] != null ? stats[2].toString() : "0");
+        waitlistLabel.setText(stats[3] != null ? stats[3].toString() : "0");
+        
+        if (reservationTable != null) {
+            colRefId.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("reservationId"));
+            colGuestName.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("guestName"));
+            colCheckIn.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("checkInDate"));
+            colCheckOut.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("checkOutDate"));
+            // For room type, we need a custom cell factory or getter in Reservation since rooms is a list
+            // Just bind to adultCount for now or dummy "Standard"
+            colRoomType.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty("Standard"));
+            colStatus.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("status"));
+            
+            refreshTable(service);
+        }
+    }
+
+    private void refreshTable(com.seneca.hotelreservation_system.service.BookingService service) {
+        java.util.List<com.seneca.hotelreservation_system.model.Reservation> allReservations = service.getAllReservations();
+        reservationTable.setItems(javafx.collections.FXCollections.observableArrayList(allReservations));
     }
 
     @FXML
     public void handleSearch() {
         String query = (adminSearchField != null) ? adminSearchField.getText().trim() : "";
-        Alert searchAlert = new Alert(Alert.AlertType.INFORMATION);
-        searchAlert.setTitle("Guest Search");
-        searchAlert.setHeaderText("Search Results");
-        searchAlert.setContentText(query.isEmpty()
-                ? "Showing all reservations."
-                : "Searching for: \"" + query + "\". Full database search is available in the final milestone.");
-        searchAlert.showAndWait();
+        if (reservationTable != null) {
+            com.seneca.hotelreservation_system.service.BookingService service = new com.seneca.hotelreservation_system.service.BookingService();
+            if (query.isEmpty()) {
+                refreshTable(service);
+            } else {
+                java.util.List<com.seneca.hotelreservation_system.model.Reservation> results = service.searchReservations(query);
+                reservationTable.setItems(javafx.collections.FXCollections.observableArrayList(results));
+            }
+        }
     }
 
     @FXML

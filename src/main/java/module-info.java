@@ -10,8 +10,8 @@ module com.seneca.hotelreservation_system {
     requires java.sql;
     requires java.naming;
 
-
     requires jbcrypt;
+    requires com.github.librepdf.openpdf;
 
 
     opens com.seneca.hotelreservation_system.controller to javafx.fxml;
