@@ -8,9 +8,13 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
+import com.lowagie.text.Document;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -207,63 +211,62 @@ public class SummaryController {
         File file = fileChooser.showSaveDialog(stage);
 
         if (file != null) {
-            try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
-                writer.println("=".repeat(55));
-                writer.println("           GRAND PLAZA HOTEL");
-                writer.println("        TORONTO  •  EST. 1985");
-                writer.println("=".repeat(55));
-                writer.println();
-                writer.println("                BOOKING SUMMARY");
-                writer.println();
-                writer.println("-".repeat(55));
-                writer.println("GUEST INFORMATION");
-                writer.println("-".repeat(55));
-                writer.printf("Name:       %s%n", data.guestName);
-                writer.printf("Email:      %s%n", data.guestEmail);
-                writer.printf("Phone:      %s%n", data.guestPhone);
-                writer.println();
-                writer.println("-".repeat(55));
-                writer.println("STAY DETAILS");
-                writer.println("-".repeat(55));
-                writer.printf("Check-in:   %s (3:00 PM)%n", data.checkIn);
-                writer.printf("Check-out:  %s (11:00 AM)%n", data.checkOut);
-                writer.printf("Nights:     %d%n", data.nights);
-                writer.printf("Guests:     %d adult(s), %d child(ren)%n", data.adults, data.children);
-                writer.println();
-                writer.println("-".repeat(55));
-                writer.println("ROOM");
-                writer.println("-".repeat(55));
-                writer.printf("Type:       %s x%d%n", data.selectedRoomType, data.roomQuantity);
-                writer.printf("Rate:       $%.2f / night%n", mainController.getBasePrice(data.selectedRoomType).doubleValue());
-                writer.printf("Pricing:    %s%n", mainController.getPricingTypeDescription());
-                writer.println();
-                writer.println("-".repeat(55));
-                writer.println("ADD-ONS");
-                writer.println("-".repeat(55));
-                if (data.hasWifi && data.wifiQuantity > 0) writer.printf("Wi-Fi:      %d device(s)%n", data.wifiQuantity);
-                if (data.hasBreakfast && data.breakfastQuantity > 0) writer.printf("Breakfast:  %d person(s)%n", data.breakfastQuantity);
-                if (data.hasParking && data.parkingQuantity > 0) writer.printf("Shuttle:    %d trip(s)%n", data.parkingQuantity);
-                if (data.hasSpa && data.spaQuantity > 0) writer.printf("Spa:        %d session(s)%n", data.spaQuantity);
-                writer.println();
-                writer.println("-".repeat(55));
-                writer.println("PRICE BREAKDOWN");
-                writer.println("-".repeat(55));
+            try {
+                Document document = new Document();
+                PdfWriter.getInstance(document, new FileOutputStream(file));
+                document.open();
+                
+                document.add(new Paragraph("=".repeat(55)));
+                document.add(new Paragraph("           GRAND PLAZA HOTEL"));
+                document.add(new Paragraph("        TORONTO  •  EST. 1985"));
+                document.add(new Paragraph("=".repeat(55)));
+                document.add(new Paragraph("\n                BOOKING SUMMARY\n"));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph("GUEST INFORMATION"));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph(String.format("Name:       %s", data.guestName)));
+                document.add(new Paragraph(String.format("Email:      %s", data.guestEmail)));
+                document.add(new Paragraph(String.format("Phone:      %s\n", data.guestPhone)));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph("STAY DETAILS"));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph(String.format("Check-in:   %s (3:00 PM)", data.checkIn)));
+                document.add(new Paragraph(String.format("Check-out:  %s (11:00 AM)", data.checkOut)));
+                document.add(new Paragraph(String.format("Nights:     %d", data.nights)));
+                document.add(new Paragraph(String.format("Guests:     %d adult(s), %d child(ren)\n", data.adults, data.children)));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph("ROOM"));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph(String.format("Type:       %s x%d", data.selectedRoomType, data.roomQuantity)));
+                document.add(new Paragraph(String.format("Rate:       $%.2f / night", mainController.getBasePrice(data.selectedRoomType).doubleValue())));
+                document.add(new Paragraph(String.format("Pricing:    %s\n", mainController.getPricingTypeDescription())));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph("ADD-ONS"));
+                document.add(new Paragraph("-".repeat(55)));
+                if (data.hasWifi && data.wifiQuantity > 0) document.add(new Paragraph(String.format("Wi-Fi:      %d device(s)", data.wifiQuantity)));
+                if (data.hasBreakfast && data.breakfastQuantity > 0) document.add(new Paragraph(String.format("Breakfast:  %d person(s)", data.breakfastQuantity)));
+                if (data.hasParking && data.parkingQuantity > 0) document.add(new Paragraph(String.format("Shuttle:    %d trip(s)", data.parkingQuantity)));
+                if (data.hasSpa && data.spaQuantity > 0) document.add(new Paragraph(String.format("Spa:        %d session(s)\n", data.spaQuantity)));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph("PRICE BREAKDOWN"));
+                document.add(new Paragraph("-".repeat(55)));
                 BigDecimal room = mainController.getRoomPrice();
                 BigDecimal addons = mainController.getAddonsTotal();
                 BigDecimal sub = room.add(addons);
                 BigDecimal tax = sub.multiply(new BigDecimal("0.13"));
-                writer.printf("Room:       $%.2f%n", room.doubleValue());
-                writer.printf("Add-ons:    $%.2f%n", addons.doubleValue());
-                writer.printf("Subtotal:   $%.2f%n", sub.doubleValue());
-                writer.printf("Tax (13%%):  $%.2f%n", tax.doubleValue());
-                writer.println("-".repeat(55));
-                writer.printf("TOTAL DUE:  $%.2f%n", mainController.getTotal().doubleValue());
-                writer.println("=".repeat(55));
-                writer.println("Thank you for choosing Grand Plaza Hotel!");
-                writer.println("Payment will be collected at the front desk.");
-
+                document.add(new Paragraph(String.format("Room:       $%.2f", room.doubleValue())));
+                document.add(new Paragraph(String.format("Add-ons:    $%.2f", addons.doubleValue())));
+                document.add(new Paragraph(String.format("Subtotal:   $%.2f", sub.doubleValue())));
+                document.add(new Paragraph(String.format("Tax (13%%):  $%.2f\n", tax.doubleValue())));
+                document.add(new Paragraph("-".repeat(55)));
+                document.add(new Paragraph(String.format("TOTAL DUE:  $%.2f", mainController.getTotal().doubleValue())));
+                document.add(new Paragraph("=".repeat(55)));
+                document.add(new Paragraph("Thank you for choosing Grand Plaza Hotel!"));
+                document.add(new Paragraph("Payment will be collected at the front desk."));
+                
+                document.close();
                 showAlert("Export Successful", "Booking summary saved to:\n" + file.getAbsolutePath());
-            } catch (IOException e) {
+            } catch (Exception e) {
                 showAlert("Export Failed", "Error saving file: " + e.getMessage());
             }
         }
