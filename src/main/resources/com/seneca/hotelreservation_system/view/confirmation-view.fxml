@@ -78,7 +78,7 @@
                     </HBox>
                     <HBox spacing="10.0" style="-fx-padding: 14 22 18 22;">
                         <Label text="Total" style="-fx-text-fill: #7a6a4a; -fx-font-size: 11px; -fx-pref-width: 86;" />
-                        <Label fx:id="totalAmountLabel" text="$0.00"
+                        <Label fx:id="totalAmountLabel" text="\$0.00"
                                style="-fx-text-fill: #c8a84b; -fx-font-size: 22px; -fx-font-weight: bold;" />
                     </HBox>
 

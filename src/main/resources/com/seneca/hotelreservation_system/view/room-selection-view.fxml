@@ -90,7 +90,7 @@
                                    style="-fx-text-fill: #4a4030; -fx-font-size: 11px; -fx-font-style: italic;" wrapText="true"/>
                             <Region prefHeight="4.0" />
                             <HBox alignment="CENTER_LEFT" spacing="6.0">
-                                <Label text="$89" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
+                                <Label text="\$89" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
                                 <Label text="/ night" style="-fx-text-fill: #54483a; -fx-font-size: 12px;" />
                             </HBox>
                             <HBox alignment="CENTER_LEFT" spacing="8.0">
@@ -132,7 +132,7 @@
                                    style="-fx-text-fill: #4a4030; -fx-font-size: 11px; -fx-font-style: italic;" wrapText="true"/>
                             <Region prefHeight="4.0" />
                             <HBox alignment="CENTER_LEFT" spacing="6.0">
-                                <Label text="$129" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
+                                <Label text="\$129" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
                                 <Label text="/ night" style="-fx-text-fill: #54483a; -fx-font-size: 12px;" />
                             </HBox>
                             <HBox alignment="CENTER_LEFT" spacing="8.0">
@@ -174,7 +174,7 @@
                                    style="-fx-text-fill: #4a4030; -fx-font-size: 11px; -fx-font-style: italic;" wrapText="true"/>
                             <Region prefHeight="4.0" />
                             <HBox alignment="CENTER_LEFT" spacing="6.0">
-                                <Label text="$199" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
+                                <Label text="\$199" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
                                 <Label text="/ night" style="-fx-text-fill: #54483a; -fx-font-size: 12px;" />
                             </HBox>
                             <HBox alignment="CENTER_LEFT" spacing="8.0">
@@ -216,7 +216,7 @@
                                    style="-fx-text-fill: #4a4030; -fx-font-size: 11px; -fx-font-style: italic;" wrapText="true"/>
                             <Region prefHeight="4.0" />
                             <HBox alignment="CENTER_LEFT" spacing="6.0">
-                                <Label text="$349" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
+                                <Label text="\$349" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
                                 <Label text="/ night" style="-fx-text-fill: #54483a; -fx-font-size: 12px;" />
                             </HBox>
                             <HBox alignment="CENTER_LEFT" spacing="8.0">
