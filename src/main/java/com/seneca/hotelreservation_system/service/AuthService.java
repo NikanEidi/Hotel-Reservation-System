@@ -12,6 +12,12 @@ public class AuthService {
     public void registerAdmin(String username, String password, String role) {
         EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
         try {
+            TypedQuery<Long> query = em.createQuery("SELECT COUNT(a) FROM Admin a WHERE a.username = :username", Long.class);
+            query.setParameter("username", username);
+            if (query.getSingleResult() > 0) {
+                return; // Admin already exists
+            }
+            
             String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
             Admin admin = new Admin(username, hashedPassword, role);
             em.getTransaction().begin();

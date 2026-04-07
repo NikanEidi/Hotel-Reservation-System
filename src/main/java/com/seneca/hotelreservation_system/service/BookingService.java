@@ -57,9 +57,10 @@ public class BookingService {
         try {
             em.getTransaction().begin();
             
-            // Check if guest exists by email
-            TypedQuery<Guest> gq = em.createQuery("SELECT g FROM Guest g WHERE g.email = :e", Guest.class);
+            // Check if guest exists by email or phone
+            TypedQuery<Guest> gq = em.createQuery("SELECT g FROM Guest g WHERE g.email = :e OR g.phone = :p", Guest.class);
             gq.setParameter("e", guest.getEmail());
+            gq.setParameter("p", guest.getPhone());
             List<Guest> existingGuests = gq.getResultList();
             
             Guest persistedGuest;
