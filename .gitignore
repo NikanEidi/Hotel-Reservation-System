@@ -31,4 +31,4 @@ src/main/resources/META-INF/persistence.xml.bak
 !docs/
 
 .env
-application-local.properties
+application-local.properties.ai/
