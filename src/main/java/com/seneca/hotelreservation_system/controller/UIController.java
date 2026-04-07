@@ -20,10 +20,33 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 @SuppressWarnings({ "unused", "SpellCheckingInspection" })
 public class UIController {
+
+    private static final java.util.logging.Logger LOGGER = java.util.logging.Logger.getLogger("HotelReservationSystem");
+
+    static {
+        try {
+            java.util.logging.FileHandler fileHandler = new java.util.logging.FileHandler(
+                    "system_logs.%g.log", 1024 * 1024, 10, true
+            );
+            java.util.logging.SimpleFormatter formatter = new java.util.logging.SimpleFormatter();
+            fileHandler.setFormatter(formatter);
+            LOGGER.addHandler(fileHandler);
+            LOGGER.setUseParentHandlers(false);
+        } catch (IOException e) {
+            LOGGER.severe("Failed to initialize logger: " + e.getMessage());
+        }
+    }
+
+    private void logKioskAction(String action, String details) {
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        LOGGER.info(String.format("[%s] KIOSK | %s | %s", timestamp, action, details));
+    }
 
     public static class BookingData {
         public int adults = 2;
@@ -47,12 +70,31 @@ public class UIController {
         public int spaQuantity = 0;
         public boolean enrollLoyalty = true;
         public int loyaltyPointsToRedeem = 0;
+        public String addonsDescription = "";
         public int nights;
         public BigDecimal roomPrice;
         public BigDecimal addonsTotal;
         public BigDecimal subtotal;
         public BigDecimal tax;
         public BigDecimal total;
+
+        public void setAddonsData(boolean wifi, boolean breakfast, boolean shuttle, boolean spa,
+                                  int wifiQty, int breakfastQty, int shuttleQty, int spaQty) {
+            booking.hasWifi = wifi;
+            booking.hasBreakfast = breakfast;
+            booking.hasParking = shuttle;
+            booking.hasSpa = spa;
+            booking.wifiQuantity = wifiQty;
+            booking.breakfastQuantity = breakfastQty;
+            booking.parkingQuantity = shuttleQty;
+            booking.spaQuantity = spaQty;
+
+            System.out.println("=== SETADDONSDATA CALLED ===");
+            System.out.println("WiFi: " + wifi + " qty:" + wifiQty);
+            System.out.println("Breakfast: " + breakfast + " qty:" + breakfastQty);
+            System.out.println("Shuttle: " + shuttle + " qty:" + shuttleQty);
+            System.out.println("Spa: " + spa + " qty:" + spaQty);
+        }
     }
 
     private static BookingData booking = new BookingData();
@@ -173,10 +215,9 @@ public class UIController {
     }
 
     public BigDecimal calculateRoomPrice() {
-        int n = getNights();
         BigDecimal basePrice = getBasePrice(booking.selectedRoomType);
         PricingStrategy strategy = getPricingStrategy(booking.checkIn, booking.checkOut);
-        BigDecimal perRoomTotal = strategy.calculatePrice(basePrice, n);
+        BigDecimal perRoomTotal = strategy.calculatePrice(basePrice, booking.nights);
         return perRoomTotal.multiply(BigDecimal.valueOf(booking.roomQuantity));
     }
 
@@ -189,6 +230,8 @@ public class UIController {
         BigDecimal total = bill.getCost();
         if (booking.hasShuttle) total = total.add(BigDecimal.valueOf(35.00));
         if (booking.hasLateCheckout) total = total.add(BigDecimal.valueOf(30.00));
+
+        System.out.println("Add-ons Total: $" + total);
         return total;
     }
 
@@ -198,6 +241,14 @@ public class UIController {
         booking.subtotal = booking.roomPrice.add(booking.addonsTotal);
         booking.tax = booking.subtotal.multiply(new BigDecimal("0.13"));
         booking.total = booking.subtotal.add(booking.tax);
+
+        System.out.println("=== CALCULATE TOTAL ===");
+        System.out.println("Room Price: $" + booking.roomPrice);
+        System.out.println("Add-ons Total: $" + booking.addonsTotal);
+        System.out.println("Subtotal: $" + booking.subtotal);
+        System.out.println("Tax (13%): $" + booking.tax);
+        System.out.println("Total: $" + booking.total);
+
         return booking.total;
     }
 
@@ -233,7 +284,8 @@ public class UIController {
     @FXML private Label taxLabel;
     @FXML private Label totalDueLabel;
 
-    public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut, String name, String email, String phone) {
+    public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
+                              String name, String email, String phone) {
         booking.adults = adults;
         booking.children = children;
         booking.checkIn = checkIn;
@@ -241,12 +293,18 @@ public class UIController {
         booking.guestName = name;
         booking.guestEmail = email;
         booking.guestPhone = phone;
-        if (checkIn != null && checkOut != null) booking.nights = (int) ChronoUnit.DAYS.between(checkIn, checkOut);
+        if (checkIn != null && checkOut != null) {
+            booking.nights = (int) ChronoUnit.DAYS.between(checkIn, checkOut);
+        }
+        logKioskAction("SEARCH", "Guest: " + name + ", " + adults + " adults, " + children + " children, " + checkIn + " to " + checkOut);
+        System.out.println("Search Data Saved: " + name);
     }
 
     public void setRoomData(RoomType type, int quantity) {
         booking.selectedRoomType = type;
         booking.roomQuantity = quantity;
+        logKioskAction("ROOM_SELECTION", type + " x" + quantity);
+        System.out.println("Room Data Saved: " + type + " x" + quantity);
     }
 
     public void setAddonsData(boolean wifi, boolean breakfast, boolean parking, boolean spa, int wifiQty, int breakfastQty, int parkingQty, int spaQty) {
@@ -258,15 +316,28 @@ public class UIController {
         booking.breakfastQuantity = breakfastQty;
         booking.parkingQuantity = parkingQty;
         booking.spaQuantity = spaQty;
+        logKioskAction("ADDONS", "WiFi:" + wifiQty + ", Breakfast:" + breakfastQty + ", Parking:" + parkingQty + ", Spa:" + spaQty);
+        System.out.println("Add-ons Saved");
     }
 
     public void setLoyaltyData(boolean enroll, int pointsToRedeem) {
         booking.enrollLoyalty = enroll;
         booking.loyaltyPointsToRedeem = pointsToRedeem;
+        logKioskAction("LOYALTY", "Enrolled: " + enroll + ", Points Redeemed: " + pointsToRedeem);
+        System.out.println("Loyalty Saved");
+    }
+
+    public void setAddonsDescription(String description) {
+        booking.addonsDescription = description;
+    }
+
+    public String getAddonsDescription() {
+        return booking.addonsDescription;
     }
 
     @FXML
     public void showRules() {
+        logKioskAction("RULES_VIEWED", "Guest viewed hotel rules");
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Grand Plaza Rules & Policies");
         alert.setHeaderText("Hotel Kiosk Regulations");
@@ -295,15 +366,74 @@ public class UIController {
 
     @FXML
     public void goToWelcome(ActionEvent event) throws IOException {
+        logKioskAction("NAVIGATION", "Returning to Welcome screen - Booking reset");
         booking = new BookingData();
         switchScene(event, "/com/seneca/hotelreservation_system/view/welcome-view.fxml");
     }
 
     @FXML
+    public void goToSearch(ActionEvent event) throws IOException {
+        logKioskAction("NAVIGATION", "Moving to Search screen");
+        switchScene(event, "/com/seneca/hotelreservation_system/view/search-view.fxml");
+    }
+
+    @FXML
+    public void goToGuestDetails(ActionEvent event) throws IOException {
+        logKioskAction("NAVIGATION", "Moving to Guest Details screen");
+        switchScene(event, "/com/seneca/hotelreservation_system/view/guest-details-view.fxml");
+    }
+
+    @FXML
+    public void goToRoomSelection(ActionEvent event) throws IOException {
+        if (booking.checkIn != null && booking.checkOut != null) {
+            booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
+        }
+        logKioskAction("NAVIGATION", "Moving to Room Selection screen - Nights: " + booking.nights);
+        switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml");
+    }
+
+    @FXML
+    public void goToAddOns(ActionEvent event) throws IOException {
+        logKioskAction("NAVIGATION", "Moving to Add-ons screen");
+        switchScene(event, "/com/seneca/hotelreservation_system/view/addons-view.fxml");
+    }
+
+    @FXML
+    public void goToLoyalty(ActionEvent event) throws IOException {
+        logKioskAction("NAVIGATION", "Moving to Loyalty screen");
+        switchScene(event, "/com/seneca/hotelreservation_system/view/loyalty-view.fxml");
+    }
+
+    @FXML
+    public void goToSummary(ActionEvent event) throws IOException {
+        calculateTotal();
+        logKioskAction("NAVIGATION", "Moving to Summary screen - Total: $" + booking.total);
+        switchScene(event, "/com/seneca/hotelreservation_system/view/summary-view.fxml");
+    }
+
+    @FXML
     public void goToConfirmation(ActionEvent event) throws IOException {
         calculateTotal();
+        logKioskAction("RESERVATION_COMPLETE", "Guest: " + booking.guestName + ", Room: " + booking.selectedRoomType +
+                ", Nights: " + booking.nights + ", Total: $" + booking.total);
         LoggerUtil.logAction(booking.guestName != null ? booking.guestName : "Guest", "RESERVATION_SAVED", "BOOKING", "TOTAL:" + booking.total, "Kiosk reservation completed");
+        System.out.println("Reservation saved! Total: $" + booking.total);
         switchScene(event, "/com/seneca/hotelreservation_system/view/confirmation-view.fxml");
+    }
+
+    @FXML
+    public void goToAdminLogin(ActionEvent event) throws IOException {
+        switchScene(event, "/com/seneca/hotelreservation_system/view/admin-login-view.fxml");
+    }
+
+    @FXML
+    public void goToAdminDashboard(ActionEvent event) throws IOException {
+        switchScene(event, "/com/seneca/hotelreservation_system/view/admin-dashboard-view.fxml");
+    }
+
+    @FXML
+    public void goToAdmin(ActionEvent event) throws IOException {
+        goToAdminDashboard(event);
     }
 
     @FXML
@@ -314,8 +444,10 @@ public class UIController {
             showAlert(Alert.AlertType.ERROR, "Login Error", "Missing Credentials", "Please enter both username and password.");
             return;
         }
+
         AuthService authService = new AuthService();
         Admin admin = authService.authenticate(u, p);
+
         if (admin != null) {
             LoggerUtil.logAction(u, "LOGIN_SUCCESS", "ADMIN", admin.getAdminId().toString(), "Admin access granted");
             goToAdminDashboard(event);
@@ -325,36 +457,124 @@ public class UIController {
         }
     }
 
+    @FXML
+    public void selectStandardDouble(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Standard Double Suite selected");
+        System.out.println("=== selectStandardDouble called ===");
+        booking.selectedRoomType = RoomType.DOUBLE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectRoyalKing(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Royal King Suite selected");
+        System.out.println("=== selectRoyalKing called ===");
+        booking.selectedRoomType = RoomType.PENTHOUSE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectSingle(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Single Room selected");
+        System.out.println("=== selectSingle called ===");
+        booking.selectedRoomType = RoomType.SINGLE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectDeluxe(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Deluxe Room selected");
+        System.out.println("=== selectDeluxe called ===");
+        booking.selectedRoomType = RoomType.DELUXE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void showFeedbackModule() {
+        showPlaceholder("Feedback", "Feedback page is part of later milestone functionality.");
+    }
+
+    @FXML
+    public void showBillingModule() {
+        showPlaceholder("Billing", "Billing page is part of later milestone functionality.");
+    }
+
+    @FXML
+    public void showWaitlistModule() {
+        showPlaceholder("Waitlist", "Waitlist page is part of later milestone functionality.");
+    }
+
+    @FXML
+    public void handleSearch() {
+        String query = (adminSearchField != null) ? adminSearchField.getText() : "None";
+        LOGGER.info("Admin searched for: " + query);
+        Alert searchAlert = new Alert(Alert.AlertType.INFORMATION);
+        searchAlert.setTitle("Admin Search");
+        searchAlert.setHeaderText("Searching Records");
+        searchAlert.setContentText("Searching for guest: " + query);
+        searchAlert.showAndWait();
+    }
+
+    @FXML
+    public void checkLoyaltyStatus() {
+        if (phoneField != null && nameField != null && emailField != null) {
+            String phone = phoneField.getText();
+
+            if (phone != null && phone.length() == 10) {
+                if ("1234567890".equals(phone)) {
+                    nameField.setText("Nikan Eidi");
+                    emailField.setText("nikaneydi1984@gmail.com");
+                    LOGGER.info("Loyalty lookup found: Nikan Eidi (phone: " + phone + ")");
+                } else {
+                    LOGGER.info("Loyalty lookup: No member found for phone: " + phone);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Loyalty Member");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Would you like to become a Loyalty Member?");
+                    alert.showAndWait();
+                }
+            }
+        }
+    }
+
+    private void showPlaceholder(String title, String message) {
+        showAlert(Alert.AlertType.INFORMATION, title, title + " Module", message);
+    }
+
     private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
         URL resource = getClass().getResource(fxmlPath);
-        if (resource == null) throw new IOException("FXML file not found: " + fxmlPath);
+
+        if (resource == null) {
+            LOGGER.severe("FXML file not found: " + fxmlPath);
+            throw new IOException("FXML file not found: " + fxmlPath);
+        }
+
         FXMLLoader loader = new FXMLLoader(resource);
         Parent root = loader.load();
         Object controller = loader.getController();
+        System.out.println("=== SWITCH SCENE DEBUG ===");
+        System.out.println("FXML: " + fxmlPath);
+        System.out.println("Controller class: " + (controller != null ? controller.getClass().getSimpleName() : "NULL"));
+
         if (controller != null) {
             try {
                 java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
+                System.out.println("Found setMainController method in " + controller.getClass().getSimpleName());
                 method.invoke(controller, this);
-            } catch (Exception e) {}
+            } catch (NoSuchMethodException e) {
+                System.out.println("ERROR: No setMainController method in " + controller.getClass().getSimpleName());
+            } catch (Exception e) {
+                System.out.println("ERROR calling setMainController: " + e.getMessage());
+            }
         }
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1400, 900));
         stage.show();
     }
-
-    @FXML public void showFeedbackModule(ActionEvent event) throws IOException { }
-    @FXML public void showBillingModule(ActionEvent event) throws IOException { }
-    @FXML public void showWaitlistModule(ActionEvent event) throws IOException { }
-    @FXML public void handleSearch(ActionEvent event) { }
-
-    @FXML public void goToSearch(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/search-view.fxml"); }
-    @FXML public void goToGuestDetails(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/guest-details-view.fxml"); }
-    @FXML public void goToRoomSelection(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml"); }
-    @FXML public void goToAddOns(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/addons-view.fxml"); }
-    @FXML public void goToLoyalty(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/loyalty-view.fxml"); }
-    @FXML public void goToSummary(ActionEvent event) throws IOException { calculateTotal(); switchScene(event, "/com/seneca/hotelreservation_system/view/summary-view.fxml"); }
-    @FXML public void goToAdminLogin(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/admin-login-view.fxml"); }
-    @FXML public void goToAdminDashboard(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/admin-dashboard-view.fxml"); }
 
     private void showAlert(Alert.AlertType type, String title, String header, String content) {
         Alert alert = new Alert(type);

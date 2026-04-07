@@ -36,7 +36,6 @@ public class RoomSelectionController {
     private static final int PENTHOUSE_MAX = 2;
 
     public void setMainController(UIController controller) {
-        System.out.println("=== RoomSelectionController.setMainController CALLED ===");
         this.mainController = controller;
         loadExistingData();
         updateSearchSummary();
@@ -171,7 +170,6 @@ public class RoomSelectionController {
 
     @FXML
     public void selectStandardDouble(ActionEvent event) throws IOException {
-        System.out.println("=== selectStandardDouble CLICKED! ===");
         selectedType = UIController.RoomType.DOUBLE;
         selectedQuantity = 1;
         goToAddOns(event);
@@ -179,7 +177,6 @@ public class RoomSelectionController {
 
     @FXML
     public void selectRoyalKing(ActionEvent event) throws IOException {
-        System.out.println("=== selectRoyalKing CLICKED! ===");
         selectedType = UIController.RoomType.PENTHOUSE;
         selectedQuantity = 1;
         goToAddOns(event);
@@ -187,7 +184,6 @@ public class RoomSelectionController {
 
     @FXML
     public void goToAddOns(ActionEvent event) throws IOException {
-        System.out.println("=== goToAddOns CALLED ===");
         if (!validateRoomSelection()) return;
         mainController.setRoomData(selectedType, selectedQuantity);
         mainController.goToAddOns(event);
@@ -195,13 +191,11 @@ public class RoomSelectionController {
 
     @FXML
     public void goToSearch(ActionEvent event) throws IOException {
-        System.out.println("=== goToSearch CALLED ===");
         mainController.goToSearch(event);
     }
 
     @FXML
     public void goToWelcome(ActionEvent event) throws IOException {
-        System.out.println("=== goToWelcome CALLED ===");
         mainController.goToWelcome(event);
     }
 
