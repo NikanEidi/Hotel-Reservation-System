@@ -41,7 +41,7 @@ public class Reservation {
     }
 
     public Reservation(Guest guest, List<Room> rooms, LocalDate checkInDate, LocalDate checkOutDate, int adultCount,
-            int childCount) {
+                       int childCount) {
         this.guest = guest;
         this.rooms = rooms;
         this.checkInDate = checkInDate;
@@ -51,67 +51,38 @@ public class Reservation {
         this.status = "PENDING";
     }
 
-    public Long getReservationId() {
-        return reservationId;
+    // Helper method for TableView in AdminController
+    public String getGuestName() {
+        return (guest != null) ? guest.getFirstName() + " " + guest.getLastName() : "Unknown Guest";
     }
 
-    public void setReservationId(Long reservationId) {
-        this.reservationId = reservationId;
+
+    public double getTotalPrice() {
+
+        return 150.0;
     }
 
-    public Guest getGuest() {
-        return guest;
-    }
+    public Long getReservationId() { return reservationId; }
+    public void setReservationId(Long reservationId) { this.reservationId = reservationId; }
 
-    public void setGuest(Guest guest) {
-        this.guest = guest;
-    }
+    public Guest getGuest() { return guest; }
+    public void setGuest(Guest guest) { this.guest = guest; }
 
-    public List<Room> getRooms() {
-        return rooms;
-    }
+    public List<Room> getRooms() { return rooms; }
+    public void setRooms(List<Room> rooms) { this.rooms = rooms; }
 
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
+    public LocalDate getCheckInDate() { return checkInDate; }
+    public void setCheckInDate(LocalDate checkInDate) { this.checkInDate = checkInDate; }
 
-    public LocalDate getCheckInDate() {
-        return checkInDate;
-    }
+    public LocalDate getCheckOutDate() { return checkOutDate; }
+    public void setCheckOutDate(LocalDate checkOutDate) { this.checkOutDate = checkOutDate; }
 
-    public void setCheckInDate(LocalDate checkInDate) {
-        this.checkInDate = checkInDate;
-    }
+    public int getAdultCount() { return adultCount; }
+    public void setAdultCount(int adultCount) { this.adultCount = adultCount; }
 
-    public LocalDate getCheckOutDate() {
-        return checkOutDate;
-    }
+    public int getChildCount() { return childCount; }
+    public void setChildCount(int childCount) { this.childCount = childCount; }
 
-    public void setCheckOutDate(LocalDate checkOutDate) {
-        this.checkOutDate = checkOutDate;
-    }
-
-    public int getAdultCount() {
-        return adultCount;
-    }
-
-    public void setAdultCount(int adultCount) {
-        this.adultCount = adultCount;
-    }
-
-    public int getChildCount() {
-        return childCount;
-    }
-
-    public void setChildCount(int childCount) {
-        this.childCount = childCount;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }
