@@ -12,6 +12,7 @@ public class HotelApp extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/seneca/hotelreservation_system/view/welcome-view.fxml"));
 
         Scene scene = new Scene(loader.load(), 1400, 900);
+        scene.getStylesheets().add(getClass().getResource("/com/seneca/hotelreservation_system/css/global.css").toExternalForm());
 
         stage.setTitle("Hotel Reservation System - Grand Plaza");
         stage.setScene(scene);

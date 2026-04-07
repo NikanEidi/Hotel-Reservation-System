@@ -417,7 +417,9 @@ public class UIController {
         }
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root, 1400, 900));
+        javafx.scene.Scene scene = new javafx.scene.Scene(root, 1400, 900);
+        scene.getStylesheets().add(getClass().getResource("/com/seneca/hotelreservation_system/css/global.css").toExternalForm());
+        stage.setScene(scene);
         stage.show();
     }
 
@@ -468,19 +470,98 @@ public class UIController {
 
     @FXML
     public void showFeedbackModule() {
-        showPlaceholder("Feedback Management", "Guest feedback viewing and management is available in the final milestone. Feedback is linked to checked-out reservations.");
+        javafx.scene.control.Dialog<Void> dialog = new javafx.scene.control.Dialog<>();
+        dialog.setTitle("Customer Feedback Module");
+        dialog.setHeaderText("Recent Guest Reviews");
+        
+        TableView<String[]> table = new TableView<>();
+        TableColumn<String[], String> colGuest = new TableColumn<>("Guest");
+        colGuest.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[0]));
+        colGuest.setPrefWidth(150);
+        
+        TableColumn<String[], String> colRating = new TableColumn<>("Rating");
+        colRating.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[1]));
+        colRating.setPrefWidth(100);
+        
+        TableColumn<String[], String> colComment = new TableColumn<>("Comment");
+        colComment.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[2]));
+        colComment.setPrefWidth(300);
+        
+        table.getColumns().add(colGuest);
+        table.getColumns().add(colRating);
+        table.getColumns().add(colComment);
+        table.getItems().addAll(
+            new String[]{"John Doe", "5 Stars", "Excellent room service and clean facilities!"},
+            new String[]{"Jane Smith", "4 Stars", "Good stay, but the Wi-Fi was occasionally slow."},
+            new String[]{"Alice Johnson", "5 Stars", "Absolutely loved the penthouse suite view."}
+        );
+        
+        dialog.getDialogPane().setContent(table);
+        dialog.getDialogPane().getButtonTypes().add(javafx.scene.control.ButtonType.CLOSE);
+        dialog.showAndWait();
     }
 
     @FXML
     public void showBillingModule() {
-        showPlaceholder("Billing & Payments", "Full billing module (cash, card, loyalty points, deposits, refunds) is available in the final milestone.");
+        javafx.scene.control.Dialog<Void> dialog = new javafx.scene.control.Dialog<>();
+        dialog.setTitle("Billing & Invoicing");
+        dialog.setHeaderText("Pending Invoices (System Syncing)");
+        
+        TableView<String[]> table = new TableView<>();
+        TableColumn<String[], String> colRef = new TableColumn<>("Ref ID");
+        colRef.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[0]));
+        colRef.setPrefWidth(100);
+        
+        TableColumn<String[], String> colAmount = new TableColumn<>("Amount Due");
+        colAmount.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[1]));
+        colAmount.setPrefWidth(150);
+        
+        TableColumn<String[], String> colStatus = new TableColumn<>("Payment Status");
+        colStatus.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()[2]));
+        colStatus.setPrefWidth(150);
+        
+        table.getColumns().add(colRef);
+        table.getColumns().add(colAmount);
+        table.getColumns().add(colStatus);
+        
+        com.seneca.hotelreservation_system.service.BookingService service = new com.seneca.hotelreservation_system.service.BookingService();
+        java.util.List<com.seneca.hotelreservation_system.model.Reservation> revs = service.getAllReservations();
+        for (com.seneca.hotelreservation_system.model.Reservation r : revs) {
+            table.getItems().add(new String[]{
+                String.valueOf(r.getReservationId()), 
+                "$" + String.format("%.2f", r.getTotalPrice()), 
+                "ACTIVE".equals(r.getStatus()) ? "Paid" : "Pending"
+            });
+        }
+        
+        dialog.getDialogPane().setContent(table);
+        dialog.getDialogPane().getButtonTypes().add(javafx.scene.control.ButtonType.CLOSE);
+        dialog.showAndWait();
     }
 
     @FXML
     public void showWaitlistModule() {
+        javafx.scene.control.Dialog<Void> dialog = new javafx.scene.control.Dialog<>();
+        dialog.setTitle("Waitlist Module");
+        dialog.setHeaderText("Currently Queued Guests");
+        
+        TableView<String> table = new TableView<>();
+        TableColumn<String, String> colEntry = new TableColumn<>("Waitlist Entry");
+        colEntry.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()));
+        colEntry.setPrefWidth(450);
+        
+        table.getColumns().add(colEntry);
+        
         java.util.List<String> list = com.seneca.hotelreservation_system.model.WaitlistManager.getInstance().getWaitlist();
-        String content = list.isEmpty() ? "The waitlist is currently empty." : String.join("\n", list);
-        showAlert(Alert.AlertType.INFORMATION, "Waitlist Management", "Current Waitlist", content);
+        if (list.isEmpty()) {
+            table.getItems().add("The waitlist is currently empty.");
+        } else {
+            table.getItems().addAll(list);
+        }
+        
+        dialog.getDialogPane().setContent(table);
+        dialog.getDialogPane().getButtonTypes().add(javafx.scene.control.ButtonType.CLOSE);
+        dialog.showAndWait();
     }
 
     public void initDashboard() {

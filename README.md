@@ -13,4 +13,4 @@ A complete management system for the Grand Plaza Hotel built on JavaFX and MySQL
 2.  Start the Application: `./mvnw javafx:run`
 3.  Login via the hidden secure login (Top Right). Admin Username `nikan`, Password `123456`.
 
--- Developed By Nikan Eidi
+-- Developed By: Nikan Eidi, [Enter Member 2 Name], [Enter Member 3 Name], [Enter Member 4 Name]

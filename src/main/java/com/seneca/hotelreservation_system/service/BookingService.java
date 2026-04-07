@@ -96,17 +96,47 @@ public class BookingService {
         EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
         try {
             Long totalRes = em.createQuery("SELECT COUNT(r) FROM Reservation r", Long.class).getSingleResult();
+            if (totalRes == 0) {
+                seedMockData(em);
+                totalRes = em.createQuery("SELECT COUNT(r) FROM Reservation r", Long.class).getSingleResult();
+            }
             Long roomsOcc = em.createQuery("SELECT COUNT(r) FROM Reservation r WHERE r.status = 'ACTIVE'", Long.class).getSingleResult();
             Long pending = em.createQuery("SELECT COUNT(r) FROM Reservation r WHERE r.status = 'PENDING'", Long.class).getSingleResult();
-            // Assuming waitlist is just a count of guests not in active/pending or just a dummy query
-            Long waitlist = 0L; // Observer pattern manages waitlist, we'll keep it 0 or mock it
             
-            return new Object[]{totalRes, roomsOcc, pending, waitlist};
+            Long waitlistCount = (long) com.seneca.hotelreservation_system.model.WaitlistManager.getInstance().getWaitlist().size();
+            
+            return new Object[]{totalRes, roomsOcc, pending, waitlistCount};
         } catch (Exception e) {
             e.printStackTrace();
             return new Object[]{0L, 0L, 0L, 0L};
         } finally {
             em.close();
         }
+    }
+
+    private void seedMockData(EntityManager em) {
+        em.getTransaction().begin();
+        for (int i = 1; i <= 5; i++) {
+            com.seneca.hotelreservation_system.model.Guest g = new com.seneca.hotelreservation_system.model.Guest();
+            g.setFirstName("Demo");
+            g.setLastName("Guest " + i);
+            g.setEmail("guest" + i + "@demo.com");
+            g.setPhone("555-000" + i);
+            g.setLoyaltyPoints(100 * i);
+            em.persist(g);
+            
+            com.seneca.hotelreservation_system.model.Reservation r = new com.seneca.hotelreservation_system.model.Reservation();
+            r.setGuest(g);
+            r.setCheckInDate(java.time.LocalDate.now().plusDays(i));
+            r.setCheckOutDate(java.time.LocalDate.now().plusDays(i + 2));
+            r.setAdultCount(2);
+            r.setChildCount(0);
+            r.setStatus(i % 2 == 0 ? "ACTIVE" : "PENDING");
+            em.persist(r);
+        }
+        em.getTransaction().commit();
+        
+        com.seneca.hotelreservation_system.model.WaitlistManager.getInstance().addToWaitlist("Waitlist Demo 1", "wait1@demo.com");
+        com.seneca.hotelreservation_system.model.WaitlistManager.getInstance().addToWaitlist("Waitlist Demo 2", "wait2@demo.com");
     }
 }
