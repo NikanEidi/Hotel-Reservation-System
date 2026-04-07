@@ -129,11 +129,9 @@ public class SearchController {
             showError("Please select a check-out date.");
             return false;
         }
-        if (!checkIn.isBefore(LocalDate.now())) {
-            if (checkIn.isBefore(LocalDate.now())) {
-                showError("Check-in date cannot be in the past.");
-                return false;
-            }
+        if (checkIn.isBefore(LocalDate.now())) {
+            showError("Check-in date cannot be in the past.");
+            return false;
         }
         if (!checkOut.isAfter(checkIn)) {
             showError("Check-out date must be after check-in date.");
@@ -176,7 +174,7 @@ public class SearchController {
 
     private void showError(String message) {
         if (errorLabel != null) {
-            errorLabel.setText("⚠  " + message);
+            errorLabel.setText(message);
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
         } else {
