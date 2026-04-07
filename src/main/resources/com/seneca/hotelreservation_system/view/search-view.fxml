@@ -1,83 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #020617;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seneca.hotelreservation_system.controller.SearchController">
+<AnchorPane prefHeight="900.0" prefWidth="1400.0"
+            style="-fx-background-color: #08080f;"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.seneca.hotelreservation_system.controller.SearchController">
 
-    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-        <Label text="①" style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold;"/>
-        <Label text="──" style="-fx-text-fill: #d4af37;"/>
-        <Label text=" ② " style="-fx-text-fill: #d4af37; -fx-font-size: 18px; -fx-font-weight: bold; -fx-border-color: #d4af37; -fx-border-radius: 50; -fx-padding: 5;"/>
-        <Label text="── ③ ── ④ ── ⑤ ── ⑥ ── ⑦" style="-fx-text-fill: #44403c; -fx-font-size: 16px;"/>
+    <HBox alignment="CENTER" spacing="6.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+        <Label text="1" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="2" style="-fx-text-fill: #c8a84b; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: rgba(200,168,75,0.12); -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #c8a84b; -fx-border-radius: 50; -fx-border-width: 1.5;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="3" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="4" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="5" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="6" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
+        <Label text="--------" style="-fx-text-fill: #2a2018; -fx-font-size: 9px;"/>
+        <Label text="7" style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #1a1a1f; -fx-background-radius: 50; -fx-padding: 4 9; -fx-border-color: #3a3028; -fx-border-radius: 50; -fx-border-width: 1;"/>
     </HBox>
 
-    <VBox alignment="CENTER" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <VBox alignment="CENTER" spacing="32.0"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-        <VBox alignment="CENTER" spacing="15.0">
-            <Label text="FIND YOUR STAY" style="-fx-text-fill: #d4af37; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif'; -fx-letter-spacing: 5px;" />
-            <Label text="Step 2: Enter your travel details" style="-fx-text-fill: #78716c; -fx-font-size: 16px; -fx-text-transform: uppercase; -fx-letter-spacing: 2px;" />
+        <VBox alignment="CENTER" spacing="7.0">
+            <Label text="FIND YOUR STAY"
+                   style="-fx-text-fill: white; -fx-font-size: 44px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+            <Label text="Step 2  -  Enter your travel details"
+                   style="-fx-text-fill: #54483a; -fx-font-size: 13px; -fx-letter-spacing: 2px;" />
         </VBox>
 
-        <VBox alignment="CENTER" spacing="20.0">
+        <Label fx:id="errorLabel" text=""
+               style="-fx-text-fill: #e55; -fx-font-size: 13px; -fx-font-weight: bold;
+                      -fx-background-color: rgba(220,50,50,0.08); -fx-padding: 9 18;
+                      -fx-background-radius: 6;"
+               visible="false" managed="false" />
 
-            <!-- Error Label -->
-            <Label fx:id="errorLabel" text="" style="-fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold;" visible="false" managed="false" />
+        <VBox alignment="CENTER" maxWidth="1060.0" spacing="0.0"
+              style="-fx-background-color: rgba(255,255,255,0.025);
+                     -fx-border-color: rgba(200,168,75,0.25); -fx-border-width: 1;
+                     -fx-background-radius: 14; -fx-border-radius: 14;
+                     -fx-padding: 28 38;">
+            <effect><DropShadow color="#c8a84b12" radius="20.0" /></effect>
 
-            <HBox alignment="CENTER" maxWidth="1100.0" spacing="25.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5;">
-                <effect><DropShadow color="#d4af371a" radius="15.0" /></effect>
+            <Label text="STAY DETAILS"
+                   style="-fx-text-fill: #c8a84b; -fx-font-size: 10px; -fx-letter-spacing: 3px; -fx-font-weight: bold;" />
 
-                <!-- Date Pickers - FIXED IDs -->
-                <DatePicker fx:id="checkInDatePicker" promptText="Check-in Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
-                <DatePicker fx:id="checkOutDatePicker" promptText="Check-out Date" style="-fx-pref-width: 220; -fx-font-size: 14px;" />
+            <Region prefHeight="18.0" />
 
-                <!-- Adults Counter -->
-                <VBox alignment="CENTER" spacing="5">
-                    <Label text="Adults" style="-fx-text-fill: #d4af37; -fx-font-size: 12px;"/>
-                    <HBox alignment="CENTER" spacing="10">
-                        <Button text="-" onAction="#decreaseAdults" style="-fx-background-color: #333; -fx-text-fill: white; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
-                        <Label fx:id="adultCountLabel" text="2" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-pref-width: 40; -fx-alignment: center;"/>
-                        <Button text="+" onAction="#increaseAdults" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
+            <HBox alignment="CENTER" spacing="24.0">
+
+                <VBox spacing="6.0" alignment="CENTER_LEFT">
+                    <Label text="CHECK-IN"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <DatePicker fx:id="checkInDatePicker" promptText="Select date"
+                                style="-fx-pref-width: 190; -fx-pref-height: 44; -fx-font-size: 13px;" />
+                </VBox>
+
+                <VBox spacing="6.0" alignment="CENTER_LEFT">
+                    <Label text="CHECK-OUT"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <DatePicker fx:id="checkOutDatePicker" promptText="Select date"
+                                style="-fx-pref-width: 190; -fx-pref-height: 44; -fx-font-size: 13px;" />
+                </VBox>
+
+                <Region prefWidth="16.0" />
+
+                <VBox alignment="CENTER" spacing="7.0">
+                    <Label text="ADULTS"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <HBox alignment="CENTER" spacing="0.0">
+                        <Button text="-" onAction="#decreaseAdults"
+                                style="-fx-background-color: #141420; -fx-text-fill: #c8a84b;
+                                       -fx-pref-width: 38; -fx-pref-height: 44;
+                                       -fx-font-size: 18px; -fx-cursor: hand;
+                                       -fx-background-radius: 8 0 0 8;
+                                       -fx-border-color: rgba(200,168,75,0.25); -fx-border-width: 1; -fx-border-radius: 8 0 0 8;"/>
+                        <Label fx:id="adultCountLabel" text="2"
+                               style="-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;
+                                      -fx-pref-width: 50; -fx-alignment: center;
+                                      -fx-background-color: #0f0f1a; -fx-pref-height: 44;
+                                      -fx-border-color: rgba(200,168,75,0.1); -fx-border-width: 0 1 0 1;"/>
+                        <Button text="+" onAction="#increaseAdults"
+                                style="-fx-background-color: #c8a84b; -fx-text-fill: #08080f;
+                                       -fx-pref-width: 38; -fx-pref-height: 44;
+                                       -fx-font-size: 18px; -fx-font-weight: bold; -fx-cursor: hand;
+                                       -fx-background-radius: 0 8 8 0;"/>
                     </HBox>
                 </VBox>
 
-                <!-- Children Counter -->
-                <VBox alignment="CENTER" spacing="5">
-                    <Label text="Children" style="-fx-text-fill: #d4af37; -fx-font-size: 12px;"/>
-                    <HBox alignment="CENTER" spacing="10">
-                        <Button text="-" onAction="#decreaseChildren" style="-fx-background-color: #333; -fx-text-fill: white; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
-                        <Label fx:id="childCountLabel" text="1" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-pref-width: 40; -fx-alignment: center;"/>
-                        <Button text="+" onAction="#increaseChildren" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-pref-width: 35; -fx-pref-height: 35; -fx-font-weight: bold; -fx-cursor: hand;"/>
+                <VBox alignment="CENTER" spacing="7.0">
+                    <Label text="CHILDREN"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <HBox alignment="CENTER" spacing="0.0">
+                        <Button text="-" onAction="#decreaseChildren"
+                                style="-fx-background-color: #141420; -fx-text-fill: #c8a84b;
+                                       -fx-pref-width: 38; -fx-pref-height: 44;
+                                       -fx-font-size: 18px; -fx-cursor: hand;
+                                       -fx-background-radius: 8 0 0 8;
+                                       -fx-border-color: rgba(200,168,75,0.25); -fx-border-width: 1; -fx-border-radius: 8 0 0 8;"/>
+                        <Label fx:id="childCountLabel" text="0"
+                               style="-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;
+                                      -fx-pref-width: 50; -fx-alignment: center;
+                                      -fx-background-color: #0f0f1a; -fx-pref-height: 44;
+                                      -fx-border-color: rgba(200,168,75,0.1); -fx-border-width: 0 1 0 1;"/>
+                        <Button text="+" onAction="#increaseChildren"
+                                style="-fx-background-color: #c8a84b; -fx-text-fill: #08080f;
+                                       -fx-pref-width: 38; -fx-pref-height: 44;
+                                       -fx-font-size: 18px; -fx-font-weight: bold; -fx-cursor: hand;
+                                       -fx-background-radius: 0 8 8 0;"/>
                     </HBox>
                 </VBox>
 
-                <Button onAction="#goToRoomSelection" text="CONTINUE" style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 200; -fx-pref-height: 45; -fx-cursor: hand;" />
             </HBox>
-
-            <Label text="* Maximum occupancy: 4 guests for Double suites, 2 for Deluxe/Single suites."
-                   style="-fx-text-fill: #44403c; -fx-font-size: 12px; -fx-font-style: italic;" />
         </VBox>
 
-        <!-- GUEST DETAILS SECTION - ADDED -->
-        <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #0a0a0a; -fx-padding: 25; -fx-border-color: #d4af37; -fx-border-width: 1; -fx-background-radius: 5; -fx-border-radius: 5; max-width: 800;">
-            <Label text="GUEST DETAILS" style="-fx-text-fill: #d4af37; -fx-font-size: 20px; -fx-font-weight: bold; -fx-letter-spacing: 2px;" />
+        <VBox alignment="CENTER" maxWidth="1060.0" spacing="0.0"
+              style="-fx-background-color: rgba(255,255,255,0.025);
+                     -fx-border-color: rgba(200,168,75,0.25); -fx-border-width: 1;
+                     -fx-background-radius: 14; -fx-border-radius: 14;
+                     -fx-padding: 28 38;">
 
-            <GridPane hgap="20" vgap="15" alignment="CENTER">
-                <Label text="Full Name *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                <TextField fx:id="fullNameField" promptText="John Smith" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="GUEST INFORMATION"
+                   style="-fx-text-fill: #c8a84b; -fx-font-size: 10px; -fx-letter-spacing: 3px; -fx-font-weight: bold;" />
 
-                <Label text="Email *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                <TextField fx:id="emailField" promptText="john.smith@email.com" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Region prefHeight="18.0" />
 
-                <Label text="Phone *" style="-fx-text-fill: #d4af37;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                <TextField fx:id="phoneField" promptText="(555) 123-4567" style="-fx-pref-width: 300; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-            </GridPane>
+            <HBox alignment="CENTER" spacing="22.0">
+
+                <VBox spacing="6.0" alignment="CENTER_LEFT">
+                    <Label text="FULL NAME"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <TextField fx:id="fullNameField" promptText="e.g. John Smith"
+                               style="-fx-pref-width: 270; -fx-pref-height: 44; -fx-font-size: 13px;
+                                      -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #3a3630;
+                                      -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 8;
+                                      -fx-background-radius: 8; -fx-padding: 0 12;" />
+                </VBox>
+
+                <VBox spacing="6.0" alignment="CENTER_LEFT">
+                    <Label text="EMAIL"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <TextField fx:id="emailField" promptText="john@example.com"
+                               style="-fx-pref-width: 270; -fx-pref-height: 44; -fx-font-size: 13px;
+                                      -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #3a3630;
+                                      -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 8;
+                                      -fx-background-radius: 8; -fx-padding: 0 12;" />
+                </VBox>
+
+                <VBox spacing="6.0" alignment="CENTER_LEFT">
+                    <Label text="PHONE"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                    <TextField fx:id="phoneField" promptText="10-digit number"
+                               style="-fx-pref-width: 200; -fx-pref-height: 44; -fx-font-size: 13px;
+                                      -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #3a3630;
+                                      -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 8;
+                                      -fx-background-radius: 8; -fx-padding: 0 12;" />
+                </VBox>
+
+                <VBox alignment="BOTTOM_LEFT" spacing="6.0">
+                    <Region prefHeight="22.0" />
+                    <Button onAction="#goToRoomSelection" text="CONTINUE"
+                            style="-fx-background-color: #c8a84b; -fx-text-fill: #08080f;
+                                   -fx-font-weight: bold; -fx-pref-width: 166; -fx-pref-height: 44;
+                                   -fx-cursor: hand; -fx-background-radius: 8;
+                                   -fx-font-size: 13px; -fx-letter-spacing: 1px;" />
+                </VBox>
+            </HBox>
         </VBox>
 
-        <Button onAction="#goToWelcome" text="RETURN TO MAIN MENU" style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" />
+        <Label text="All fields are required. Phone must be 10 digits. Maximum occupancy: 4 guests for Double, 2 for all other room types."
+               style="-fx-text-fill: #2a2018; -fx-font-size: 11px;" />
+
+        <Button onAction="#goToWelcome" text="Return to Home"
+                style="-fx-background-color: transparent; -fx-text-fill: #54483a;
+                       -fx-font-size: 12px; -fx-cursor: hand; -fx-underline: true;" />
+
     </VBox>
 
-    <Button onAction="#showRules" text="RULES &amp; POLICIES" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-border-width: 0.5; -fx-cursor: hand; -fx-padding: 10 20;" />
+    <Button onAction="#showRules" text="RULES AND POLICIES"
+            AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="38.0"
+            style="-fx-background-color: transparent; -fx-text-fill: #c8a84b;
+                   -fx-border-color: rgba(200,168,75,0.5); -fx-border-width: 1;
+                   -fx-cursor: hand; -fx-padding: 9 16;
+                   -fx-background-radius: 6; -fx-border-radius: 6;
+                   -fx-font-size: 11px; -fx-letter-spacing: 1px;" />
 
 </AnchorPane>

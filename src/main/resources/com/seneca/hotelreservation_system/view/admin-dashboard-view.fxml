@@ -12,81 +12,189 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0"
-            style="-fx-background-color: #020617;"
+            style="-fx-background-color: #08080f;"
             xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.seneca.hotelreservation_system.controller.UIController">
 
-    <VBox prefWidth="280.0"
-          spacing="15.0"
-          AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0"
-          AnchorPane.topAnchor="0.0"
-          style="-fx-background-color: #0a0a0a; -fx-padding: 40 25; -fx-border-color: #d4af37; -fx-border-width: 0 1 0 0;">
+    <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-        <Label text="GRAND PLAZA"
-               style="-fx-text-fill: #d4af37; -fx-font-size: 22px; -fx-font-weight: bold;" />
+        <VBox prefWidth="252.0" spacing="8.0"
+              style="-fx-background-color: #050509;
+                     -fx-padding: 34 18 34 22;
+                     -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 0 1 0 0;">
 
-        <Region prefHeight="30.0" />
+            <VBox spacing="3.0"
+                  style="-fx-padding: 0 0 18 0;
+                         -fx-border-color: rgba(200,168,75,0.12); -fx-border-width: 0 0 1 0;">
+                <Label text="GRAND PLAZA"
+                       style="-fx-text-fill: #c8a84b; -fx-font-size: 17px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+                <Label text="Administration"
+                       style="-fx-text-fill: #54483a; -fx-font-size: 11px; -fx-letter-spacing: 2px;" />
+            </VBox>
 
-        <Button text="DASHBOARD"
-                style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+            <Region prefHeight="8.0" />
 
-        <Button text="FEEDBACK"
-                onAction="#showFeedbackModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+            <Label text="NAVIGATION"
+                   style="-fx-text-fill: #3a3028; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
 
-        <Button text="BILLING"
-                onAction="#showBillingModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+            <Button text="Dashboard"
+                    style="-fx-background-color: rgba(200,168,75,0.1);
+                           -fx-text-fill: #c8a84b; -fx-font-weight: bold;
+                           -fx-pref-width: 212; -fx-pref-height: 42;
+                           -fx-cursor: hand; -fx-alignment: CENTER_LEFT;
+                           -fx-padding: 0 0 0 14; -fx-background-radius: 8;
+                           -fx-border-color: rgba(200,168,75,0.28); -fx-border-width: 1; -fx-border-radius: 8;" />
 
-        <Button text="WAITLIST"
-                onAction="#showWaitlistModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+            <Button text="Feedback"
+                    onAction="#showFeedbackModule"
+                    style="-fx-background-color: transparent; -fx-text-fill: #7a6a4a;
+                           -fx-pref-width: 212; -fx-pref-height: 42;
+                           -fx-cursor: hand; -fx-alignment: CENTER_LEFT;
+                           -fx-padding: 0 0 0 14; -fx-background-radius: 8;" />
 
-        <Region VBox.vgrow="ALWAYS" />
+            <Button text="Billing"
+                    onAction="#showBillingModule"
+                    style="-fx-background-color: transparent; -fx-text-fill: #7a6a4a;
+                           -fx-pref-width: 212; -fx-pref-height: 42;
+                           -fx-cursor: hand; -fx-alignment: CENTER_LEFT;
+                           -fx-padding: 0 0 0 14; -fx-background-radius: 8;" />
 
-        <Button text="SECURE LOGOUT"
-                onAction="#goToWelcome"
-                style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-border-color: #ef4444; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
-    </VBox>
+            <Button text="Waitlist"
+                    onAction="#showWaitlistModule"
+                    style="-fx-background-color: transparent; -fx-text-fill: #7a6a4a;
+                           -fx-pref-width: 212; -fx-pref-height: 42;
+                           -fx-cursor: hand; -fx-alignment: CENTER_LEFT;
+                           -fx-padding: 0 0 0 14; -fx-background-radius: 8;" />
 
-    <VBox spacing="30.0"
-          AnchorPane.bottomAnchor="40.0"
-          AnchorPane.leftAnchor="330.0"
-          AnchorPane.rightAnchor="50.0"
-          AnchorPane.topAnchor="40.0">
+            <Region VBox.vgrow="ALWAYS" />
 
-        <HBox alignment="CENTER_LEFT">
-            <Label text="System Overview"
-                   style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
-            <Region HBox.hgrow="ALWAYS" />
-            <Label text="Authenticated: Admin"
-                   style="-fx-text-fill: #d4af37;" />
-        </HBox>
+            <Label text="SYSTEM"
+                   style="-fx-text-fill: #3a3028; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
 
-        <HBox spacing="15.0"
-              style="-fx-background-color: #0a0a0a; -fx-padding: 15; -fx-border-color: #44403c;">
-            <TextField fx:id="adminSearchField"
-                       promptText="Search Guest Name or Phone..."
-                       style="-fx-pref-width: 350;" />
+            <Button text="Secure Logout"
+                    onAction="#goToWelcome"
+                    style="-fx-background-color: transparent; -fx-text-fill: #dc3545;
+                           -fx-pref-width: 212; -fx-pref-height: 42;
+                           -fx-cursor: hand; -fx-alignment: CENTER_LEFT;
+                           -fx-padding: 0 0 0 14; -fx-background-radius: 8;
+                           -fx-border-color: rgba(220,53,69,0.28); -fx-border-width: 1; -fx-border-radius: 8;" />
+        </VBox>
 
-            <ComboBox promptText="All Statuses"
-                      style="-fx-pref-width: 150;" />
+        <VBox spacing="22.0" HBox.hgrow="ALWAYS" style="-fx-padding: 34 34 34 34;">
 
-            <Button text="FILTER"
-                    onAction="#handleSearch"
-                    style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 120; -fx-cursor: hand;" />
-        </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="14.0">
+                <VBox spacing="3.0">
+                    <Label text="System Overview"
+                           style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+                    <Label text="Manage reservations, guests, and operations"
+                           style="-fx-text-fill: #54483a; -fx-font-size: 12px;" />
+                </VBox>
+                <Region HBox.hgrow="ALWAYS" />
+                <VBox alignment="CENTER_RIGHT" spacing="2.0">
+                    <Label text="AUTHENTICATED"
+                           style="-fx-text-fill: #22c55e; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                    <Label text="Administrator"
+                           style="-fx-text-fill: #c8a84b; -fx-font-size: 13px; -fx-font-weight: bold;" />
+                </VBox>
+            </HBox>
 
-        <TableView VBox.vgrow="ALWAYS"
-                   style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c;">
-            <columns>
-                <TableColumn text="REF ID" prefWidth="150.0" />
-                <TableColumn text="GUEST NAME" prefWidth="250.0" />
-                <TableColumn text="CHECK-IN" prefWidth="200.0" />
-                <TableColumn text="STATUS" prefWidth="200.0" />
-            </columns>
-        </TableView>
-    </VBox>
+            <HBox spacing="14.0">
+                <VBox spacing="7.0" prefWidth="206.0"
+                      style="-fx-background-color: rgba(255,255,255,0.025);
+                             -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 1;
+                             -fx-background-radius: 12; -fx-border-radius: 12;
+                             -fx-padding: 18 20;">
+                    <Label text="TOTAL RESERVATIONS"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                    <Label text="Loading..."
+                           style="-fx-text-fill: #c8a84b; -fx-font-size: 28px; -fx-font-weight: bold;" />
+                </VBox>
+                <VBox spacing="7.0" prefWidth="206.0"
+                      style="-fx-background-color: rgba(255,255,255,0.025);
+                             -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 1;
+                             -fx-background-radius: 12; -fx-border-radius: 12;
+                             -fx-padding: 18 20;">
+                    <Label text="ROOMS OCCUPIED"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                    <Label text="Loading..."
+                           style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+                </VBox>
+                <VBox spacing="7.0" prefWidth="206.0"
+                      style="-fx-background-color: rgba(255,255,255,0.025);
+                             -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 1;
+                             -fx-background-radius: 12; -fx-border-radius: 12;
+                             -fx-padding: 18 20;">
+                    <Label text="PENDING CHECK-INS"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                    <Label text="Loading..."
+                           style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+                </VBox>
+                <VBox spacing="7.0" prefWidth="206.0"
+                      style="-fx-background-color: rgba(255,255,255,0.025);
+                             -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 1;
+                             -fx-background-radius: 12; -fx-border-radius: 12;
+                             -fx-padding: 18 20;">
+                    <Label text="WAITLIST"
+                           style="-fx-text-fill: #7a6a4a; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                    <Label text="Loading..."
+                           style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+                </VBox>
+            </HBox>
+
+            <VBox spacing="0.0"
+                  style="-fx-background-color: rgba(255,255,255,0.025);
+                         -fx-border-color: rgba(200,168,75,0.18); -fx-border-width: 1;
+                         -fx-background-radius: 12; -fx-border-radius: 12;"
+                  VBox.vgrow="ALWAYS">
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0"
+                      style="-fx-padding: 14 18;
+                             -fx-border-color: rgba(200,168,75,0.12); -fx-border-width: 0 0 1 0;">
+                    <TextField fx:id="adminSearchField"
+                               promptText="Search guest name, phone, or reservation ID..."
+                               style="-fx-pref-width: 360; -fx-pref-height: 38; -fx-font-size: 13px;
+                                      -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #3a3630;
+                                      -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 7;
+                                      -fx-background-radius: 7; -fx-padding: 0 10;" />
+
+                    <ComboBox promptText="All Statuses"
+                              style="-fx-pref-width: 148; -fx-pref-height: 38; -fx-font-size: 13px;" />
+
+                    <Button text="SEARCH"
+                            onAction="#handleSearch"
+                            style="-fx-background-color: #c8a84b; -fx-text-fill: #08080f;
+                                   -fx-font-weight: bold; -fx-pref-width: 100; -fx-pref-height: 38;
+                                   -fx-cursor: hand; -fx-background-radius: 7; -fx-font-size: 12px;
+                                   -fx-letter-spacing: 1px;" />
+
+                    <Region HBox.hgrow="ALWAYS" />
+
+                    <Label text="RESERVATION RECORDS"
+                           style="-fx-text-fill: #c8a84b; -fx-font-size: 9px; -fx-letter-spacing: 2px; -fx-font-weight: bold;" />
+                </HBox>
+
+                <TableView VBox.vgrow="ALWAYS"
+                           style="-fx-background-color: transparent;
+                                  -fx-table-cell-border-color: rgba(200,168,75,0.06);">
+                    <columns>
+                        <TableColumn text="REF ID" prefWidth="130.0" />
+                        <TableColumn text="GUEST NAME" prefWidth="220.0" />
+                        <TableColumn text="CHECK-IN" prefWidth="160.0" />
+                        <TableColumn text="CHECK-OUT" prefWidth="160.0" />
+                        <TableColumn text="ROOM TYPE" prefWidth="150.0" />
+                        <TableColumn text="STATUS" prefWidth="120.0" />
+                    </columns>
+                    <placeholder>
+                        <Label text="No reservation records found"
+                               style="-fx-text-fill: #3a3028; -fx-font-size: 14px;" />
+                    </placeholder>
+                </TableView>
+            </VBox>
+
+        </VBox>
+    </HBox>
+
 </AnchorPane>

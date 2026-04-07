@@ -1,60 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0"
-            style="-fx-background-color: #020617;"
+            style="-fx-background-color: #08080f;"
             xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.seneca.hotelreservation_system.controller.UIController">
 
-    <StackPane AnchorPane.bottomAnchor="0.0"
-               AnchorPane.leftAnchor="0.0"
-               AnchorPane.rightAnchor="0.0"
-               AnchorPane.topAnchor="0.0">
+    <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-        <VBox alignment="CENTER"
-              maxWidth="500.0"
-              spacing="20.0"
-              style="-fx-background-color: #0a0a0a; -fx-border-color: #d4af37; -fx-border-width: 2; -fx-background-radius: 15; -fx-border-radius: 15; -fx-padding: 40;">
+        <VBox alignment="CENTER" maxWidth="460.0" spacing="20.0"
+              style="-fx-background-color: rgba(255,255,255,0.025);
+                     -fx-border-color: rgba(200,168,75,0.30); -fx-border-width: 1;
+                     -fx-background-radius: 16; -fx-border-radius: 16;
+                     -fx-padding: 50 54 50 54;">
+            <effect><DropShadow color="#c8a84b1a" radius="48.0" /></effect>
 
-            <padding>
-                <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
-            </padding>
+            <VBox alignment="CENTER" spacing="5.0">
+                <Label text="ADMINISTRATOR"
+                       style="-fx-text-fill: #c8a84b; -fx-font-size: 10px; -fx-letter-spacing: 4px; -fx-font-weight: bold;" />
+                <Label text="Staff Login"
+                       style="-fx-text-fill: white; -fx-font-size: 34px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+                <Label text="Grand Plaza Hotel - Secure Access"
+                       style="-fx-text-fill: #54483a; -fx-font-size: 12px; -fx-letter-spacing: 1px;" />
+            </VBox>
 
-            <effect>
-                <DropShadow color="#d4af3733" radius="25.0" />
-            </effect>
+            <Region prefHeight="4.0" />
 
-            <Label text="ADMIN LOGIN"
-                   style="-fx-text-fill: #d4af37; -fx-font-size: 30px; -fx-font-weight: bold;" />
+            <VBox spacing="6.0">
+                <Label text="USERNAME"
+                       style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                <TextField fx:id="usernameField" promptText="Enter your username"
+                           style="-fx-pref-width: 352; -fx-pref-height: 46; -fx-font-size: 14px;
+                                  -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                  -fx-prompt-text-fill: #3a3630;
+                                  -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 8;
+                                  -fx-background-radius: 8; -fx-padding: 0 12;" />
+            </VBox>
 
-            <Label text="Please enter administrator credentials"
-                   style="-fx-text-fill: #d6d3d1; -fx-font-size: 14px;" />
+            <VBox spacing="6.0">
+                <Label text="PASSWORD"
+                       style="-fx-text-fill: #7a6a4a; -fx-font-size: 10px; -fx-letter-spacing: 2px; -fx-font-weight: bold;"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password"
+                               style="-fx-pref-width: 352; -fx-pref-height: 46; -fx-font-size: 14px;
+                                      -fx-background-color: #0f0f1a; -fx-text-fill: white;
+                                      -fx-prompt-text-fill: #3a3630;
+                                      -fx-border-color: rgba(200,168,75,0.22); -fx-border-radius: 8;
+                                      -fx-background-radius: 8; -fx-padding: 0 12;" />
+            </VBox>
 
-            <TextField fx:id="usernameField"
-                       promptText="Username"
-                       style="-fx-pref-width: 320; -fx-pref-height: 45;" />
-
-            <PasswordField fx:id="passwordField"
-                           promptText="Password"
-                           style="-fx-pref-width: 320; -fx-pref-height: 45;" />
+            <Region prefHeight="4.0" />
 
             <Button text="LOGIN"
                     onAction="#handleAdminLogin"
-                    style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-pref-width: 320; -fx-pref-height: 45; -fx-cursor: hand;" />
+                    style="-fx-background-color: #c8a84b; -fx-text-fill: #08080f;
+                           -fx-font-size: 14px; -fx-font-weight: bold;
+                           -fx-pref-width: 352; -fx-pref-height: 50;
+                           -fx-cursor: hand; -fx-background-radius: 8;
+                           -fx-letter-spacing: 1px;" />
 
-            <Button text="BACK"
+            <Button text="Return to Kiosk"
                     onAction="#goToWelcome"
-                    style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 320; -fx-pref-height: 45; -fx-cursor: hand;" />
+                    style="-fx-background-color: transparent; -fx-text-fill: #7a6a4a;
+                           -fx-font-size: 12px; -fx-cursor: hand; -fx-underline: true;" />
+
         </VBox>
+
     </StackPane>
+
 </AnchorPane>
