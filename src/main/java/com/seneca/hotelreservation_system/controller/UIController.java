@@ -342,6 +342,11 @@ public class UIController {
         stage.show();
     }
 
+    @FXML public void showFeedbackModule(ActionEvent event) throws IOException { }
+    @FXML public void showBillingModule(ActionEvent event) throws IOException { }
+    @FXML public void showWaitlistModule(ActionEvent event) throws IOException { }
+    @FXML public void handleSearch(ActionEvent event) { }
+
     @FXML public void goToSearch(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/search-view.fxml"); }
     @FXML public void goToGuestDetails(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/guest-details-view.fxml"); }
     @FXML public void goToRoomSelection(ActionEvent event) throws IOException { switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml"); }
