@@ -111,11 +111,11 @@ public class RoomSelectionController {
         int totalCapacity = maxCapacity * selectedQuantity;
 
         if (totalGuests <= totalCapacity) {
-            capacityLabel.setText(String.format("✓  %d / %d guests  —  Capacity OK", totalGuests, totalCapacity));
+            capacityLabel.setText(String.format("CAPACITY OK  -  %d / %d guests", totalGuests, totalCapacity));
             capacityLabel.setStyle("-fx-text-fill: #22c55e; -fx-font-size: 13px; -fx-font-weight: bold;");
             capacityBar.setStyle("-fx-accent: #22c55e;");
         } else {
-            capacityLabel.setText(String.format("⚠  %d guests exceed %d capacity  —  Adjust selection", totalGuests, totalCapacity));
+            capacityLabel.setText(String.format("EXCEEDS CAPACITY  -  %d guests exceed %d capacity", totalGuests, totalCapacity));
             capacityLabel.setStyle("-fx-text-fill: #e55; -fx-font-size: 13px; -fx-font-weight: bold;");
             capacityBar.setStyle("-fx-accent: #e55;");
         }
