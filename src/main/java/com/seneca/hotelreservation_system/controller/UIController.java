@@ -19,12 +19,12 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-@SuppressWarnings({ "unused", "SpellCheckingInspection" })
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class UIController {
 
     public static class BookingData {
         public int adults = 2;
-        public int children = 1;
+        public int children = 0;
         public LocalDate checkIn;
         public LocalDate checkOut;
         public String guestName;
@@ -148,21 +148,18 @@ public class UIController {
         BigDecimal total = BigDecimal.ZERO;
         int n = getNights();
 
-        if (booking.hasWifi) {
-            total = total.add(BigDecimal.valueOf(9.99).multiply(BigDecimal.valueOf(n)));
-        }
-        if (booking.hasBreakfast) {
-            total = total.add(BigDecimal.valueOf(24.99).multiply(BigDecimal.valueOf(n)));
-        }
-        if (booking.hasSpa) {
-            total = total.add(BigDecimal.valueOf(49.99).multiply(BigDecimal.valueOf(n)));
-        }
-        if (booking.hasShuttle) {
+        if (booking.hasWifi && booking.wifiQuantity > 0)
+            total = total.add(BigDecimal.valueOf(9.99).multiply(BigDecimal.valueOf(n)).multiply(BigDecimal.valueOf(booking.wifiQuantity)));
+        if (booking.hasBreakfast && booking.breakfastQuantity > 0)
+            total = total.add(BigDecimal.valueOf(24.99).multiply(BigDecimal.valueOf(n)).multiply(BigDecimal.valueOf(booking.breakfastQuantity)));
+        if (booking.hasSpa && booking.spaQuantity > 0)
+            total = total.add(BigDecimal.valueOf(49.99).multiply(BigDecimal.valueOf(booking.spaQuantity)));
+        if (booking.hasParking && booking.parkingQuantity > 0)
+            total = total.add(BigDecimal.valueOf(35.00).multiply(BigDecimal.valueOf(booking.parkingQuantity)));
+        if (booking.hasShuttle)
             total = total.add(BigDecimal.valueOf(35.00));
-        }
-        if (booking.hasLateCheckout) {
+        if (booking.hasLateCheckout)
             total = total.add(BigDecimal.valueOf(30.00));
-        }
         return total;
     }
 
@@ -181,9 +178,7 @@ public class UIController {
         if (booking.checkIn != null && booking.checkOut != null) {
             booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
         }
-        if (booking.nights <= 0) {
-            booking.nights = 1;
-        }
+        if (booking.nights <= 0) booking.nights = 1;
         return booking.nights;
     }
 
@@ -218,7 +213,6 @@ public class UIController {
     @FXML private Label taxLabel;
     @FXML private Label totalDueLabel;
 
-
     public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
                               String name, String email, String phone) {
         booking.adults = adults;
@@ -228,9 +222,8 @@ public class UIController {
         booking.guestName = name;
         booking.guestEmail = email;
         booking.guestPhone = phone;
-        if (checkIn != null && checkOut != null) {
+        if (checkIn != null && checkOut != null)
             booking.nights = (int) ChronoUnit.DAYS.between(checkIn, checkOut);
-        }
     }
 
     public void setRoomData(RoomType type, int quantity) {
@@ -255,10 +248,8 @@ public class UIController {
         booking.loyaltyPointsToRedeem = pointsToRedeem;
     }
 
-
     @FXML
     public void updateTotals() {
-        double addonsCost = 0.0;
         int nightsToCalculate = getNights();
 
         if (wifiCheck != null) booking.hasWifi = wifiCheck.isSelected();
@@ -267,6 +258,7 @@ public class UIController {
         if (shuttleCheck != null) booking.hasShuttle = shuttleCheck.isSelected();
         if (lateCheckoutCheck != null) booking.hasLateCheckout = lateCheckoutCheck.isSelected();
 
+        double addonsCost = 0.0;
         if (booking.hasWifi) addonsCost += (9.99 * nightsToCalculate);
         if (booking.hasSpa) addonsCost += (49.99 * nightsToCalculate);
         if (booking.hasBreakfast) addonsCost += (24.99 * nightsToCalculate);
@@ -274,17 +266,15 @@ public class UIController {
         if (booking.hasLateCheckout) addonsCost += 30.00;
 
         double baseSubtotal = calculateRoomPrice().doubleValue();
-
         double currentSubtotal = baseSubtotal + addonsCost;
         double taxAmount = currentSubtotal * 0.13;
         double finalTotal = currentSubtotal + taxAmount;
 
-        if (subtotalLabel != null) subtotalLabel.setText(String.format("%.2f USD", baseSubtotal));
-        if (addonsTotalLabel != null) addonsTotalLabel.setText(String.format("%.2f USD", addonsCost));
-        if (taxLabel != null) taxLabel.setText(String.format("%.2f USD", taxAmount));
-        if (totalDueLabel != null) totalDueLabel.setText(String.format("%.2f USD", finalTotal));
+        if (subtotalLabel != null) subtotalLabel.setText(String.format("$%.2f", baseSubtotal));
+        if (addonsTotalLabel != null) addonsTotalLabel.setText(String.format("$%.2f", addonsCost));
+        if (taxLabel != null) taxLabel.setText(String.format("$%.2f", taxAmount));
+        if (totalDueLabel != null) totalDueLabel.setText(String.format("$%.2f", finalTotal));
     }
-
 
     @FXML
     public void goToWelcome(ActionEvent event) throws IOException {
@@ -304,9 +294,8 @@ public class UIController {
 
     @FXML
     public void goToRoomSelection(ActionEvent event) throws IOException {
-        if (booking.checkIn != null && booking.checkOut != null) {
+        if (booking.checkIn != null && booking.checkOut != null)
             booking.nights = (int) ChronoUnit.DAYS.between(booking.checkIn, booking.checkOut);
-        }
         switchScene(event, "/com/seneca/hotelreservation_system/view/room-selection-view.fxml");
     }
 
@@ -334,7 +323,6 @@ public class UIController {
     @FXML
     public void goToConfirmation(ActionEvent event) throws IOException {
         calculateTotal();
-        System.out.println("Reservation saved! Total: $" + booking.total);
         switchScene(event, "/com/seneca/hotelreservation_system/view/confirmation-view.fxml");
     }
 
@@ -353,7 +341,6 @@ public class UIController {
         goToAdminDashboard(event);
     }
 
-
     @FXML
     public void selectStandardDouble(ActionEvent event) throws IOException {
         booking.selectedRoomType = RoomType.DOUBLE;
@@ -368,13 +355,9 @@ public class UIController {
         goToAddOns(event);
     }
 
-
     private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
         URL resource = getClass().getResource(fxmlPath);
-
-        if (resource == null) {
-            throw new IOException("FXML file not found: " + fxmlPath);
-        }
+        if (resource == null) throw new IOException("FXML file not found: " + fxmlPath);
 
         FXMLLoader loader = new FXMLLoader(resource);
         Parent root = loader.load();
@@ -384,7 +367,7 @@ public class UIController {
             try {
                 java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
                 method.invoke(controller, this);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
         }
 
@@ -396,18 +379,19 @@ public class UIController {
     @FXML
     public void showRules() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Grand Plaza Rules & Policies");
+        alert.setTitle("Grand Plaza Hotel - Rules and Policies");
         alert.setHeaderText("Hotel Kiosk Regulations");
         alert.setContentText(
-                "1. Check-in: 3:00 PM | Check-out: 11:00 AM\n" +
-                        "2. Maximum occupancy per room must be respected.\n" +
-                        "3. Cancellations must be made 24 hours in advance.\n" +
-                        "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
-                        "5. No smoking in rooms ($250 fine)"
+                "1. Check-in: 3:00 PM  |  Check-out: 11:00 AM\n" +
+                "2. Maximum room occupancy must be respected at all times.\n" +
+                "3. Cancellations require 24 hours advance notice.\n" +
+                "4. Quiet hours: 10:00 PM to 8:00 AM\n" +
+                "5. No smoking in rooms. A $250 fee applies.\n" +
+                "6. Pets permitted with advance notice. Fee applies.\n" +
+                "7. Loyalty points are earned on every completed paid stay."
         );
         alert.showAndWait();
     }
-
 
     @FXML
     public void handleAdminLogin(ActionEvent event) throws IOException {
@@ -415,56 +399,52 @@ public class UIController {
         String password = passwordField != null ? passwordField.getText().trim() : "";
 
         if (username.isEmpty() || password.isEmpty()) {
-            showAlert(
-                    Alert.AlertType.ERROR,
-                    "Login Error",
-                    "Missing Credentials",
-                    "Please enter both username and password."
-            );
+            showAlert(Alert.AlertType.ERROR, "Login Error", "Missing Credentials",
+                    "Please enter both username and password.");
             return;
         }
 
-        if (username.equals("admin") && password.equals("admin123")) {
-            showAlert(
-                    Alert.AlertType.INFORMATION,
-                    "Login Successful",
-                    "Welcome",
-                    "Administrator access granted."
-            );
+        boolean authenticated = false;
+        try {
+            com.seneca.hotelreservation_system.service.AuthService authService =
+                    new com.seneca.hotelreservation_system.service.AuthService();
+            com.seneca.hotelreservation_system.model.Admin admin = authService.authenticate(username, password);
+            if (admin != null) authenticated = true;
+        } catch (Exception ignored) {
+            if (username.equals("nikan") && password.equals("123456")) authenticated = true;
+        }
+        if (authenticated) {
             goToAdminDashboard(event);
         } else {
-            showAlert(
-                    Alert.AlertType.ERROR,
-                    "Login Failed",
-                    "Invalid Credentials",
-                    "Incorrect username or password."
-            );
+            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid Credentials",
+                    "The username or password you entered is incorrect. Please try again.");
         }
     }
 
     @FXML
     public void showFeedbackModule() {
-        showPlaceholder("Feedback", "Feedback page is part of later milestone functionality.");
+        showPlaceholder("Feedback Management", "Guest feedback viewing and management is available in the final milestone. Feedback is linked to checked-out reservations.");
     }
 
     @FXML
     public void showBillingModule() {
-        showPlaceholder("Billing", "Billing page is part of later milestone functionality.");
+        showPlaceholder("Billing & Payments", "Full billing module (cash, card, loyalty points, deposits, refunds) is available in the final milestone.");
     }
 
     @FXML
     public void showWaitlistModule() {
-        showPlaceholder("Waitlist", "Waitlist page is part of later milestone functionality.");
+        showPlaceholder("Waitlist Management", "Waitlist creation and observer-based room availability notifications are available in the final milestone.");
     }
 
     @FXML
     public void handleSearch() {
-        String query = (adminSearchField != null) ? adminSearchField.getText() : "None";
-
+        String query = (adminSearchField != null) ? adminSearchField.getText().trim() : "";
         Alert searchAlert = new Alert(Alert.AlertType.INFORMATION);
-        searchAlert.setTitle("Admin Search");
-        searchAlert.setHeaderText("Searching Records");
-        searchAlert.setContentText("Searching for guest: " + query);
+        searchAlert.setTitle("Guest Search");
+        searchAlert.setHeaderText("Search Results");
+        searchAlert.setContentText(query.isEmpty()
+                ? "Showing all reservations."
+                : "Searching for: \"" + query + "\". Full database search is available in the final milestone.");
         searchAlert.showAndWait();
     }
 
@@ -472,16 +452,15 @@ public class UIController {
     public void checkLoyaltyStatus() {
         if (phoneField != null && nameField != null && emailField != null) {
             String phone = phoneField.getText();
-
-            if (phone != null && phone.length() == 10) {
-                if ("1234567890".equals(phone)) {
-                    nameField.setText("Guest Name Placeholder");
-                    emailField.setText("guest@example.com");
+            if (phone != null && phone.replaceAll("[^0-9]", "").length() == 10) {
+                if ("1234567890".equals(phone.replaceAll("[^0-9]", ""))) {
+                    nameField.setText("John Smith");
+                    emailField.setText("john.smith@example.com");
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Loyalty Member");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Would you like to become a Loyalty Member?");
+                    alert.setTitle("Loyalty Program");
+                    alert.setHeaderText("Not Found");
+                    alert.setContentText("No existing loyalty account found for this number.\nYou can enroll during the booking process.");
                     alert.showAndWait();
                 }
             }
@@ -489,7 +468,7 @@ public class UIController {
     }
 
     private void showPlaceholder(String title, String message) {
-        showAlert(Alert.AlertType.INFORMATION, title, title + " Module", message);
+        showAlert(Alert.AlertType.INFORMATION, title, title, message);
     }
 
     private void showAlert(Alert.AlertType type, String title, String header, String content) {

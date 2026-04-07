@@ -3,7 +3,7 @@ package com.seneca.hotelreservation_system.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.time.temporal.ChronoUnit;
 
@@ -21,10 +21,10 @@ public class RoomSelectionController {
     @FXML private ComboBox<Integer> doubleRoomQty;
     @FXML private ComboBox<Integer> deluxeRoomQty;
     @FXML private ComboBox<Integer> penthouseQty;
-    @FXML private HBox singleRoomCard;
-    @FXML private HBox doubleRoomCard;
-    @FXML private HBox deluxeRoomCard;
-    @FXML private HBox penthouseCard;
+    @FXML private VBox singleRoomCard;
+    @FXML private VBox doubleRoomCard;
+    @FXML private VBox deluxeRoomCard;
+    @FXML private VBox penthouseCard;
 
     private UIController mainController;
     private UIController.RoomType selectedType;
@@ -46,27 +46,13 @@ public class RoomSelectionController {
         UIController.BookingData data = mainController.getBookingData();
         if (data != null) {
             switch (data.selectedRoomType) {
-                case SINGLE:
-                    singleRoomRadio.setSelected(true);
-                    selectedType = UIController.RoomType.SINGLE;
-                    break;
-                case DOUBLE:
-                    doubleRoomRadio.setSelected(true);
-                    selectedType = UIController.RoomType.DOUBLE;
-                    break;
-                case DELUXE:
-                    deluxeRoomRadio.setSelected(true);
-                    selectedType = UIController.RoomType.DELUXE;
-                    break;
-                case PENTHOUSE:
-                    penthouseRadio.setSelected(true);
-                    selectedType = UIController.RoomType.PENTHOUSE;
-                    break;
-                default:
-                    singleRoomRadio.setSelected(true);
-                    selectedType = UIController.RoomType.SINGLE;
+                case SINGLE:    singleRoomRadio.setSelected(true); selectedType = UIController.RoomType.SINGLE; break;
+                case DOUBLE:    doubleRoomRadio.setSelected(true); selectedType = UIController.RoomType.DOUBLE; break;
+                case DELUXE:    deluxeRoomRadio.setSelected(true); selectedType = UIController.RoomType.DELUXE; break;
+                case PENTHOUSE: penthouseRadio.setSelected(true); selectedType = UIController.RoomType.PENTHOUSE; break;
+                default:        singleRoomRadio.setSelected(true); selectedType = UIController.RoomType.SINGLE;
             }
-            selectedQuantity = data.roomQuantity;
+            selectedQuantity = Math.max(data.roomQuantity, 1);
         } else {
             singleRoomRadio.setSelected(true);
             selectedType = UIController.RoomType.SINGLE;
@@ -76,39 +62,27 @@ public class RoomSelectionController {
     }
 
     private void initializeComboBoxes() {
-        singleRoomQty.getItems().addAll(0, 1, 2, 3, 4);
-        doubleRoomQty.getItems().addAll(0, 1, 2, 3, 4);
-        deluxeRoomQty.getItems().addAll(0, 1, 2);
-        penthouseQty.getItems().addAll(0, 1, 2);
+        singleRoomQty.getItems().addAll(1, 2, 3, 4);
+        doubleRoomQty.getItems().addAll(1, 2, 3, 4);
+        deluxeRoomQty.getItems().addAll(1, 2);
+        penthouseQty.getItems().addAll(1, 2);
 
-        singleRoomQty.setValue(selectedType == UIController.RoomType.SINGLE ? selectedQuantity : 0);
-        doubleRoomQty.setValue(selectedType == UIController.RoomType.DOUBLE ? selectedQuantity : 0);
-        deluxeRoomQty.setValue(selectedType == UIController.RoomType.DELUXE ? selectedQuantity : 0);
-        penthouseQty.setValue(selectedType == UIController.RoomType.PENTHOUSE ? selectedQuantity : 0);
+        singleRoomQty.setValue(selectedType == UIController.RoomType.SINGLE ? selectedQuantity : 1);
+        doubleRoomQty.setValue(selectedType == UIController.RoomType.DOUBLE ? selectedQuantity : 1);
+        deluxeRoomQty.setValue(selectedType == UIController.RoomType.DELUXE ? selectedQuantity : 1);
+        penthouseQty.setValue(selectedType == UIController.RoomType.PENTHOUSE ? selectedQuantity : 1);
 
         singleRoomQty.valueProperty().addListener((obs, old, val) -> {
-            if (val != null && val > 0 && singleRoomRadio.isSelected()) {
-                selectedQuantity = val;
-                updateCapacityDisplay();
-            }
+            if (val != null && singleRoomRadio.isSelected()) { selectedQuantity = val; updateCapacityDisplay(); }
         });
         doubleRoomQty.valueProperty().addListener((obs, old, val) -> {
-            if (val != null && val > 0 && doubleRoomRadio.isSelected()) {
-                selectedQuantity = val;
-                updateCapacityDisplay();
-            }
+            if (val != null && doubleRoomRadio.isSelected()) { selectedQuantity = val; updateCapacityDisplay(); }
         });
         deluxeRoomQty.valueProperty().addListener((obs, old, val) -> {
-            if (val != null && val > 0 && deluxeRoomRadio.isSelected()) {
-                selectedQuantity = val;
-                updateCapacityDisplay();
-            }
+            if (val != null && deluxeRoomRadio.isSelected()) { selectedQuantity = val; updateCapacityDisplay(); }
         });
         penthouseQty.valueProperty().addListener((obs, old, val) -> {
-            if (val != null && val > 0 && penthouseRadio.isSelected()) {
-                selectedQuantity = val;
-                updateCapacityDisplay();
-            }
+            if (val != null && penthouseRadio.isSelected()) { selectedQuantity = val; updateCapacityDisplay(); }
         });
     }
 
@@ -117,8 +91,13 @@ public class RoomSelectionController {
         UIController.BookingData data = mainController.getBookingData();
         if (data != null && data.checkIn != null && data.checkOut != null) {
             long nights = ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
-            searchSummaryLabel.setText(String.format("%d Adults, %d Children • %s to %s (%d nights)",
-                    data.adults, data.children, data.checkIn, data.checkOut, nights));
+            searchSummaryLabel.setText(String.format(
+                    "%d Adult%s%s  •  %s → %s  (%d night%s)",
+                    data.adults, data.adults != 1 ? "s" : "",
+                    data.children > 0 ? ", " + data.children + " Child" + (data.children != 1 ? "ren" : "") : "",
+                    data.checkIn, data.checkOut, nights, nights != 1 ? "s" : ""));
+        } else {
+            searchSummaryLabel.setText("Step 3  •  Choose your suite");
         }
     }
 
@@ -132,21 +111,23 @@ public class RoomSelectionController {
         int totalCapacity = maxCapacity * selectedQuantity;
 
         if (totalGuests <= totalCapacity) {
-            capacityLabel.setText(String.format("✓ Total Occupancy: %d/%d persons", totalGuests, totalCapacity));
-            capacityBar.setProgress((double) totalGuests / totalCapacity);
-            capacityLabel.setStyle("-fx-text-fill: #28a745; -fx-font-weight: bold;");
+            capacityLabel.setText(String.format("✓  %d / %d guests  —  Capacity OK", totalGuests, totalCapacity));
+            capacityLabel.setStyle("-fx-text-fill: #22c55e; -fx-font-size: 13px; -fx-font-weight: bold;");
+            capacityBar.setStyle("-fx-accent: #22c55e;");
         } else {
-            capacityLabel.setText(String.format("⚠️ OVER CAPACITY: %d guests exceed %d capacity", totalGuests, totalCapacity));
-            capacityBar.setProgress(1.0);
-            capacityLabel.setStyle("-fx-text-fill: #dc3545; -fx-font-weight: bold;");
+            capacityLabel.setText(String.format("⚠  %d guests exceed %d capacity  —  Adjust selection", totalGuests, totalCapacity));
+            capacityLabel.setStyle("-fx-text-fill: #e55; -fx-font-size: 13px; -fx-font-weight: bold;");
+            capacityBar.setStyle("-fx-accent: #e55;");
         }
+        double pct = totalCapacity > 0 ? Math.min(1.0, (double) totalGuests / totalCapacity) : 0;
+        capacityBar.setProgress(pct);
     }
 
     private int getCurrentRoomMaxCapacity() {
-        if (singleRoomRadio.isSelected()) return SINGLE_MAX;
-        if (doubleRoomRadio.isSelected()) return DOUBLE_MAX;
-        if (deluxeRoomRadio.isSelected()) return DELUXE_MAX;
-        if (penthouseRadio.isSelected()) return PENTHOUSE_MAX;
+        if (singleRoomRadio != null && singleRoomRadio.isSelected()) return SINGLE_MAX;
+        if (doubleRoomRadio != null && doubleRoomRadio.isSelected()) return DOUBLE_MAX;
+        if (deluxeRoomRadio != null && deluxeRoomRadio.isSelected()) return DELUXE_MAX;
+        if (penthouseRadio != null && penthouseRadio.isSelected()) return PENTHOUSE_MAX;
         return SINGLE_MAX;
     }
 
@@ -171,14 +152,28 @@ public class RoomSelectionController {
     @FXML
     public void selectStandardDouble(ActionEvent event) throws IOException {
         selectedType = UIController.RoomType.DOUBLE;
-        selectedQuantity = 1;
+        selectedQuantity = doubleRoomQty.getValue() != null ? doubleRoomQty.getValue() : 1;
         goToAddOns(event);
     }
 
     @FXML
     public void selectRoyalKing(ActionEvent event) throws IOException {
         selectedType = UIController.RoomType.PENTHOUSE;
-        selectedQuantity = 1;
+        selectedQuantity = penthouseQty.getValue() != null ? penthouseQty.getValue() : 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectSingle(ActionEvent event) throws IOException {
+        selectedType = UIController.RoomType.SINGLE;
+        selectedQuantity = singleRoomQty.getValue() != null ? singleRoomQty.getValue() : 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectDeluxe(ActionEvent event) throws IOException {
+        selectedType = UIController.RoomType.DELUXE;
+        selectedQuantity = deluxeRoomQty.getValue() != null ? deluxeRoomQty.getValue() : 1;
         goToAddOns(event);
     }
 
@@ -211,16 +206,21 @@ public class RoomSelectionController {
             return false;
         }
 
+        if (selectedQuantity <= 0) {
+            showError("Please select at least one room.");
+            return false;
+        }
+
         int totalGuests = data.adults + data.children;
         int maxCapacity = getCurrentRoomMaxCapacity();
         int totalCapacity = maxCapacity * selectedQuantity;
 
-        if (selectedQuantity == 0) {
-            showError("Please select at least one room.");
-            return false;
-        }
         if (totalGuests > totalCapacity) {
-            showError("Occupancy exceeds capacity! " + totalGuests + " guests exceed " + totalCapacity + " capacity.");
+            showError(String.format(
+                    "Occupancy exceeded: %d guests cannot fit in %d %s room(s) (max %d per room, %d total capacity).",
+                    totalGuests, selectedQuantity,
+                    selectedType.name().toLowerCase(),
+                    maxCapacity, totalCapacity));
             return false;
         }
         return true;
@@ -228,8 +228,8 @@ public class RoomSelectionController {
 
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Room Selection Error");
-        alert.setHeaderText(null);
+        alert.setTitle("Room Selection");
+        alert.setHeaderText("Invalid Selection");
         alert.setContentText(message);
         alert.showAndWait();
     }

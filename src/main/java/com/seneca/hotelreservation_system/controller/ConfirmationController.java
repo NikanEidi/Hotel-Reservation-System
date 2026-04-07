@@ -5,10 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import javafx.scene.control.TextArea;
 
 public class ConfirmationController {
 
@@ -28,7 +26,7 @@ public class ConfirmationController {
     @FXML private Label emailLabel;
 
     private UIController mainController;
-    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy");
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy");
 
     public void setMainController(UIController controller) {
         this.mainController = controller;
@@ -40,71 +38,71 @@ public class ConfirmationController {
         if (data == null) return;
 
         bookingReferenceLabel.setText(generateBookingReference());
-        guestNameLabel.setText(data.guestName);
+        if (guestNameLabel != null) guestNameLabel.setText(data.guestName != null ? data.guestName : "—");
+        if (emailLabel != null) emailLabel.setText(data.guestEmail != null ? data.guestEmail : "—");
 
         if (data.checkIn != null && data.checkOut != null) {
-            checkInLabel.setText(data.checkIn.format(dateFormatter) + " (3:00 PM)");
-            checkOutLabel.setText(data.checkOut.format(dateFormatter) + " (11:00 AM)");
-            nightsLabel.setText(data.nights + " nights");
+            if (checkInLabel != null) checkInLabel.setText(data.checkIn.format(dateFormatter) + "  (3:00 PM)");
+            if (checkOutLabel != null) checkOutLabel.setText(data.checkOut.format(dateFormatter) + "  (11:00 AM)");
         }
+        if (nightsLabel != null) nightsLabel.setText(data.nights + " night" + (data.nights != 1 ? "s" : ""));
 
-        roomTypeLabel.setText(getRoomTypeName(data.selectedRoomType));
-        roomQuantityLabel.setText("x" + data.roomQuantity);
+        if (roomTypeLabel != null) roomTypeLabel.setText(getRoomTypeName(data.selectedRoomType));
+        if (roomQuantityLabel != null) roomQuantityLabel.setText("×" + data.roomQuantity);
 
         StringBuilder addOnsBuilder = new StringBuilder();
-        if (data.hasWifi && data.wifiQuantity > 0) addOnsBuilder.append("• Wi-Fi: ").append(data.wifiQuantity).append(" device(s)\n");
-        if (data.hasBreakfast && data.breakfastQuantity > 0) addOnsBuilder.append("• Breakfast: ").append(data.breakfastQuantity).append(" person(s)\n");
-        if (data.hasParking && data.parkingQuantity > 0) addOnsBuilder.append("• Parking: ").append(data.parkingQuantity).append(" car(s)\n");
-        if (data.hasSpa && data.spaQuantity > 0) addOnsBuilder.append("• Spa: ").append(data.spaQuantity).append(" session(s)\n");
+        if (data.hasWifi && data.wifiQuantity > 0)
+            addOnsBuilder.append("• Wi-Fi: ").append(data.wifiQuantity).append(" device(s)\n");
+        if (data.hasBreakfast && data.breakfastQuantity > 0)
+            addOnsBuilder.append("• Breakfast: ").append(data.breakfastQuantity).append(" person(s)\n");
+        if (data.hasParking && data.parkingQuantity > 0)
+            addOnsBuilder.append("• Airport Shuttle: ").append(data.parkingQuantity).append(" trip(s)\n");
+        if (data.hasSpa && data.spaQuantity > 0)
+            addOnsBuilder.append("• Spa: ").append(data.spaQuantity).append(" session(s)\n");
 
-        if (addOnsBuilder.length() > 0) addOnsDetailsArea.setText(addOnsBuilder.toString());
-        else addOnsDetailsArea.setText("No additional services selected");
-
-        totalAmountLabel.setText("$" + mainController.getTotal());
-
-        paymentInstructionLabel.setText(
-                "✓ Please proceed to the FRONT DESK upon arrival\n" +
-                        "✓ Complete payment (Cash, Card, or Loyalty Points)\n" +
-                        "✓ Receive your room keys\n" +
-                        "✓ Enjoy your stay at GRAND HOTEL!"
-        );
-
-        if (data.enrollLoyalty) {
-            loyaltyNumberLabel.setText("LTY-" + System.currentTimeMillis());
-            loyaltyInfoBox.setVisible(true);
+        if (addOnsDetailsArea != null) {
+            addOnsDetailsArea.setText(addOnsBuilder.length() > 0
+                    ? addOnsBuilder.toString().trim()
+                    : "No additional services selected.");
         }
 
-        confirmationDateLabel.setText(LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMM dd, yyyy HH:mm:ss")));
-        emailLabel.setText(data.guestEmail);
+        if (totalAmountLabel != null)
+            totalAmountLabel.setText(String.format("$%.2f", mainController.getTotal().doubleValue()));
 
-        // Save to database
-        saveReservationToDatabase();
+        if (paymentInstructionLabel != null) {
+            paymentInstructionLabel.setText(
+                    "✓  Please proceed to the FRONT DESK upon arrival.\n" +
+                    "✓  Complete payment (Cash, Card, or Loyalty Points).\n" +
+                    "✓  Receive your room keys and enjoy your stay!"
+            );
+        }
+
+        if (data.enrollLoyalty) {
+            if (loyaltyNumberLabel != null)
+                loyaltyNumberLabel.setText("LTY-" + System.currentTimeMillis() % 1000000);
+            if (loyaltyInfoBox != null) {
+                loyaltyInfoBox.setVisible(true);
+                loyaltyInfoBox.setManaged(true);
+            }
+        }
+
+        if (confirmationDateLabel != null)
+            confirmationDateLabel.setText(LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMM dd, yyyy  HH:mm")));
     }
 
     private String getRoomTypeName(UIController.RoomType type) {
         switch (type) {
-            case SINGLE: return "Single Room (1 Queen Bed)";
-            case DOUBLE: return "Double Room (2 Queen Beds)";
-            case DELUXE: return "Deluxe Room (King Bed + City View)";
-            case PENTHOUSE: return "Penthouse Suite (Panoramic View + Jacuzzi)";
-            default: return "Standard Room";
+            case SINGLE:    return "Single Room";
+            case DOUBLE:    return "Double Room";
+            case DELUXE:    return "Deluxe Room";
+            case PENTHOUSE: return "Penthouse Suite";
+            default:        return "Standard Room";
         }
     }
 
     private String generateBookingReference() {
-        return "BK-" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")) + "-" + String.format("%04d", (int)(Math.random() * 10000));
-    }
-
-    private void saveReservationToDatabase() {
-        UIController.BookingData data = mainController.getBookingData();
-        if (data != null) {
-            System.out.println("========================================");
-            System.out.println("RESERVATION SAVED");
-            System.out.println("Booking Ref: " + bookingReferenceLabel.getText());
-            System.out.println("Guest: " + data.guestName);
-            System.out.println("Total: $" + mainController.getTotal());
-            System.out.println("========================================");
-        }
+        return "BK-" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")) +
+                "-" + String.format("%04d", (int) (Math.random() * 10000));
     }
 
     @FXML
@@ -116,15 +114,18 @@ public class ConfirmationController {
     public void printConfirmation() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Print Confirmation");
+        alert.setHeaderText("Sending to Printer");
         alert.setContentText("Your booking confirmation has been sent to the printer.\n\nBooking Reference: " + bookingReferenceLabel.getText());
         alert.showAndWait();
     }
 
     @FXML
     public void emailConfirmation() {
+        String email = emailLabel != null ? emailLabel.getText() : "—";
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Email Confirmation");
-        alert.setContentText("Confirmation sent to: " + emailLabel.getText());
+        alert.setHeaderText("Confirmation Sent");
+        alert.setContentText("A confirmation email has been sent to:\n" + email);
         alert.showAndWait();
     }
 }

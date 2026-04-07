@@ -19,15 +19,27 @@ public class SearchController {
 
     private UIController mainController;
     private int adults = 2;
-    private int children = 1;
+    private int children = 0;
 
     public void setMainController(UIController controller) {
         this.mainController = controller;
+        UIController.BookingData data = mainController.getBookingData();
+        if (data != null) {
+            adults = data.adults;
+            children = data.children;
+            adultCountLabel.setText(String.valueOf(adults));
+            childCountLabel.setText(String.valueOf(children));
+            if (data.checkIn != null) checkInDatePicker.setValue(data.checkIn);
+            if (data.checkOut != null) checkOutDatePicker.setValue(data.checkOut);
+            if (data.guestName != null) fullNameField.setText(data.guestName);
+            if (data.guestEmail != null) emailField.setText(data.guestEmail);
+            if (data.guestPhone != null) phoneField.setText(data.guestPhone);
+        }
     }
 
     @FXML
     public void increaseAdults() {
-        if (adults < 6) {
+        if (adults < 8) {
             adults++;
             adultCountLabel.setText(String.valueOf(adults));
         }
@@ -43,7 +55,7 @@ public class SearchController {
 
     @FXML
     public void increaseChildren() {
-        if (children < 4) {
+        if (children < 6) {
             children++;
             childCountLabel.setText(String.valueOf(children));
         }
@@ -59,34 +71,13 @@ public class SearchController {
 
     @FXML
     public void goToRoomSelection(ActionEvent event) throws IOException {
-        System.out.println("=== STEP 1: goToRoomSelection CALLED! ===");
-
         if (mainController == null) {
-            System.out.println("ERROR: mainController is NULL!");
             showError("System error. Please restart.");
             return;
         }
 
-        System.out.println("STEP 2: mainController is NOT null");
-        System.out.println("STEP 3: Validating inputs...");
+        if (!validateInputs()) return;
 
-        // Validate inputs
-        if (!validateInputs()) {
-            System.out.println("STEP 4: Validation FAILED!");
-            return;
-        }
-
-        System.out.println("STEP 5: Validation PASSED!");
-        System.out.println("Adults: " + adults + ", Children: " + children);
-        System.out.println("CheckIn: " + checkInDatePicker.getValue());
-        System.out.println("CheckOut: " + checkOutDatePicker.getValue());
-        System.out.println("Name: " + fullNameField.getText());
-        System.out.println("Email: " + emailField.getText());
-        System.out.println("Phone: " + phoneField.getText());
-
-        System.out.println("STEP 6: Saving data to mainController...");
-
-        // Save data to main controller
         mainController.setSearchData(
                 adults,
                 children,
@@ -97,9 +88,7 @@ public class SearchController {
                 phoneField.getText().trim()
         );
 
-        System.out.println("STEP 7: Data saved! Navigating to room selection...");
         mainController.goToRoomSelection(event);
-        System.out.println("STEP 8: Navigation called!");
     }
 
     @FXML
@@ -114,10 +103,10 @@ public class SearchController {
         alert.setHeaderText("Hotel Kiosk Regulations");
         alert.setContentText(
                 "1. Check-in: 3:00 PM | Check-out: 11:00 AM\n" +
-                        "2. Maximum occupancy per room must be respected.\n" +
-                        "3. Cancellations must be made 24 hours in advance.\n" +
-                        "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
-                        "5. No smoking in rooms ($250 fine)"
+                "2. Maximum occupancy per room must be respected.\n" +
+                "3. Cancellations must be made 24 hours in advance.\n" +
+                "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
+                "5. No smoking in rooms ($250 fine)"
         );
         alert.showAndWait();
     }
@@ -126,48 +115,59 @@ public class SearchController {
         if (errorLabel != null) {
             errorLabel.setText("");
             errorLabel.setVisible(false);
+            errorLabel.setManaged(false);
         }
 
         LocalDate checkIn = checkInDatePicker.getValue();
         LocalDate checkOut = checkOutDatePicker.getValue();
 
         if (checkIn == null) {
-            showError("Please select a check-in date");
+            showError("Please select a check-in date.");
             return false;
         }
         if (checkOut == null) {
-            showError("Please select a check-out date");
+            showError("Please select a check-out date.");
             return false;
         }
-        if (checkOut.isBefore(checkIn) || checkOut.isEqual(checkIn)) {
-            showError("Check-out date must be after check-in date");
+        if (!checkIn.isBefore(LocalDate.now())) {
+            if (checkIn.isBefore(LocalDate.now())) {
+                showError("Check-in date cannot be in the past.");
+                return false;
+            }
+        }
+        if (!checkOut.isAfter(checkIn)) {
+            showError("Check-out date must be after check-in date.");
             return false;
         }
 
         String name = fullNameField.getText().trim();
         if (name.isEmpty()) {
-            showError("Please enter your full name");
+            showError("Please enter your full name.");
+            return false;
+        }
+        if (name.length() < 2) {
+            showError("Name must be at least 2 characters.");
             return false;
         }
 
         String email = emailField.getText().trim();
         if (email.isEmpty()) {
-            showError("Please enter your email address");
+            showError("Please enter your email address.");
             return false;
         }
         if (!email.contains("@") || !email.contains(".")) {
-            showError("Please enter a valid email address");
+            showError("Please enter a valid email address.");
             return false;
         }
 
         String phone = phoneField.getText().trim();
         if (phone.isEmpty()) {
-            showError("Please enter your phone number");
+            showError("Please enter your phone number.");
             return false;
         }
         String phoneDigits = phone.replaceAll("[^0-9]", "");
         if (phoneDigits.length() != 10) {
-            showError("Phone number must be 10 digits");
+            showError("Phone number must be exactly 10 digits.");
             return false;
         }
 
@@ -176,12 +176,15 @@ public class SearchController {
 
     private void showError(String message) {
         if (errorLabel != null) {
-            errorLabel.setText(message);
+            errorLabel.setText("⚠  " + message);
             errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Validation Error");
+            alert.setHeaderText(null);
             alert.setContentText(message);
-            alert.show();
+            alert.showAndWait();
         }
     }
 }
