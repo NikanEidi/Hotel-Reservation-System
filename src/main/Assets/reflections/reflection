@@ -1,0 +1,54 @@
+REFLECTION - Nischal Khanal (nkhanal6)
+My Role in the Project
+I was responsible for the Kiosk Booking Flow and Advanced Pricing & Add-ons modules. My work focused on creating a seamless 7-screen self-service kiosk experience for guests, implementing dynamic pricing strategies, and enabling guests to add optional amenities to their stay.
+My Contributions
+1. Kiosk 7-Screen Flow
+•	Built the complete guest journey from Welcome to Confirmation
+•	Created controllers for all 7 screens: SearchController, RoomSelectionController, AddOnsController, LoyaltyController, SummaryController, ConfirmationController
+•	Implemented data passing between screens using a custom BookingData class
+•	Connected all FXML files with their respective controllers
+2. Strategy Pattern (Pricing)
+•	Implemented PricingStrategy interface with three concrete strategies:
+o	StandardPricing - Weekday rates
+o	WeekendPricing - 20% surcharge for weekend stays
+o	PeakSeasonPricing - 30% surcharge for peak season (July, August, December)
+•	Integrated dynamic pricing into the Summary screen
+3. Decorator Pattern (Dynamic Amenities - MS3)
+•	Created BillComponent interface as the core component
+•	Implemented BaseBill to wrap room costs
+•	Created decorators for each amenity:
+o	WiFiDecorator - $10 per night per device
+o	BreakfastDecorator - $15 per person per day
+o	ShuttleDecorator - $35 per trip
+o	SpaDecorator - $50 per session
+•	The decorators chain together to build the final bill dynamically
+
+
+Challenges I Faced
+Challenge 1: Null Pointer Exceptions with Spinners
+Problem: When trying to save add-ons, the spinner values were returning null, causing NullPointerException. The console showed spinner value=null even when the checkbox was selected.
+Solution: I discovered that setupSpinners() was being called AFTER loadExistingData(). The spinners didn't have their value factories created yet when loadExistingData() tried to set their values. I reordered the method calls in setMainController() to create spinners first, then load data. I also added null safety checks.
+Challenge 2: FXML Controller Binding
+Problem: The CONTINUE button on the Search screen wasn't working. Clicking it did nothing.
+Solution: I found that the fx:controller attribute in the FXML file was pointing to UIControllerinstead of SearchController. After correcting it to SearchController, the button started working. This taught me the importance of matching FXML controller references.
+Challenge 3: Add-ons Not Adding to Total
+Problem: When users selected add-ons, the quantity remained at 0, so no cost was added to the bill.
+Solution: I updated the setupCheckboxListeners() method to automatically set the spinner quantity to 1 when a checkbox is selected. This ensured that if a user checks an amenity, they get at least one unit by default.
+Challenge 4: Navigation Between Screens
+Problem: The setMainController method wasn't being called on child controllers, so mainController was always null.
+Solution: I implemented the switchScene() method in UIController to use reflection to find and call setMainController on any controller that has it. This ensured proper parent-child controller communication.
+
+What I Learned
+Technical Learnings:
+1.	Decorator Pattern - Learned how to dynamically add responsibilities to objects at runtime, which is perfect for pricing add-ons
+2.	Strategy Pattern - Understood how to encapsulate algorithms (pricing rules) and make them interchangeable
+3.	JavaFX Lifecycle - Learned about FXML loading, controller initialization, and the importance of method execution order
+4.	Null Safety - The importance of checking for null before calling methods on objects
+5.	Logging - How to configure rotating file handlers for production-level logging
+Soft Skills:
+1.	Debugging - Using print statements strategically to trace issues
+2.	Problem Solving - Breaking down complex issues into smaller, testable parts
+3.	Documentation - Keeping track of changes and explaining them clearly
+Conclusion
+This project was a valuable learning experience. I successfully implemented both Strategy and Decorator patterns to create a flexible, extensible pricing system. The kiosk flow is fully functional, allowing guests to book rooms, select amenities, and receive a complete summary before confirmation. I overcame several technical challenges, particularly around null safety and FXML-controller binding. These skills will be valuable in my future software development career.
+

@@ -1,0 +1,1680 @@
+Apr 06, 2026 2:54:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:54:58] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 2:55:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:08] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 2:55:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:09] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 2:55:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:09] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 2:55:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:13] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:14] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:14] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:15] KIOSK | NAVIGATION | Moving to Guest Details screen
+Apr 06, 2026 2:55:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:16] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:16] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:19] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:20] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:20] KIOSK | NAVIGATION | Moving to Guest Details screen
+Apr 06, 2026 2:55:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:21] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:22] KIOSK | RULES_VIEWED | Guest viewed hotel rules
+Apr 06, 2026 2:55:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:24] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:44] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 2:55:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:46] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 2:55:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:48] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 2:55:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:48] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 2:55:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:50] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:51] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:51] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:55:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:55:51] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:56:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:26] KIOSK | NAVIGATION | Moving to Guest Details screen
+Apr 06, 2026 2:56:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:26] KIOSK | NAVIGATION | Moving to Guest Details screen
+Apr 06, 2026 2:56:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:27] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:56:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:27] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:56:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:27] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:56:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:27] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:56:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:41] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 2:56:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:43] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 2:56:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:56:45] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 2:57:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:02] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 2:57:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:11] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 2:57:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:11] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 2:57:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:16] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:57:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:16] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 2:57:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 14:57:16] KIOSK | NAVIGATION | Moving to Summary screen - Total: $0.00
+Apr 06, 2026 3:01:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:04] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:01:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:05] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:01:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:06] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:01:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:06] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:01:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:07] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:01:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:20] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:01:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:01:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:29] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:01:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:01:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:29] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:01:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:01:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:30] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:01:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:30] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:01:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:31] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:01:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:33] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr 06, 2026 3:01:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:36] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr 06, 2026 3:01:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:01:36] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:02:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:08] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:02:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:09] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:02:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:10] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:02:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:10] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:11] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:11] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:11] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:11] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:02:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:12] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:02:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:13] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:15] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:15] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:02:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:04:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:42] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:04:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:43] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:04:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:45] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:04:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:45] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:04:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:46] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:04:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:54] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:04:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:57] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:04:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:58] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:04:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:04:58] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:05:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:05:00] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:05:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:05:00] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:05:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:05:00] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:05:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:05:02] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr 06, 2026 3:10:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:15] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:10:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:18] KIOSK | RULES_VIEWED | Guest viewed hotel rules
+Apr 06, 2026 3:10:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:22] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:10:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:23] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:10:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:23] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:10:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:24] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:10:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:24] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:10:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:25] KIOSK | RULES_VIEWED | Guest viewed hotel rules
+Apr 06, 2026 3:10:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:57] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:10:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:57] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:10:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:58] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:10:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:10:58] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:11:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:11:19] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:11:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:11:19] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:11:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:11:20] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:17:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:26] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:17:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:17:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:28] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:17:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:28] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:17:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:29] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:17:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:40] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:17:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:41] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:17:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:41] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:17:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:41] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:17:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:41] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:17:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:42] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:17:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:42] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:17:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:42] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:17:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:42] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:17:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:17:43] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:18:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:04] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr 06, 2026 3:18:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:06] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:18:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:19] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:18:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:22] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:18:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:22] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:18:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:22] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:18:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:22] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:18:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:24] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:18:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:24] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:18:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:24] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:18:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:18:24] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:21:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:19] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:21:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 0
+Apr 06, 2026 3:21:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:33] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:21:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:33] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:21:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:33] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:21:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:21:33] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:24:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:24:12] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:24:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:24:29] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 3:24:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:24:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:29:59 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:29:59] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:32:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:04] KIOSK | SEARCH | Guest: John Smith, 2 adults, 1 children, 2026-04-06 to 2026-04-16
+Apr. 06, 2026 3:32:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:04] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 10
+Apr. 06, 2026 3:32:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:06] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:32:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:06] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:32:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:07] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 3:32:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:07] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:32:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:32:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:50] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-15
+Apr. 06, 2026 3:32:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:32:50] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr. 06, 2026 3:33:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:33:14] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 3:33:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:33:14] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:33:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:33:17] KIOSK | RULES_VIEWED | Guest viewed hotel rules
+Apr. 06, 2026 3:33:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:33:22] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:33:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:33:22] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:40:59 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:40:59] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 3:41:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:24] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-09
+Apr 06, 2026 3:41:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:24] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr 06, 2026 3:41:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:26] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:41:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:26] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:41:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:50] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 3:41:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:50] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:41:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:51] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:41:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:51] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 3:41:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:51] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 3:41:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:41:51] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:13] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:42:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:30] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-14
+Apr. 06, 2026 3:42:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:30] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 8
+Apr. 06, 2026 3:42:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:31] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:42:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:31] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:35] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 3:42:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:35] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:35] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 3:42:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:35] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:42:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:42:36] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:44:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:44:03] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:44:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:44:03] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:44:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:44:03] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:44:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:44:03] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:46:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:46:48] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 3:47:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:15] KIOSK | SEARCH | Guest: nisc, 2 adults, 1 children, 2026-04-06 to 2026-04-09
+Apr. 06, 2026 3:47:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:15] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr. 06, 2026 3:47:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:16] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:47:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:16] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:47:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:18] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr. 06, 2026 3:47:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:19] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 3:47:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:47:19] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:49:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:49:08] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr. 06, 2026 3:49:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:49:09] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 3:49:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:49:09] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 3:49:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:49:16] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr. 06, 2026 3:51:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 15:51:12] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 4:03:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:03:37] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 4:04:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:49] KIOSK | SEARCH | Guest: nischal, 4 adults, 2 children, 2026-04-06 to 2026-04-10
+Apr 06, 2026 4:04:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:49] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr 06, 2026 4:04:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:51] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 4:04:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:51] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 4:04:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:53] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr 06, 2026 4:04:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:53] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 4:04:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:04:53] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 4:06:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:06:43] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 4:07:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:07:13] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-10
+Apr 06, 2026 4:07:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:07:13] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr 06, 2026 4:07:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:07:15] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 4:07:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:07:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:22:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:22:58] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 4:23:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:23:18] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-07 to 2026-04-16
+Apr. 06, 2026 4:23:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:23:18] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr. 06, 2026 4:23:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:23:19] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 4:23:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:23:19] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 4:24:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:24:29] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 4:24:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:24:53] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-15
+Apr 06, 2026 4:24:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:24:53] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr 06, 2026 4:24:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:24:54] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 4:24:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:24:54] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 4:25:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:25:05] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr 06, 2026 4:25:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:25:06] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 4:25:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:25:06] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:35:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:35:07] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 4:35:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:35:28] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-09
+Apr. 06, 2026 4:35:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:35:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 3
+Apr. 06, 2026 4:35:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:35:29] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 4:35:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:35:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:39:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:39:40] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 4:40:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:00] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-07 to 2026-04-16
+Apr. 06, 2026 4:40:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:00] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr. 06, 2026 4:40:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:01] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 4:40:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:01] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:40:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:06] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 4:40:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:06] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 4:40:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:12] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:40:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:22] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 4:40:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:22] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 4:40:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:40:40] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 4:41:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:41:27] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 4:41:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 16:41:27] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 6:29:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:29:53] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 6:30:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:30:13] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-07 to 2026-04-08
+Apr. 06, 2026 6:30:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:30:13] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 6:30:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:30:15] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 6:30:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:30:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 6:31:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:01] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 6:31:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:01] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 6:31:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:04] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 6:31:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:14] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 6:31:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:14] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:31:57 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:31:57] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 6:32:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:18] KIOSK | SEARCH | Guest: nkhanal6, 2 adults, 1 children, 2026-04-06 to 2026-04-15
+Apr 06, 2026 6:32:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:18] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr 06, 2026 6:32:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:20] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 6:32:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:20] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:32:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:22] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:32:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:32:22] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:33:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:33:56] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 6:34:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:15] KIOSK | SEARCH | Guest: sc, 2 adults, 1 children, 2026-04-06 to 2026-04-15
+Apr 06, 2026 6:34:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:15] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr 06, 2026 6:34:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:16] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 6:34:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:16] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:34:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:20] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:20] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:21] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:21] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:21] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:21] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:22] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:22] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:23] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:23] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:23] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:23] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:24] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:24] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:34:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:25] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr 06, 2026 6:34:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:26] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 6:34:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:26] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:34:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:26] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:34:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:34:26] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:38:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:29] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 6:38:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:46] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-16
+Apr 06, 2026 6:38:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:46] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 10
+Apr 06, 2026 6:38:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:47] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 6:38:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:47] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:38:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:51] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:38:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:38:51] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:39:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:06] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr 06, 2026 6:39:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:06] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:07] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr 06, 2026 6:39:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:07] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:07] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr 06, 2026 6:39:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:07] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:07] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:39:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:08] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:39:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:08] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:39:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:09] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr 06, 2026 6:39:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:09] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:10] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr 06, 2026 6:39:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:10] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:10] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 6:39:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:11] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 6:39:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:11] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 6:39:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:14] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 6:39:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:14] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:14] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 6:39:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:14] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr 06, 2026 6:39:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:39:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 6:41:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:31] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 6:41:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:47] KIOSK | SEARCH | Guest: s, 2 adults, 1 children, 2026-04-06 to 2026-04-16
+Apr. 06, 2026 6:41:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:47] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 10
+Apr. 06, 2026 6:41:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:49] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 6:41:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:49] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 6:41:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:52] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 6:41:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:52] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 6:41:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:53] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 6:41:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:41:53] KIOSK | NAVIGATION | Moving to Summary screen - Total: $3839.00
+Apr. 06, 2026 6:42:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:42:09] KIOSK | RESERVATION_COMPLETE | Guest: s, Room: PENTHOUSE, Nights: 10, Total: $3839.00
+Apr. 06, 2026 6:42:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:42:10] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 6:55:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:55:56] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 6:56:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:15] KIOSK | SEARCH | Guest: s, 2 adults, 2 children, 2026-04-06 to 2026-04-08
+Apr. 06, 2026 6:56:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:15] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 2
+Apr. 06, 2026 6:56:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:17] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 6:56:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:17] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 6:56:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:29] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 6:56:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:29] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 6:56:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:31] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 6:56:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:31] KIOSK | NAVIGATION | Moving to Summary screen - Total: $767.80
+Apr. 06, 2026 6:56:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:46] KIOSK | RESERVATION_COMPLETE | Guest: s, Room: PENTHOUSE, Nights: 2, Total: $767.80
+Apr. 06, 2026 6:56:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 18:56:48] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 7:01:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:01:23] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 7:01:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:01:56] KIOSK | SEARCH | Guest: nk, 4 adults, 2 children, 2026-04-06 to 2026-04-08
+Apr. 06, 2026 7:01:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:01:56] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 2
+Apr. 06, 2026 7:01:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:01:58] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 7:01:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:01:58] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 7:02:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:04] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 7:02:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:04] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 7:02:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:06] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 7:02:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:06] KIOSK | NAVIGATION | Moving to Summary screen - Total: $767.80
+Apr. 06, 2026 7:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:15] KIOSK | RESERVATION_COMPLETE | Guest: nk, Room: PENTHOUSE, Nights: 2, Total: $767.80
+Apr. 06, 2026 7:02:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:02:16] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 7:05:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:05:25] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 7:05:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:05:45] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-08
+Apr. 06, 2026 7:05:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:05:45] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 2
+Apr. 06, 2026 7:05:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:05:49] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 7:05:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:05:49] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 7:06:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:06:13] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 7:06:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:06:13] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 7:06:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:06:15] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 7:06:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:06:15] KIOSK | NAVIGATION | Moving to Summary screen - Total: $767.80
+Apr. 06, 2026 7:39:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:39:42] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 7:39:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:39:43] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 7:39:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:39:45] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 2
+Apr 06, 2026 7:41:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:01] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 7:41:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:24] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-10
+Apr 06, 2026 7:41:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:24] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr 06, 2026 7:41:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:26] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 7:41:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:26] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 7:41:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:31] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 7:41:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:31] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 7:41:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:33] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 7:41:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:41:33] KIOSK | NAVIGATION | Moving to Summary screen - Total: $1535.60
+Apr 06, 2026 7:42:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:42:05] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 7:42:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 19:42:06] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 8:05:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:05:58] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 8:05:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:05:58] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:06:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:00] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 8:06:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:00] KIOSK | NAVIGATION | Moving to Summary screen - Total: $1535.60
+Apr 06, 2026 8:06:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:04] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:06:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:05] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 8:06:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:07] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr 06, 2026 8:06:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:10] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 8:06:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:36] KIOSK | SEARCH | Guest: n, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr 06, 2026 8:06:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:36] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr 06, 2026 8:06:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:38] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr 06, 2026 8:06:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:38] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 8:06:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:40] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 8:06:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:40] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:06:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:41] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 8:06:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:41] KIOSK | NAVIGATION | Moving to Summary screen - Total: $383.90
+Apr 06, 2026 8:06:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:49] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:06:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:50] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 8:06:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:51] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr 06, 2026 8:06:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:52] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 8:06:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:52] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 8:06:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:54] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 8:06:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:54] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:06:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:56] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 8:06:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:06:56] KIOSK | NAVIGATION | Moving to Summary screen - Total: $141.90
+Apr 06, 2026 8:07:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:07:12] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 8:07:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:07:13] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:13:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:23] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:13:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:38] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:13:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:38] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:13:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:39] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 8:13:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:39] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:13:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:49] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:13:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:49] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:13:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:52] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:13:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:13:52] KIOSK | NAVIGATION | Moving to Summary screen - Total: $383.90
+Apr. 06, 2026 8:14:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:12] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:14:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:13] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:14:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:17] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:14:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:19] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:14:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:19] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:14:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:24] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:14:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:24] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:14:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:25] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:14:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:14:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $141.90
+Apr. 06, 2026 8:18:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:18:47] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:19:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:04] KIOSK | SEARCH | Guest: df, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:19:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:04] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:19:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:06] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:19:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:06] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:19:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:13] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:19:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:13] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:19:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:15] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:19:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:15] KIOSK | NAVIGATION | Moving to Summary screen - Total: $141.90
+Apr. 06, 2026 8:19:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:27] KIOSK | RESERVATION_COMPLETE | Guest: df, Room: DOUBLE, Nights: 1, Total: $141.90
+Apr. 06, 2026 8:19:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:29] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 8:19:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:19:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:53] KIOSK | SEARCH | Guest: d, 2 adults, 1 children, 2026-04-06 to 2026-04-10
+Apr. 06, 2026 8:19:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:53] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 4
+Apr. 06, 2026 8:19:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:55] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:19:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:19:55] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:20:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:04] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:20:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:04] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:20:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:05] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:20:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:05] KIOSK | NAVIGATION | Moving to Summary screen - Total: $567.60
+Apr. 06, 2026 8:20:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:11] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:20:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:20:12] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:24:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:12] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:24:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:28] KIOSK | SEARCH | Guest: jj, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:24:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:24:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:30] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:24:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:30] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:24:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:36] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:24:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:36] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:24:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:37] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:24:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:37] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:24:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:46] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:24:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:47] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:24:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:48] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:24:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:52] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:24:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:52] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:24:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:58] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:24:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:24:58] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:25:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:25:01] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:25:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:25:01] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:25:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:25:14] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:25:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:25:15] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:28:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:28:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:45] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:28:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:45] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:28:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:47] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:28:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:47] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:28:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:51] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:28:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:51] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:28:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:52] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:28:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:28:52] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:29:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:27] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:29:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:29:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:35] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:29:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:35] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:29:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:36] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:29:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:29:36] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:36:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:02] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:36:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:37] KIOSK | SEARCH | Guest: ns, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:36:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:37] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:36:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:38] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:36:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:38] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:36:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:42] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:36:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:42] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:36:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:44] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:36:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:44] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:36:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:55] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:36:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:36:56] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:37:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:37:02] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:37:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:37:02] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:37:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:37:03] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:37:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:37:03] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:39:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:46] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:39:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:47] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:39:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:48] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:39:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:51] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 8:39:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:51] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:39:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:55] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:39:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:55] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:39:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:56] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:39:56 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:39:56] KIOSK | NAVIGATION | Moving to Summary screen - Total: $394.37
+Apr. 06, 2026 8:40:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:20] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:40:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:36] KIOSK | SEARCH | Guest: cc, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:40:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:36] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:40:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:38] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 8:40:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:38] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:40:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:41] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:40:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:41] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:40:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:43] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:40:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:40:43] KIOSK | NAVIGATION | Moving to Summary screen - Total: $394.37
+Apr. 06, 2026 8:41:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:31] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:41:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:32] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:41:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:42] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:41:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:42] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:41:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:43] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:41:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:41:43] KIOSK | NAVIGATION | Moving to Summary screen - Total: $394.37
+Apr. 06, 2026 8:46:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:06] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:46:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:23] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:46:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:23] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:46:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:24] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:46:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:24] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:46:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:33] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:46:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:33] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:46:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:34] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:46:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:34] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:46:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:38] KIOSK | RESERVATION_COMPLETE | Guest: nk, Room: DOUBLE, Nights: 1, Total: $145.77
+Apr. 06, 2026 8:46:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:44] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 8:46:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:46:46] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:49:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:02] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:49:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:20] KIOSK | SEARCH | Guest: nk, 2 adults, 2 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:49:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:20] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:49:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:22] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:49:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:22] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:49:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:33] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:49:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:34] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:49:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:49:34] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:54:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:54:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:47] KIOSK | SEARCH | Guest: nk, 2 adults, 2 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:54:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:47] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:54:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:48] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:54:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:48] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:54:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:52] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:54:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:52] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:54:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:53] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:54:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:54:53] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:58:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:58:47] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 8:59:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:06] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 8:59:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:06] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 8:59:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:07] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 8:59:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:07] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:59:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:10] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:59:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:10] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:59:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:11] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:59:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:11] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 8:59:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:15] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:59:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:16] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 8:59:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:21] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 8:59:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:21] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 8:59:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:21] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 8:59:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 20:59:21] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:00:58 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:00:58] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:01:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:16] KIOSK | SEARCH | Guest: cde, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:01:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:16] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:01:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:17] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:01:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:17] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:01:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:20] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:01:20 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:20] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:01:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:21] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:01:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:01:21] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:14:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:27] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:14:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:42] KIOSK | SEARCH | Guest: njs, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:14:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:42] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:14:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:43] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:14:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:43] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:14:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:47] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:14:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:47] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:14:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:50] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:14:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:14:50] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:18:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:18] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:18:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:33] KIOSK | SEARCH | Guest: jd, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:18:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:33] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:18:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:34] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:18:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:34] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:18:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:43] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:18:43 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:43] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:18:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:44] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:18:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:18:44] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:24:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:00] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:24:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:16] KIOSK | SEARCH | Guest: ce, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:24:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:16] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:24:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:17] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:24:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:17] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:24:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:23] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:24:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:23] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:24:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:24] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:24:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:24:24] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr 06, 2026 9:25:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:25:42] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 9:25:59 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:25:59] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr 06, 2026 9:25:59 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:25:59] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr 06, 2026 9:26:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:00] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr 06, 2026 9:26:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:00] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 9:26:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:04] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 9:26:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:04] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 9:26:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:05] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 9:26:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:26:05] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:30:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:18] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:30:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:31] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:30:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:31] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:30:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:33] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:30:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:33] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:30:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:35] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:30:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:35] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:30:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:36] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:30:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:36] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:30:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:41] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:30:42 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:42] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:30:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:46] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:30:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:46] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:30:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:47] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:30:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:30:47] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:32:30 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:30] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:32:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:46] KIOSK | SEARCH | Guest: nkj, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:32:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:46] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:32:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:48] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:32:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:48] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:32:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:51] KIOSK | ADDONS | WiFi:0, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:32:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:51] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:32:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:52] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:32:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:32:52] KIOSK | NAVIGATION | Moving to Summary screen - Total: $145.77
+Apr. 06, 2026 9:37:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:27] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:37:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:40] KIOSK | SEARCH | Guest: mxc, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:37:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:40] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:37:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:41] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:37:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:41] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:37:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:46] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:37:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:46] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:37:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:47] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:37:47 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:37:47] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:41:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:41:39] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:41:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:41:54] KIOSK | SEARCH | Guest: njd, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:41:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:41:54] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:41:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:41:55] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:41:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:41:55] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:42:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:05] KIOSK | ADDONS | WiFi:1, Breakfast:1, Parking:1, Spa:1
+Apr. 06, 2026 9:42:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:05] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:42:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:06] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:42:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:06] KIOSK | NAVIGATION | Moving to Summary screen - Total: $270.07
+Apr. 06, 2026 9:42:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:31] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:42:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:33] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:42:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:45] KIOSK | ADDONS | WiFi:2, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:42:45 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:45] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:42:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:46] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:42:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:46] KIOSK | NAVIGATION | Moving to Summary screen - Total: $168.37
+Apr. 06, 2026 9:42:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:53] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:42:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:42:54] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:43:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:02] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:43:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:03] KIOSK | ROOM_SELECTION | Royal King Suite selected
+Apr. 06, 2026 9:43:03 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:03] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:43:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:07] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:43:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:07] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:43:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:08] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:43:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:43:08] KIOSK | NAVIGATION | Moving to Summary screen - Total: $405.67
+Apr. 06, 2026 9:47:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:35] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:47:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:50] KIOSK | SEARCH | Guest: nk, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:47:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:50] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:47:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:51] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:47:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:51] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:47:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:54] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:47:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:54] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:47:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:55] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:47:55 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:47:55] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:49:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:33] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:49:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:48] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:49:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:48] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:49:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:49] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:49:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:49] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:49:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:52] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:49:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:52] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:49:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:53] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:49:53 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:49:53] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:50:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:05] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:50:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:25] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:50:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:27] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:50:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:27] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:50:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:28] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:50:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:50:28] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:52:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:17] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:52:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:38] KIOSK | SEARCH | Guest: sc, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:52:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:38] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:52:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:39] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:52:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:39] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:52:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:41] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:52:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:41] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:52:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:41] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:52:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:52:41] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:55:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:55:49] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:56:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:02] KIOSK | SEARCH | Guest: jsc, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:56:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:02] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:56:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:04] KIOSK | ROOM_SELECTION | Standard Double Suite selected
+Apr. 06, 2026 9:56:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:04] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:56:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:06] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 9:56:06 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:06] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:56:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:07] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:56:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:07] KIOSK | NAVIGATION | Moving to Summary screen - Total: $157.07
+Apr. 06, 2026 9:56:18 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:18] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:56:19 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:19] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:56:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:22] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:1, Spa:0
+Apr. 06, 2026 9:56:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:22] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:56:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:23] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 9:56:23 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:23] KIOSK | NAVIGATION | Moving to Summary screen - Total: $196.62
+Apr. 06, 2026 9:56:27 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:27] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 9:56:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:28] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 9:56:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:56:32] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 9:57:26 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:57:26] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 9:57:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:57:46] KIOSK | SEARCH | Guest: bdj, 1 adults, 0 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 9:57:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 21:57:46] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:01:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:01:49] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:02:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:04] KIOSK | SEARCH | Guest: nfb, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:02:04 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:04] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:11] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:02:11 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:11] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:02:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:14] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:02:14 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:14] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:15] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:02:15 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:15] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:02:21 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:21] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:02:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:22] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:02:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:02:25] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:11:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:11:00] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:11:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:11:05] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 10:11:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:11:13] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:11:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:11:49] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:11:49 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:11:49] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:12:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:05] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:12:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:05] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:12:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:17] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:12:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:17] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:12:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:28] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:12:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:28] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:12:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:12:37] KIOSK | RESERVATION_COMPLETE | Guest: nischal, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:30:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:30:31] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 10:30:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:30:32] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:30:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:30:51] KIOSK | SEARCH | Guest: nischal, 2 adults, 1 children, 2026-04-06 to 2026-04-15
+Apr. 06, 2026 10:30:51 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:30:51] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 9
+Apr. 06, 2026 10:31:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:02] KIOSK | ROOM_SELECTION | Deluxe Room selected
+Apr. 06, 2026 10:31:02 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:02] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:31:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:08] KIOSK | ADDONS | WiFi:1, Breakfast:1, Parking:1, Spa:1
+Apr. 06, 2026 10:31:08 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:08] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:31:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:09] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:31:09 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:31:09] KIOSK | NAVIGATION | Moving to Summary screen - Total: $2374.13
+Apr. 06, 2026 10:32:10 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:10] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:32:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:25] KIOSK | LOYALTY | Enrolled: false, Points Redeemed: 0
+Apr. 06, 2026 10:32:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:25] KIOSK | NAVIGATION | Moving to Summary screen - Total: $2374.13
+Apr. 06, 2026 10:32:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:32] KIOSK | RESERVATION_COMPLETE | Guest: nischal, Room: DELUXE, Nights: 9, Total: $2374.13
+Apr. 06, 2026 10:32:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:35] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr. 06, 2026 10:32:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:32:37] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:44:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:33] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:44:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:48] KIOSK | SEARCH | Guest: nini, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:44:48 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:48] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:44:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:50] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:44:50 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:50] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:44:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:52] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:44:52 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:52] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:44:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:54] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:44:54 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:54] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:44:59 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:44:59] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:00] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:00 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:00] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:01 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:01] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:05] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:05] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:45:05 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:45:05] KIOSK | RESERVATION_COMPLETE | Guest: nini, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:48:16 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:16] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:48:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:31] KIOSK | SEARCH | Guest: njs, 2 adults, 1 children, 2026-04-06 to 2026-04-08
+Apr. 06, 2026 10:48:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:31] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 2
+Apr. 06, 2026 10:48:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:32] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:48:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:32] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:48:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:35] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:48:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:35] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:48:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:36] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:48:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:36] KIOSK | NAVIGATION | Moving to Summary screen - Total: $223.74
+Apr. 06, 2026 10:48:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:37] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:38] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:38] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:38] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:38] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:40] KIOSK | RESERVATION_COMPLETE | Guest: njs, Room: SINGLE, Nights: 2, Total: $223.74
+Apr. 06, 2026 10:48:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:48:41] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 10:49:17 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:17] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 10:49:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:33] KIOSK | SEARCH | Guest: df, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr 06, 2026 10:49:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:33] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr 06, 2026 10:49:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:34] KIOSK | ROOM_SELECTION | Single Room selected
+Apr 06, 2026 10:49:34 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:34] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 10:49:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:37] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr 06, 2026 10:49:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:37] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 10:49:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:38] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 10:49:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:38] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr 06, 2026 10:49:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:39] KIOSK | RESERVATION_COMPLETE | Guest: df, Room: SINGLE, Nights: 1, Total: $111.87
+Apr 06, 2026 10:49:40 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:49:40] KIOSK | NAVIGATION | Returning to Welcome screen - Booking reset
+Apr 06, 2026 10:51:07 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:07] KIOSK | NAVIGATION | Moving to Search screen
+Apr 06, 2026 10:51:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:24] KIOSK | SEARCH | Guest: h, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr 06, 2026 10:51:24 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:24] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr 06, 2026 10:51:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:25] KIOSK | ROOM_SELECTION | Single Room selected
+Apr 06, 2026 10:51:25 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:25] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr 06, 2026 10:51:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:29] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:1
+Apr 06, 2026 10:51:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:29] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr 06, 2026 10:51:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:32] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr 06, 2026 10:51:32 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:32] KIOSK | NAVIGATION | Moving to Summary screen - Total: $168.37
+Apr 06, 2026 10:51:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:51:35] KIOSK | RESERVATION_COMPLETE | Guest: h, Room: SINGLE, Nights: 1, Total: $168.37
+Apr. 06, 2026 10:56:12 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:12] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:56:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:28] KIOSK | SEARCH | Guest: ni, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:56:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:56:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:29] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:56:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:56:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:31] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:56:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:31] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:56:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:33] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:56:33 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:33] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:56:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:35] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:56:35 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:35] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:56:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:36] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:56:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:36] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:56:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:36] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:56:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:56:36] KIOSK | RESERVATION_COMPLETE | Guest: ni, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:58:13 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:13] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:58:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:28] KIOSK | SEARCH | Guest: nis, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:58:28 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:28] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:58:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:29] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:58:29 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:29] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:58:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:31] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:58:31 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:31] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:58:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:36] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:58:36 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:36] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:58:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:37] KIOSK | RESERVATION_COMPLETE | Guest: nis, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:58:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:38] KIOSK | RESERVATION_COMPLETE | Guest: nis, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:58:38 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:58:38] KIOSK | RESERVATION_COMPLETE | Guest: nis, Room: SINGLE, Nights: 1, Total: $111.87
+Apr. 06, 2026 10:59:22 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:22] KIOSK | NAVIGATION | Moving to Search screen
+Apr. 06, 2026 10:59:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:37] KIOSK | SEARCH | Guest: nisn, 2 adults, 1 children, 2026-04-06 to 2026-04-07
+Apr. 06, 2026 10:59:37 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:37] KIOSK | NAVIGATION | Moving to Room Selection screen - Nights: 1
+Apr. 06, 2026 10:59:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:39] KIOSK | ROOM_SELECTION | Single Room selected
+Apr. 06, 2026 10:59:39 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:39] KIOSK | NAVIGATION | Moving to Add-ons screen
+Apr. 06, 2026 10:59:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:41] KIOSK | ADDONS | WiFi:1, Breakfast:0, Parking:0, Spa:0
+Apr. 06, 2026 10:59:41 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:41] KIOSK | NAVIGATION | Moving to Loyalty screen
+Apr. 06, 2026 10:59:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:44] KIOSK | LOYALTY | Enrolled: true, Points Redeemed: 0
+Apr. 06, 2026 10:59:44 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:44] KIOSK | NAVIGATION | Moving to Summary screen - Total: $111.87
+Apr. 06, 2026 10:59:46 P.M. com.seneca.hotelreservation_system.controller.UIController logKioskAction
+INFO: [2026-04-06 22:59:46] KIOSK | RESERVATION_COMPLETE | Guest: nisn, Room: SINGLE, Nights: 1, Total: $111.87

@@ -18,11 +18,14 @@ public class AddOnsController {
     @FXML private Spinner<Integer> shuttleSpinner;
     @FXML private Spinner<Integer> spaSpinner;
     @FXML private Label addonsTotalLabel;
-    @FXML private Label nightsLabel;
-    @FXML private Label guestsLabel;
-    @FXML private Label subtotalLabel;
-    @FXML private Label taxLabel;
-    @FXML private Label totalLabel;
+
+
+
+    @FXML
+    public void testWiFi() {
+        System.out.println("=== TEST METHOD CALLED ===");
+        wifiCheck.setSelected(!wifiCheck.isSelected());
+    }
 
     private UIController mainController;
     private int nights;
@@ -197,8 +200,8 @@ public class AddOnsController {
     public void setMainController(UIController controller) {
         this.mainController = controller;
         loadBookingInfo();
-        loadExistingData();
         setupSpinners();
+        loadExistingData();
         setupCheckboxListeners();
         updateTotalDisplay();
     }
@@ -208,8 +211,6 @@ public class AddOnsController {
         if (data != null && data.checkIn != null && data.checkOut != null) {
             nights = (int) ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
             totalGuests = data.adults + data.children;
-            nightsLabel.setText("for " + nights + " nights");
-            guestsLabel.setText(totalGuests + " guest(s)");
         }
     }
 
@@ -220,29 +221,43 @@ public class AddOnsController {
             breakfastCheck.setSelected(data.hasBreakfast);
             shuttleCheck.setSelected(data.hasParking);
             spaCheck.setSelected(data.hasSpa);
-            wifiSpinner.getValueFactory().setValue(data.wifiQuantity);
-            breakfastSpinner.getValueFactory().setValue(data.breakfastQuantity);
-            shuttleSpinner.getValueFactory().setValue(data.parkingQuantity);
-            spaSpinner.getValueFactory().setValue(data.spaQuantity);
+
+            // Only set spinner values if value factory exists
+            if (wifiSpinner.getValueFactory() != null) {
+                wifiSpinner.getValueFactory().setValue(data.wifiQuantity);
+            }
+            if (breakfastSpinner.getValueFactory() != null) {
+                breakfastSpinner.getValueFactory().setValue(data.breakfastQuantity);
+            }
+            if (shuttleSpinner.getValueFactory() != null) {
+                shuttleSpinner.getValueFactory().setValue(data.parkingQuantity);
+            }
+            if (spaSpinner.getValueFactory() != null) {
+                spaSpinner.getValueFactory().setValue(data.spaQuantity);
+            }
         }
     }
 
     private void setupSpinners() {
+        // Create value factories with default values
         wifiSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 5, 0));
         breakfastSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, totalGuests, 0));
         shuttleSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 3, 0));
         spaSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0));
 
+        // Force initial values to 0
         wifiSpinner.getValueFactory().setValue(0);
         breakfastSpinner.getValueFactory().setValue(0);
         shuttleSpinner.getValueFactory().setValue(0);
         spaSpinner.getValueFactory().setValue(0);
 
+        // Disable spinners when checkbox not selected
         wifiSpinner.disableProperty().bind(wifiCheck.selectedProperty().not());
         breakfastSpinner.disableProperty().bind(breakfastCheck.selectedProperty().not());
         shuttleSpinner.disableProperty().bind(shuttleCheck.selectedProperty().not());
         spaSpinner.disableProperty().bind(spaCheck.selectedProperty().not());
 
+        // Add listeners
         wifiSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
         breakfastSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
         shuttleSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
@@ -251,19 +266,43 @@ public class AddOnsController {
 
     private void setupCheckboxListeners() {
         wifiCheck.selectedProperty().addListener((obs, old, val) -> {
-            if (!val) wifiSpinner.getValueFactory().setValue(0);
+            System.out.println("WiFi checkbox changed to: " + val);
+            if (val) {
+                // Set quantity to 1 when checkbox is selected
+                wifiSpinner.getValueFactory().setValue(1);
+            } else {
+                wifiSpinner.getValueFactory().setValue(0);
+            }
             updateTotalDisplay();
         });
+
         breakfastCheck.selectedProperty().addListener((obs, old, val) -> {
-            if (!val) breakfastSpinner.getValueFactory().setValue(0);
+            System.out.println("Breakfast checkbox changed to: " + val);
+            if (val) {
+                breakfastSpinner.getValueFactory().setValue(1);
+            } else {
+                breakfastSpinner.getValueFactory().setValue(0);
+            }
             updateTotalDisplay();
         });
+
         shuttleCheck.selectedProperty().addListener((obs, old, val) -> {
-            if (!val) shuttleSpinner.getValueFactory().setValue(0);
+            System.out.println("Shuttle checkbox changed to: " + val);
+            if (val) {
+                shuttleSpinner.getValueFactory().setValue(1);
+            } else {
+                shuttleSpinner.getValueFactory().setValue(0);
+            }
             updateTotalDisplay();
         });
+
         spaCheck.selectedProperty().addListener((obs, old, val) -> {
-            if (!val) spaSpinner.getValueFactory().setValue(0);
+            System.out.println("Spa checkbox changed to: " + val);
+            if (val) {
+                spaSpinner.getValueFactory().setValue(1);
+            } else {
+                spaSpinner.getValueFactory().setValue(0);
+            }
             updateTotalDisplay();
         });
     }
@@ -272,46 +311,40 @@ public class AddOnsController {
         BigDecimal total = calculateTotalWithDecorator();
         addonsTotalLabel.setText("$" + total);
 
+        // Don't try to update labels that don't exist
         UIController.BookingData data = mainController.getBookingData();
         if (data != null) {
             data.addonsTotal = total;
-            mainController.calculateTotal();
-
-            if (subtotalLabel != null) {
-                subtotalLabel.setText("$" + data.subtotal);
-            }
-            if (taxLabel != null) {
-                taxLabel.setText("$" + data.tax);
-            }
-            if (totalLabel != null) {
-                totalLabel.setText("$" + data.total);
-            }
+            // Remove the subtotal, tax, total label updates since they don't exist
         }
     }
 
     @FXML
     public void goToLoyalty(ActionEvent event) throws IOException {
-        System.out.println("=== STEP 1: goToLoyalty CALLED in AddOnsController! ===");
-
-        if (mainController == null) {
-            System.out.println("ERROR: mainController is NULL!");
-            return;
-        }
-
-        System.out.println("STEP 2: Saving add-ons data...");
-
+        // Get spinner values safely
         int wifiQty = wifiSpinner.getValue() != null ? wifiSpinner.getValue() : 0;
         int breakfastQty = breakfastSpinner.getValue() != null ? breakfastSpinner.getValue() : 0;
         int shuttleQty = shuttleSpinner.getValue() != null ? shuttleSpinner.getValue() : 0;
         int spaQty = spaSpinner.getValue() != null ? spaSpinner.getValue() : 0;
 
+        boolean wifiSelected = wifiCheck.isSelected();
+        boolean breakfastSelected = breakfastCheck.isSelected();
+        boolean shuttleSelected = shuttleCheck.isSelected();
+        boolean spaSelected = spaCheck.isSelected();
+
+        System.out.println("=== SAVING ADD-ONS ===");
+        System.out.println("WiFi: selected=" + wifiSelected + ", qty=" + wifiQty);
+        System.out.println("Breakfast: selected=" + breakfastSelected + ", qty=" + breakfastQty);
+        System.out.println("Shuttle: selected=" + shuttleSelected + ", qty=" + shuttleQty);
+        System.out.println("Spa: selected=" + spaSelected + ", qty=" + spaQty);
+
         mainController.setAddonsData(
-                wifiCheck.isSelected(), breakfastCheck.isSelected(),
-                shuttleCheck.isSelected(), spaCheck.isSelected(),
+                wifiSelected, breakfastSelected,
+                shuttleSelected, spaSelected,
                 wifiQty, breakfastQty, shuttleQty, spaQty
         );
 
-        System.out.println("STEP 3: Calling mainController.goToLoyalty()...");
+        System.out.println("Add-ons saved to booking data");
         mainController.goToLoyalty(event);
     }
 
