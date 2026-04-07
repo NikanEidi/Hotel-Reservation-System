@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f5a3059f-4488-45a1-ab1f-98bcfc0fe79b" name="Changes" comment="ms3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/AddOnsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/ConfirmationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/SummaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seneca/hotelreservation_system/controller/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/addons-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/addons-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/confirmation-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/confirmation-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/room-selection-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/summary-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/seneca/hotelreservation_system/view/summary-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775515362919</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ms3">
+      <option name="closed" value="true" />
+      <created>1775517591763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775517591763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

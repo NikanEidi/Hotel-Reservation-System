@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import javafx.scene.layout.HBox;
 
 public class SummaryController {
 
@@ -29,6 +30,25 @@ public class SummaryController {
     @FXML private Label taxLabel;
     @FXML private Label totalLabel;
 
+    // Add-ons Labels
+    @FXML private Label summaryWifiLabel;
+    @FXML private Label summaryWifiPrice;
+    @FXML private Label summaryBreakfastLabel;
+    @FXML private Label summaryBreakfastPrice;
+    @FXML private Label summaryShuttleLabel;
+    @FXML private Label summaryShuttlePrice;
+    @FXML private Label summarySpaLabel;
+    @FXML private Label summarySpaPrice;
+
+    // Add-ons Rows (HBox for visibility control)
+    @FXML private HBox summaryWifiRow;
+    @FXML private HBox summaryBreakfastRow;
+    @FXML private HBox summaryShuttleRow;
+    @FXML private HBox summarySpaRow;
+
+    // Add-ons Header
+    @FXML private Label addonsHeader;
+
     private UIController mainController;
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy");
 
@@ -43,8 +63,10 @@ public class SummaryController {
 
         System.out.println("=== Loading Summary Data ===");
 
+        // Guest Information
         summaryGuestName.setText(data.guestName != null ? data.guestName : "Guest");
 
+        // Stay Details
         if (data.checkIn != null && data.checkOut != null) {
             summaryCheckIn.setText(data.checkIn.format(dateFormatter) + " (3:00 PM)");
             summaryCheckOut.setText(data.checkOut.format(dateFormatter) + " (11:00 AM)");
@@ -55,22 +77,75 @@ public class SummaryController {
         summaryGuests.setText(data.adults + " Adults, " + data.children + " Children");
         summaryRoomType.setText(getRoomTypeName(data.selectedRoomType));
 
-        // Force recalculation
+        // Force recalculation of all prices
         BigDecimal roomPrice = mainController.getRoomPrice();
-        BigDecimal subtotal = mainController.getSubtotal();
-        BigDecimal tax = mainController.getTax();
-        BigDecimal total = mainController.getTotal();
+        BigDecimal addonsTotal = mainController.getAddonsTotal();
+        BigDecimal subtotal = roomPrice.add(addonsTotal);
+        BigDecimal tax = subtotal.multiply(new BigDecimal("0.13")); // 13% tax
+        BigDecimal total = subtotal.add(tax);
 
         System.out.println("Room Price: $" + roomPrice);
+        System.out.println("Add-ons Total: $" + addonsTotal);
         System.out.println("Subtotal: $" + subtotal);
-        System.out.println("Tax: $" + tax);
+        System.out.println("Tax (13%): $" + tax);
         System.out.println("Total: $" + total);
 
-        summaryRoomPrice.setText("$" + roomPrice);
-        pricingTypeLabel.setText(mainController.getPricingTypeDescription());
-        subtotalLabel.setText("$" + subtotal);
-        taxLabel.setText("$" + tax);
-        totalLabel.setText("$" + total);
+        // Update labels
+        summaryRoomPrice.setText("Room: $" + roomPrice);
+
+        // IMPORTANT: Update the total labels - these MUST match your FXML fx:id
+        subtotalLabel.setText("Subtotal: $" + subtotal);
+        taxLabel.setText("Tax (13%): $" + tax);
+        totalLabel.setText("TOTAL: $" + total);
+
+        pricingTypeLabel.setText("Pricing: " + mainController.getPricingTypeDescription());
+
+        // Display Add-ons
+        boolean hasAddons = false;
+
+        if (data.hasWifi && data.wifiQuantity > 0) {
+            summaryWifiRow.setVisible(true);
+            summaryWifiRow.setManaged(true);
+            summaryWifiLabel.setText(data.wifiQuantity + " device(s), " + data.nights + " nights");
+            summaryWifiPrice.setText("$" + (10 * data.nights * data.wifiQuantity));
+            hasAddons = true;
+        } else {
+            summaryWifiRow.setVisible(false);
+            summaryWifiRow.setManaged(false);
+        }
+
+        if (data.hasBreakfast && data.breakfastQuantity > 0) {
+            summaryBreakfastRow.setVisible(true);
+            summaryBreakfastRow.setManaged(true);
+            summaryBreakfastLabel.setText(data.breakfastQuantity + " person(s), " + data.nights + " days");
+            summaryBreakfastPrice.setText("$" + (15 * data.nights * data.breakfastQuantity));
+            hasAddons = true;
+        } else {
+            summaryBreakfastRow.setVisible(false);
+            summaryBreakfastRow.setManaged(false);
+        }
+
+        if (data.hasParking && data.parkingQuantity > 0) {
+            summaryShuttleRow.setVisible(true);
+            summaryShuttleRow.setManaged(true);
+            summaryShuttleLabel.setText(data.parkingQuantity + " trip(s)");
+            summaryShuttlePrice.setText("$" + (35 * data.parkingQuantity));
+            hasAddons = true;
+        } else {
+            summaryShuttleRow.setVisible(false);
+            summaryShuttleRow.setManaged(false);
+        }
+
+        if (data.hasSpa && data.spaQuantity > 0) {
+            summarySpaRow.setVisible(true);
+            summarySpaRow.setManaged(true);
+            summarySpaLabel.setText(data.spaQuantity + " session(s)");
+            summarySpaPrice.setText("$" + (50 * data.spaQuantity));
+            hasAddons = true;
+        } else {
+            summarySpaRow.setVisible(false);
+            summarySpaRow.setManaged(false);
+        }
     }
 
     private String getRoomTypeName(UIController.RoomType type) {
@@ -114,11 +189,21 @@ public class SummaryController {
                 writer.println("Nights," + data.nights);
                 writer.println("Guests," + data.adults + " Adults, " + data.children + " Children");
                 writer.println();
-                writer.println("PRICE BREAKDOWN");
+                writer.println("ROOM DETAILS");
                 writer.println("Room Type," + data.selectedRoomType);
                 writer.println("Room Price,$" + mainController.getRoomPrice());
-                writer.println("Subtotal,$" + mainController.getSubtotal());
-                writer.println("Tax (10%),$" + mainController.getTax());
+                writer.println();
+                writer.println("ADD-ONS");
+                writer.println("Wi-Fi," + (data.hasWifi ? data.wifiQuantity : 0));
+                writer.println("Breakfast," + (data.hasBreakfast ? data.breakfastQuantity : 0));
+                writer.println("Airport Shuttle," + (data.hasParking ? data.parkingQuantity : 0));
+                writer.println("Spa," + (data.hasSpa ? data.spaQuantity : 0));
+                writer.println();
+                writer.println("PRICE BREAKDOWN");
+                writer.println("Room Price,$" + mainController.getRoomPrice());
+                writer.println("Add-ons Total,$" + mainController.getAddonsTotal());
+                writer.println("Subtotal,$" + mainController.getRoomPrice().add(mainController.getAddonsTotal()));
+                writer.println("Tax (13%),$" + mainController.getRoomPrice().add(mainController.getAddonsTotal()).multiply(new BigDecimal("0.13")));
                 writer.println("TOTAL,$" + mainController.getTotal());
 
                 showAlert("Export Successful", "Booking summary exported to:\n" + file.getAbsolutePath());
@@ -162,8 +247,18 @@ public class SummaryController {
                 writer.println();
                 writer.println("Room: " + data.selectedRoomType);
                 writer.println("Room Price: $" + mainController.getRoomPrice());
-                writer.println("Subtotal: $" + mainController.getSubtotal());
-                writer.println("Tax (10%): $" + mainController.getTax());
+                writer.println();
+                writer.println("ADD-ONS:");
+                writer.println("  WiFi: " + (data.hasWifi ? data.wifiQuantity : 0));
+                writer.println("  Breakfast: " + (data.hasBreakfast ? data.breakfastQuantity : 0));
+                writer.println("  Airport Shuttle: " + (data.hasParking ? data.parkingQuantity : 0));
+                writer.println("  Spa: " + (data.hasSpa ? data.spaQuantity : 0));
+                writer.println();
+                writer.println("PRICE BREAKDOWN");
+                writer.println("Room Price: $" + mainController.getRoomPrice());
+                writer.println("Add-ons Total: $" + mainController.getAddonsTotal());
+                writer.println("Subtotal: $" + mainController.getRoomPrice().add(mainController.getAddonsTotal()));
+                writer.println("Tax (13%): $" + mainController.getRoomPrice().add(mainController.getAddonsTotal()).multiply(new BigDecimal("0.13")));
                 writer.println("TOTAL: $" + mainController.getTotal());
                 writer.println();
                 writer.println("=".repeat(50));

@@ -76,9 +76,29 @@ public class UIController {
         public BigDecimal subtotal;
         public BigDecimal tax;
         public BigDecimal total;
+
+        public void setAddonsData(boolean wifi, boolean breakfast, boolean shuttle, boolean spa,
+                                  int wifiQty, int breakfastQty, int shuttleQty, int spaQty) {
+            booking.hasWifi = wifi;
+            booking.hasBreakfast = breakfast;
+            booking.hasParking = shuttle;  // shuttle stored in parking field
+            booking.hasSpa = spa;
+            booking.wifiQuantity = wifiQty;
+            booking.breakfastQuantity = breakfastQty;
+            booking.parkingQuantity = shuttleQty;
+            booking.spaQuantity = spaQty;
+
+            System.out.println("=== SETADDONSDATA CALLED ===");
+            System.out.println("WiFi: " + wifi + " qty:" + wifiQty);
+            System.out.println("Breakfast: " + breakfast + " qty:" + breakfastQty);
+            System.out.println("Shuttle: " + shuttle + " qty:" + shuttleQty);
+            System.out.println("Spa: " + spa + " qty:" + spaQty);
+        }
     }
 
     private static BookingData booking = new BookingData();
+
+
 
     // ========== STRATEGY PATTERN FOR PRICING ==========
     public interface PricingStrategy {
@@ -168,21 +188,34 @@ public class UIController {
 
     public BigDecimal calculateAddonsTotal() {
         BigDecimal total = BigDecimal.ZERO;
-        if (booking.hasWifi) {
-            total = total.add(BigDecimal.valueOf(10).multiply(BigDecimal.valueOf(booking.nights))
+
+        // WiFi: $10 per night per device
+        if (booking.hasWifi && booking.wifiQuantity > 0) {
+            total = total.add(BigDecimal.valueOf(10)
+                    .multiply(BigDecimal.valueOf(booking.nights))
                     .multiply(BigDecimal.valueOf(booking.wifiQuantity)));
         }
-        if (booking.hasBreakfast) {
-            total = total.add(BigDecimal.valueOf(15).multiply(BigDecimal.valueOf(booking.nights))
+
+        // Breakfast: $15 per night per person
+        if (booking.hasBreakfast && booking.breakfastQuantity > 0) {
+            total = total.add(BigDecimal.valueOf(15)
+                    .multiply(BigDecimal.valueOf(booking.nights))
                     .multiply(BigDecimal.valueOf(booking.breakfastQuantity)));
         }
-        if (booking.hasParking) {
-            total = total.add(BigDecimal.valueOf(20).multiply(BigDecimal.valueOf(booking.nights))
+
+        // Shuttle: $35 per trip
+        if (booking.hasParking && booking.parkingQuantity > 0) {
+            total = total.add(BigDecimal.valueOf(35)
                     .multiply(BigDecimal.valueOf(booking.parkingQuantity)));
         }
-        if (booking.hasSpa) {
-            total = total.add(BigDecimal.valueOf(50).multiply(BigDecimal.valueOf(booking.spaQuantity)));
+
+        // Spa: $50 per session
+        if (booking.hasSpa && booking.spaQuantity > 0) {
+            total = total.add(BigDecimal.valueOf(50)
+                    .multiply(BigDecimal.valueOf(booking.spaQuantity)));
         }
+
+        System.out.println("Add-ons Total: $" + total);
         return total;
     }
 
@@ -190,8 +223,16 @@ public class UIController {
         booking.roomPrice = calculateRoomPrice();
         booking.addonsTotal = calculateAddonsTotal();
         booking.subtotal = booking.roomPrice.add(booking.addonsTotal);
-        booking.tax = booking.subtotal.multiply(new BigDecimal("0.10"));
+        booking.tax = booking.subtotal.multiply(new BigDecimal("0.13"));  // 13% tax
         booking.total = booking.subtotal.add(booking.tax);
+
+        System.out.println("=== CALCULATE TOTAL ===");
+        System.out.println("Room Price: $" + booking.roomPrice);
+        System.out.println("Add-ons Total: $" + booking.addonsTotal);
+        System.out.println("Subtotal: $" + booking.subtotal);
+        System.out.println("Tax (13%): $" + booking.tax);
+        System.out.println("Total: $" + booking.total);
+
         return booking.total;
     }
 
@@ -216,7 +257,6 @@ public class UIController {
         if (strategy instanceof WeekendPricing) return "Weekend Rate (+20%)";
         return "Standard Rate";
     }
-
     // ========== METHODS TO UPDATE BOOKING DATA ==========
     public void setSearchData(int adults, int children, LocalDate checkIn, LocalDate checkOut,
                               String name, String email, String phone) {
@@ -361,6 +401,23 @@ public class UIController {
         booking.roomQuantity = 1;
         goToAddOns(event);
     }
+    @FXML
+    public void selectSingle(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Single Room selected");
+        System.out.println("=== selectSingle called ===");
+        booking.selectedRoomType = RoomType.SINGLE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
+
+    @FXML
+    public void selectDeluxe(ActionEvent event) throws IOException {
+        logKioskAction("ROOM_SELECTION", "Deluxe Room selected");
+        System.out.println("=== selectDeluxe called ===");
+        booking.selectedRoomType = RoomType.DELUXE;
+        booking.roomQuantity = 1;
+        goToAddOns(event);
+    }
 
     // ========== HELPER METHODS ==========
     private void switchScene(ActionEvent event, String fxmlPath) throws IOException {
@@ -374,15 +431,20 @@ public class UIController {
         FXMLLoader loader = new FXMLLoader(resource);
         Parent root = loader.load();
 
-        // Pass this UIController to the new screen's controller
         Object controller = loader.getController();
+        System.out.println("=== SWITCH SCENE DEBUG ===");
+        System.out.println("FXML: " + fxmlPath);
+        System.out.println("Controller class: " + (controller != null ? controller.getClass().getSimpleName() : "NULL"));
+
         if (controller != null) {
             try {
                 java.lang.reflect.Method method = controller.getClass().getMethod("setMainController", UIController.class);
+                System.out.println("Found setMainController method in " + controller.getClass().getSimpleName());
                 method.invoke(controller, this);
-                System.out.println("setMainController called on: " + controller.getClass().getSimpleName());
+            } catch (NoSuchMethodException e) {
+                System.out.println("ERROR: No setMainController method in " + controller.getClass().getSimpleName());
             } catch (Exception e) {
-                // Controller doesn't have setMainController - that's OK
+                System.out.println("ERROR calling setMainController: " + e.getMessage());
             }
         }
 
