@@ -1,25 +1,34 @@
-### Build and Target ###
 target/
-!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
 
-### IntelliJ IDEA ###
 .idea/
-*.iws
 *.iml
 *.ipr
-out/
+*.iws
 
-### Eclipse ###
-.metadata
 .settings/
 .classpath
 .project
 .factorypath
 
-### Operating System ###
+*.log
+*.lck
+system_logs.*.log
+system_logs.*.log.*
+system_logs.*.log.lck
+
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-### MS3 Specifics ###
-*.log
-system_logs/
+src/main/resources/META-INF/persistence.xml.bak
+
+*.pdf
+*.docx
+!docs/
+
+.env
+application-local.properties
