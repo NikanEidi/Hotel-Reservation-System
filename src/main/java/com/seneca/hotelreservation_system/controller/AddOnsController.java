@@ -19,14 +19,6 @@ public class AddOnsController {
     @FXML private Spinner<Integer> spaSpinner;
     @FXML private Label addonsTotalLabel;
 
-
-
-    @FXML
-    public void testWiFi() {
-        System.out.println("=== TEST METHOD CALLED ===");
-        wifiCheck.setSelected(!wifiCheck.isSelected());
-    }
-
     private UIController mainController;
     private int nights;
     private int totalGuests;
@@ -37,8 +29,8 @@ public class AddOnsController {
     }
 
     public static class BaseBill implements BillComponent {
-        private BigDecimal roomCost;
-        private String roomDescription;
+        private final BigDecimal roomCost;
+        private final String roomDescription;
 
         public BaseBill(BigDecimal roomCost, String roomDescription) {
             this.roomCost = roomCost;
@@ -46,20 +38,16 @@ public class AddOnsController {
         }
 
         @Override
-        public BigDecimal getCost() {
-            return roomCost;
-        }
+        public BigDecimal getCost() { return roomCost; }
 
         @Override
-        public String getDescription() {
-            return roomDescription;
-        }
+        public String getDescription() { return roomDescription; }
     }
 
     public static class WiFiDecorator implements BillComponent {
-        private BillComponent wrapped;
-        private int quantity;
-        private int nights;
+        private final BillComponent wrapped;
+        private final int quantity;
+        private final int nights;
 
         public WiFiDecorator(BillComponent wrapped, int quantity, int nights) {
             this.wrapped = wrapped;
@@ -69,7 +57,7 @@ public class AddOnsController {
 
         @Override
         public BigDecimal getCost() {
-            BigDecimal wifiCost = BigDecimal.valueOf(10)
+            BigDecimal wifiCost = BigDecimal.valueOf(9.99)
                     .multiply(BigDecimal.valueOf(nights))
                     .multiply(BigDecimal.valueOf(quantity));
             return wrapped.getCost().add(wifiCost);
@@ -77,17 +65,16 @@ public class AddOnsController {
 
         @Override
         public String getDescription() {
-            if (quantity > 0) {
+            if (quantity > 0)
                 return wrapped.getDescription() + " + Wi-Fi (" + quantity + " device(s), " + nights + " nights)";
-            }
             return wrapped.getDescription();
         }
     }
 
     public static class BreakfastDecorator implements BillComponent {
-        private BillComponent wrapped;
-        private int quantity;
-        private int nights;
+        private final BillComponent wrapped;
+        private final int quantity;
+        private final int nights;
 
         public BreakfastDecorator(BillComponent wrapped, int quantity, int nights) {
             this.wrapped = wrapped;
@@ -97,7 +84,7 @@ public class AddOnsController {
 
         @Override
         public BigDecimal getCost() {
-            BigDecimal breakfastCost = BigDecimal.valueOf(15)
+            BigDecimal breakfastCost = BigDecimal.valueOf(24.99)
                     .multiply(BigDecimal.valueOf(nights))
                     .multiply(BigDecimal.valueOf(quantity));
             return wrapped.getCost().add(breakfastCost);
@@ -105,16 +92,15 @@ public class AddOnsController {
 
         @Override
         public String getDescription() {
-            if (quantity > 0) {
+            if (quantity > 0)
                 return wrapped.getDescription() + " + Breakfast (" + quantity + " person(s), " + nights + " days)";
-            }
             return wrapped.getDescription();
         }
     }
 
     public static class ShuttleDecorator implements BillComponent {
-        private BillComponent wrapped;
-        private int quantity;
+        private final BillComponent wrapped;
+        private final int quantity;
 
         public ShuttleDecorator(BillComponent wrapped, int quantity) {
             this.wrapped = wrapped;
@@ -129,16 +115,15 @@ public class AddOnsController {
 
         @Override
         public String getDescription() {
-            if (quantity > 0) {
+            if (quantity > 0)
                 return wrapped.getDescription() + " + Airport Shuttle (" + quantity + " trip(s))";
-            }
             return wrapped.getDescription();
         }
     }
 
     public static class SpaDecorator implements BillComponent {
-        private BillComponent wrapped;
-        private int quantity;
+        private final BillComponent wrapped;
+        private final int quantity;
 
         public SpaDecorator(BillComponent wrapped, int quantity) {
             this.wrapped = wrapped;
@@ -147,15 +132,14 @@ public class AddOnsController {
 
         @Override
         public BigDecimal getCost() {
-            BigDecimal spaCost = BigDecimal.valueOf(50).multiply(BigDecimal.valueOf(quantity));
+            BigDecimal spaCost = BigDecimal.valueOf(49.99).multiply(BigDecimal.valueOf(quantity));
             return wrapped.getCost().add(spaCost);
         }
 
         @Override
         public String getDescription() {
-            if (quantity > 0) {
+            if (quantity > 0)
                 return wrapped.getDescription() + " + Spa (" + quantity + " session(s))";
-            }
             return wrapped.getDescription();
         }
     }
@@ -167,34 +151,29 @@ public class AddOnsController {
 
         BillComponent bill = new BaseBill(roomCost, roomDesc);
 
-        if (wifiCheck.isSelected() && wifiSpinner.getValue() > 0) {
+        if (wifiCheck.isSelected() && wifiSpinner.getValue() > 0)
             bill = new WiFiDecorator(bill, wifiSpinner.getValue(), nights);
-        }
 
-        if (breakfastCheck.isSelected() && breakfastSpinner.getValue() > 0) {
+        if (breakfastCheck.isSelected() && breakfastSpinner.getValue() > 0)
             bill = new BreakfastDecorator(bill, breakfastSpinner.getValue(), nights);
-        }
 
-        if (shuttleCheck.isSelected() && shuttleSpinner.getValue() > 0) {
+        if (shuttleCheck.isSelected() && shuttleSpinner.getValue() > 0)
             bill = new ShuttleDecorator(bill, shuttleSpinner.getValue());
-        }
 
-        if (spaCheck.isSelected() && spaSpinner.getValue() > 0) {
+        if (spaCheck.isSelected() && spaSpinner.getValue() > 0)
             bill = new SpaDecorator(bill, spaSpinner.getValue());
-        }
 
         return bill;
     }
 
-    private BigDecimal calculateTotalWithDecorator() {
+    private BigDecimal calculateAddonsOnly() {
         BillComponent bill = buildBill();
         BigDecimal roomCost = mainController.getRoomPrice();
         return bill.getCost().subtract(roomCost);
     }
 
     public String getFullBillDescription() {
-        BillComponent bill = buildBill();
-        return bill.getDescription();
+        return buildBill().getDescription();
     }
 
     public void setMainController(UIController controller) {
@@ -212,6 +191,8 @@ public class AddOnsController {
             nights = (int) ChronoUnit.DAYS.between(data.checkIn, data.checkOut);
             totalGuests = data.adults + data.children;
         }
+        if (nights <= 0) nights = 1;
+        if (totalGuests <= 0) totalGuests = 1;
     }
 
     private void loadExistingData() {
@@ -222,42 +203,28 @@ public class AddOnsController {
             shuttleCheck.setSelected(data.hasParking);
             spaCheck.setSelected(data.hasSpa);
 
-            // Only set spinner values if value factory exists
-            if (wifiSpinner.getValueFactory() != null) {
+            if (wifiSpinner.getValueFactory() != null)
                 wifiSpinner.getValueFactory().setValue(data.wifiQuantity);
-            }
-            if (breakfastSpinner.getValueFactory() != null) {
+            if (breakfastSpinner.getValueFactory() != null)
                 breakfastSpinner.getValueFactory().setValue(data.breakfastQuantity);
-            }
-            if (shuttleSpinner.getValueFactory() != null) {
+            if (shuttleSpinner.getValueFactory() != null)
                 shuttleSpinner.getValueFactory().setValue(data.parkingQuantity);
-            }
-            if (spaSpinner.getValueFactory() != null) {
+            if (spaSpinner.getValueFactory() != null)
                 spaSpinner.getValueFactory().setValue(data.spaQuantity);
-            }
         }
     }
 
     private void setupSpinners() {
-        // Create value factories with default values
         wifiSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 5, 0));
-        breakfastSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, totalGuests, 0));
-        shuttleSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 3, 0));
+        breakfastSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Math.max(totalGuests, 1), 0));
+        shuttleSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 5, 0));
         spaSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0));
 
-        // Force initial values to 0
-        wifiSpinner.getValueFactory().setValue(0);
-        breakfastSpinner.getValueFactory().setValue(0);
-        shuttleSpinner.getValueFactory().setValue(0);
-        spaSpinner.getValueFactory().setValue(0);
-
-        // Disable spinners when checkbox not selected
         wifiSpinner.disableProperty().bind(wifiCheck.selectedProperty().not());
         breakfastSpinner.disableProperty().bind(breakfastCheck.selectedProperty().not());
         shuttleSpinner.disableProperty().bind(shuttleCheck.selectedProperty().not());
         spaSpinner.disableProperty().bind(spaCheck.selectedProperty().not());
 
-        // Add listeners
         wifiSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
         breakfastSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
         shuttleSpinner.valueProperty().addListener((obs, old, val) -> updateTotalDisplay());
@@ -266,85 +233,45 @@ public class AddOnsController {
 
     private void setupCheckboxListeners() {
         wifiCheck.selectedProperty().addListener((obs, old, val) -> {
-            System.out.println("WiFi checkbox changed to: " + val);
-            if (val) {
-                // Set quantity to 1 when checkbox is selected
-                wifiSpinner.getValueFactory().setValue(1);
-            } else {
-                wifiSpinner.getValueFactory().setValue(0);
-            }
+            wifiSpinner.getValueFactory().setValue(val ? 1 : 0);
             updateTotalDisplay();
         });
-
         breakfastCheck.selectedProperty().addListener((obs, old, val) -> {
-            System.out.println("Breakfast checkbox changed to: " + val);
-            if (val) {
-                breakfastSpinner.getValueFactory().setValue(1);
-            } else {
-                breakfastSpinner.getValueFactory().setValue(0);
-            }
+            breakfastSpinner.getValueFactory().setValue(val ? 1 : 0);
             updateTotalDisplay();
         });
-
         shuttleCheck.selectedProperty().addListener((obs, old, val) -> {
-            System.out.println("Shuttle checkbox changed to: " + val);
-            if (val) {
-                shuttleSpinner.getValueFactory().setValue(1);
-            } else {
-                shuttleSpinner.getValueFactory().setValue(0);
-            }
+            shuttleSpinner.getValueFactory().setValue(val ? 1 : 0);
             updateTotalDisplay();
         });
-
         spaCheck.selectedProperty().addListener((obs, old, val) -> {
-            System.out.println("Spa checkbox changed to: " + val);
-            if (val) {
-                spaSpinner.getValueFactory().setValue(1);
-            } else {
-                spaSpinner.getValueFactory().setValue(0);
-            }
+            spaSpinner.getValueFactory().setValue(val ? 1 : 0);
             updateTotalDisplay();
         });
     }
 
     private void updateTotalDisplay() {
-        BigDecimal total = calculateTotalWithDecorator();
-        addonsTotalLabel.setText("$" + total);
-
-        // Don't try to update labels that don't exist
+        BigDecimal addonsTotal = calculateAddonsOnly();
+        if (addonsTotalLabel != null)
+            addonsTotalLabel.setText(String.format("$%.2f", addonsTotal.doubleValue()));
         UIController.BookingData data = mainController.getBookingData();
-        if (data != null) {
-            data.addonsTotal = total;
-            // Remove the subtotal, tax, total label updates since they don't exist
-        }
+        if (data != null)
+            data.addonsTotal = addonsTotal;
     }
 
     @FXML
     public void goToLoyalty(ActionEvent event) throws IOException {
-        // Get spinner values safely
         int wifiQty = wifiSpinner.getValue() != null ? wifiSpinner.getValue() : 0;
         int breakfastQty = breakfastSpinner.getValue() != null ? breakfastSpinner.getValue() : 0;
         int shuttleQty = shuttleSpinner.getValue() != null ? shuttleSpinner.getValue() : 0;
         int spaQty = spaSpinner.getValue() != null ? spaSpinner.getValue() : 0;
 
-        boolean wifiSelected = wifiCheck.isSelected();
-        boolean breakfastSelected = breakfastCheck.isSelected();
-        boolean shuttleSelected = shuttleCheck.isSelected();
-        boolean spaSelected = spaCheck.isSelected();
-
-        System.out.println("=== SAVING ADD-ONS ===");
-        System.out.println("WiFi: selected=" + wifiSelected + ", qty=" + wifiQty);
-        System.out.println("Breakfast: selected=" + breakfastSelected + ", qty=" + breakfastQty);
-        System.out.println("Shuttle: selected=" + shuttleSelected + ", qty=" + shuttleQty);
-        System.out.println("Spa: selected=" + spaSelected + ", qty=" + spaQty);
-
         mainController.setAddonsData(
-                wifiSelected, breakfastSelected,
-                shuttleSelected, spaSelected,
+                wifiCheck.isSelected(), breakfastCheck.isSelected(),
+                shuttleCheck.isSelected(), spaCheck.isSelected(),
                 wifiQty, breakfastQty, shuttleQty, spaQty
         );
 
-        System.out.println("Add-ons saved to booking data");
         mainController.goToLoyalty(event);
     }
 
@@ -360,10 +287,10 @@ public class AddOnsController {
         alert.setHeaderText("Hotel Kiosk Regulations");
         alert.setContentText(
                 "1. Check-in: 3:00 PM | Check-out: 11:00 AM\n" +
-                        "2. Maximum occupancy per room must be respected.\n" +
-                        "3. Cancellations must be made 24 hours in advance.\n" +
-                        "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
-                        "5. No smoking in rooms ($250 fine)"
+                "2. Maximum occupancy per room must be respected.\n" +
+                "3. Cancellations must be made 24 hours in advance.\n" +
+                "4. Quiet hours: 10:00 PM - 8:00 AM\n" +
+                "5. No smoking in rooms ($250 fine)"
         );
         alert.showAndWait();
     }

@@ -3,12 +3,14 @@ package com.seneca.hotelreservation_system.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import java.io.IOException;
 
 public class LoyaltyController {
 
     @FXML private RadioButton enrollYesBtn;
     @FXML private RadioButton enrollNoBtn;
+    @FXML private ToggleGroup enrollGroup;
 
     private UIController mainController;
 
@@ -22,20 +24,25 @@ public class LoyaltyController {
         if (data != null) {
             enrollYesBtn.setSelected(data.enrollLoyalty);
             enrollNoBtn.setSelected(!data.enrollLoyalty);
+        } else {
+            enrollYesBtn.setSelected(true);
         }
     }
 
     @FXML
     public void goToSummary(ActionEvent event) throws IOException {
         boolean enrollLoyalty = enrollYesBtn.isSelected();
-        int pointsToRedeem = 0;  // No points redemption in simple version
-
-        mainController.setLoyaltyData(enrollLoyalty, pointsToRedeem);
+        mainController.setLoyaltyData(enrollLoyalty, 0);
         mainController.goToSummary(event);
     }
 
     @FXML
     public void goToAddOns(ActionEvent event) throws IOException {
         mainController.goToAddOns(event);
+    }
+
+    @FXML
+    public void showRules() {
+        mainController.showRules();
     }
 }
