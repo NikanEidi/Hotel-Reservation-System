@@ -71,9 +71,9 @@ public class ConfirmationController {
 
         if (paymentInstructionLabel != null) {
             paymentInstructionLabel.setText(
-                    "✓  Please proceed to the FRONT DESK upon arrival.\n" +
-                    "✓  Complete payment (Cash, Card, or Loyalty Points).\n" +
-                    "✓  Receive your room keys and enjoy your stay!"
+                    "- Please proceed to the FRONT DESK upon arrival.\n" +
+                    "- Complete payment (Cash, Card, or Loyalty Points).\n" +
+                    "- Receive your room keys and enjoy your stay!"
             );
         }
 
