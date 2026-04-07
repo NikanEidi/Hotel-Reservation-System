@@ -14,7 +14,7 @@
             style="-fx-background-color: #020617;"
             xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+            fx:controller="com.seneca.hotelreservation_system.controller.AdminController">
 
     <StackPane AnchorPane.bottomAnchor="0.0"
                AnchorPane.leftAnchor="0.0"
@@ -37,7 +37,7 @@
             <Label text="ADMIN LOGIN"
                    style="-fx-text-fill: #d4af37; -fx-font-size: 30px; -fx-font-weight: bold;" />
 
-            <Label text="Please enter administrator credentials"
+            <Label text="Use admin / admin123 or manager / manager123"
                    style="-fx-text-fill: #d6d3d1; -fx-font-size: 14px;" />
 
             <TextField fx:id="usernameField"

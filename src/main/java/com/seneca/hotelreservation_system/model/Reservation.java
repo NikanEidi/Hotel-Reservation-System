@@ -1,12 +1,12 @@
 package com.seneca.hotelreservation_system.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 @Table(name = "reservation")
-@SuppressWarnings({ "unused", "JpaDataSourceORMInspection" })
 public class Reservation {
 
     @Id
@@ -14,12 +14,16 @@ public class Reservation {
     @Column(name = "reservation_id")
     private Long reservationId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "guest_id", nullable = false)
     private Guest guest;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "reservation_room", joinColumns = @JoinColumn(name = "reservation_id"), inverseJoinColumns = @JoinColumn(name = "room_id"))
+    @JoinTable(
+            name = "reservation_room",
+            joinColumns = @JoinColumn(name = "reservation_id"),
+            inverseJoinColumns = @JoinColumn(name = "room_id")
+    )
     private List<Room> rooms;
 
     @Column(name = "check_in_date", nullable = false)
@@ -37,18 +41,30 @@ public class Reservation {
     @Column(name = "status", nullable = false)
     private String status;
 
+    @Column(name = "discount_percent", nullable = false, precision = 10, scale = 2)
+    private BigDecimal discountPercent = BigDecimal.ZERO;
+
+    @Column(name = "loyalty_points_redeemed", nullable = false)
+    private int loyaltyPointsRedeemed = 0;
+
+    @Column(name = "total_amount", nullable = false, precision = 10, scale = 2)
+    private BigDecimal totalAmount = BigDecimal.ZERO;
+
     public Reservation() {
     }
 
-    public Reservation(Guest guest, List<Room> rooms, LocalDate checkInDate, LocalDate checkOutDate, int adultCount,
-            int childCount) {
+    public Reservation(Guest guest, List<Room> rooms, LocalDate checkInDate, LocalDate checkOutDate,
+                       int adultCount, int childCount) {
         this.guest = guest;
         this.rooms = rooms;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.adultCount = adultCount;
         this.childCount = childCount;
-        this.status = "PENDING";
+        this.status = "CONFIRMED";
+        this.discountPercent = BigDecimal.ZERO;
+        this.loyaltyPointsRedeemed = 0;
+        this.totalAmount = BigDecimal.ZERO;
     }
 
     public Long getReservationId() {
@@ -113,5 +129,29 @@ public class Reservation {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public BigDecimal getDiscountPercent() {
+        return discountPercent;
+    }
+
+    public void setDiscountPercent(BigDecimal discountPercent) {
+        this.discountPercent = discountPercent == null ? BigDecimal.ZERO : discountPercent;
+    }
+
+    public int getLoyaltyPointsRedeemed() {
+        return loyaltyPointsRedeemed;
+    }
+
+    public void setLoyaltyPointsRedeemed(int loyaltyPointsRedeemed) {
+        this.loyaltyPointsRedeemed = Math.max(loyaltyPointsRedeemed, 0);
+    }
+
+    public BigDecimal getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(BigDecimal totalAmount) {
+        this.totalAmount = totalAmount == null ? BigDecimal.ZERO : totalAmount;
     }
 }

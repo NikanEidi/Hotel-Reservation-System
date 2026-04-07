@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
@@ -15,7 +19,7 @@
             style="-fx-background-color: #020617;"
             xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.seneca.hotelreservation_system.controller.UIController">
+            fx:controller="com.seneca.hotelreservation_system.controller.AdminController">
 
     <VBox prefWidth="280.0"
           spacing="15.0"
@@ -30,63 +34,177 @@
         <Region prefHeight="30.0" />
 
         <Button text="DASHBOARD"
-                style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+                style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 230; -fx-pref-height: 45;" />
 
         <Button text="FEEDBACK"
                 onAction="#showFeedbackModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45;" />
 
         <Button text="BILLING"
                 onAction="#showBillingModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45;" />
 
         <Button text="WAITLIST"
                 onAction="#showWaitlistModule"
-                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+                style="-fx-background-color: transparent; -fx-text-fill: #a8a29e; -fx-border-color: #44403c; -fx-pref-width: 230; -fx-pref-height: 45;" />
 
         <Region VBox.vgrow="ALWAYS" />
 
         <Button text="SECURE LOGOUT"
                 onAction="#goToWelcome"
-                style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-border-color: #ef4444; -fx-pref-width: 230; -fx-pref-height: 45; -fx-cursor: hand;" />
+                style="-fx-background-color: transparent; -fx-text-fill: #ef4444; -fx-border-color: #ef4444; -fx-pref-width: 230; -fx-pref-height: 45;" />
     </VBox>
 
-    <VBox spacing="30.0"
-          AnchorPane.bottomAnchor="40.0"
-          AnchorPane.leftAnchor="330.0"
-          AnchorPane.rightAnchor="50.0"
-          AnchorPane.topAnchor="40.0">
+    <VBox spacing="18.0"
+          AnchorPane.bottomAnchor="20.0"
+          AnchorPane.leftAnchor="300.0"
+          AnchorPane.rightAnchor="20.0"
+          AnchorPane.topAnchor="20.0">
 
-        <HBox alignment="CENTER_LEFT">
-            <Label text="System Overview"
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <Label text="Admin Operations Dashboard"
                    style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" />
             <Region HBox.hgrow="ALWAYS" />
-            <Label text="Authenticated: Admin"
-                   style="-fx-text-fill: #d4af37;" />
+            <Label fx:id="authenticatedLabel"
+                   text="Authenticated: Not Logged In"
+                   style="-fx-text-fill: #d4af37; -fx-font-size: 14px;" />
         </HBox>
 
-        <HBox spacing="15.0"
+        <Label fx:id="notificationLabel"
+               text="Notification: No new notifications."
+               wrapText="true"
+               style="-fx-background-color: #0a0a0a; -fx-text-fill: #facc15; -fx-border-color: #44403c; -fx-padding: 12;" />
+
+        <HBox spacing="12.0"
               style="-fx-background-color: #0a0a0a; -fx-padding: 15; -fx-border-color: #44403c;">
             <TextField fx:id="adminSearchField"
-                       promptText="Search Guest Name or Phone..."
-                       style="-fx-pref-width: 350;" />
+                       promptText="Search guest by name or phone"
+                       style="-fx-pref-width: 320;" />
 
-            <ComboBox promptText="All Statuses"
-                      style="-fx-pref-width: 150;" />
+            <ComboBox fx:id="statusFilterCombo"
+                      promptText="All Statuses"
+                      style="-fx-pref-width: 160;" />
 
             <Button text="FILTER"
                     onAction="#handleSearch"
-                    style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 120; -fx-cursor: hand;" />
+                    style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 120;" />
+
+            <Button text="REFRESH"
+                    onAction="#handleRefreshData"
+                    style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 120;" />
         </HBox>
 
-        <TableView VBox.vgrow="ALWAYS"
-                   style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c;">
-            <columns>
-                <TableColumn text="REF ID" prefWidth="150.0" />
-                <TableColumn text="GUEST NAME" prefWidth="250.0" />
-                <TableColumn text="CHECK-IN" prefWidth="200.0" />
-                <TableColumn text="STATUS" prefWidth="200.0" />
-            </columns>
-        </TableView>
+        <HBox spacing="18.0" VBox.vgrow="ALWAYS">
+            <VBox spacing="12.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
+                <Label text="Reservations"
+                       style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                <TableView fx:id="reservationTable"
+                           VBox.vgrow="ALWAYS"
+                           style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c;">
+                    <columns>
+                        <TableColumn fx:id="refIdColumn" text="REF ID" prefWidth="90.0" />
+                        <TableColumn fx:id="guestNameColumn" text="GUEST NAME" prefWidth="210.0" />
+                        <TableColumn fx:id="checkInColumn" text="CHECK-IN" prefWidth="120.0" />
+                        <TableColumn fx:id="statusColumn" text="STATUS" prefWidth="110.0" />
+                        <TableColumn fx:id="totalColumn" text="TOTAL" prefWidth="110.0" />
+                    </columns>
+                </TableView>
+
+                <Label text="Waitlist"
+                       style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                <TableView fx:id="waitlistTable"
+                           prefHeight="200.0"
+                           style="-fx-background-color: #0a0a0a; -fx-border-color: #44403c;">
+                    <columns>
+                        <TableColumn fx:id="waitGuestColumn" text="GUEST" prefWidth="180.0" />
+                        <TableColumn fx:id="waitRoomTypeColumn" text="ROOM TYPE" prefWidth="120.0" />
+                        <TableColumn fx:id="waitDatesColumn" text="DATES" prefWidth="220.0" />
+                        <TableColumn fx:id="waitStatusColumn" text="STATUS" prefWidth="110.0" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox spacing="12.0"
+                  prefWidth="380.0"
+                  style="-fx-background-color: #0a0a0a; -fx-padding: 18; -fx-border-color: #44403c;">
+
+                <Label text="Reservation Form"
+                       style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                <GridPane hgap="10.0" vgap="10.0">
+                    <padding>
+                        <Insets top="5.0" right="5.0" bottom="5.0" left="5.0"/>
+                    </padding>
+
+                    <Label text="First Name" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Last Name" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <Label text="Email" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                    <Label text="Phone" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                    <Label text="Check In" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <DatePicker fx:id="checkInPicker" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                    <Label text="Check Out" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                    <DatePicker fx:id="checkOutPicker" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                    <Label text="Adults" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                    <TextField fx:id="adultsField" text="1" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+                    <Label text="Children" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                    <TextField fx:id="childrenField" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+                    <Label text="Room Type" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                    <ComboBox fx:id="roomTypeCombo" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+                    <Label text="Room Qty" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+                    <TextField fx:id="roomQuantityField" text="1" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+                    <Label text="Discount %" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+                    <TextField fx:id="discountField" text="0" promptText="Admin max 15 / Manager max 30" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+                    <Label text="Payment" style="-fx-text-fill: #d6d3d1;" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+                    <ComboBox fx:id="paymentMethodCombo" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+                </GridPane>
+
+                <CheckBox fx:id="redeemLoyaltyCheck"
+                          text="Redeem loyalty points"
+                          onAction="#previewLoyaltyImpact"
+                          style="-fx-text-fill: white;" />
+
+                <Label fx:id="loyaltyPreviewLabel"
+                       text="Loyalty redemption not selected."
+                       style="-fx-text-fill: #d4af37;" />
+
+                <HBox spacing="10.0">
+                    <Button text="CREATE"
+                            onAction="#handleCreateReservation"
+                            style="-fx-background-color: #22c55e; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 110;" />
+                    <Button text="UPDATE"
+                            onAction="#handleUpdateReservation"
+                            style="-fx-background-color: #d4af37; -fx-text-fill: black; -fx-font-weight: bold; -fx-pref-width: 110;" />
+                    <Button text="CLEAR"
+                            onAction="#handleClearForm"
+                            style="-fx-background-color: transparent; -fx-text-fill: #d4af37; -fx-border-color: #d4af37; -fx-pref-width: 110;" />
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <Button text="CANCEL RES."
+                            onAction="#handleCancelReservation"
+                            style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 165;" />
+                    <Button text="CHECKOUT"
+                            onAction="#handleCheckoutReservation"
+                            style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 165;" />
+                </HBox>
+            </VBox>
+        </HBox>
     </VBox>
 </AnchorPane>
