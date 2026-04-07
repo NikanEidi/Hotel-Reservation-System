@@ -22,12 +22,7 @@ o	BreakfastDecorator - $15 per person per day
 o	ShuttleDecorator - $35 per trip
 o	SpaDecorator - $50 per session
 •	The decorators chain together to build the final bill dynamically
-4. CSV/PDF Export
-•	Added exportToCSV() and exportToPDF() methods to SummaryController
-•	Guests can download their booking summary in both formats
-5. Logging System
-•	Configured rotating file logging (1MB limit, keeps 10 files)
-•	Added logging for all kiosk actions and admin activities
+
 
 Challenges I Faced
 Challenge 1: Null Pointer Exceptions with Spinners
