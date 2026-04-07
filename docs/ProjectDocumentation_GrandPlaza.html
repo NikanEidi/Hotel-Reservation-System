@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px 'Times New Roman'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px 'Times New Roman'}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Times New Roman'}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Times New Roman'}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Times New Roman'; min-height: 10.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; min-height: 11.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Times New Roman'}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Times New Roman'; min-height: 11.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Times New Roman'}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.0px Arial}
+    span.s1 {text-decoration: underline}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Grand Plaza Hotel</b></p>
+<p class="p2">Reservation System</p>
+<p class="p3">Project Documentation</p>
+<p class="p4">APD Course - Seneca College</p>
+<p class="p4">Students: Nikan Eidi, [Member 2], [Member 3], [Member 4]</p>
+<p class="p5"><br></p>
+<p class="p6"><br></p>
+<p class="p6"><br></p>
+<p class="p7"><span class="s1"><b>1. Project Overview</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Summary</b><b></b></p>
+<p class="p9">Grand Plaza Hotel is a five-star property located in Toronto, Ontario. The hotel previously managed all reservations manually using paper-based forms stored in filing cabinets. This system introduces a fully digital replacement covering the complete guest journey from initial inquiry through room selection, service add-ons, loyalty enrollment, payment, and checkout.</p>
+<p class="p8"><br></p>
+<p class="p9">The system is a JavaFX desktop application consisting of two primary interfaces: a self-service kiosk intended for use by arriving guests, and a password-protected administration portal for hotel staff. Both interfaces communicate with a shared MySQL database through a JPA-based data access layer.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Key Features</b><b></b></p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Self-service kiosk with a guided seven-step reservation workflow</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Room selection with four categories and occupancy validation</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Dynamic pricing using date-based strategy selection</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Add-on service selection using the Decorator design pattern</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Loyalty program enrollment and point tracking</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Booking summary with CSV and PDF export</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Admin dashboard with reservation search and reporting modules</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Secure BCrypt password authentication for admin accounts</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- Rotating file-based audit logging with size limits</p>
+<p class="p9"><span class="Apple-tab-span">	</span>- JPA persistence for all entities with Hibernate as the ORM provider</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Technologies Used</b><b></b></p>
+<p class="p9"><span class="Apple-tab-span">	</span>Language: Java 17</p>
+<p class="p9"><span class="Apple-tab-span">	</span>UI: JavaFX 17 with FXML declarative layouts</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Database: MySQL 8</p>
+<p class="p9"><span class="Apple-tab-span">	</span>ORM: Hibernate 5.6 with JPA 2.2 specification</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Security: jBCrypt 0.4 for password hashing</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Export: OpenCSV 5.8, OpenPDF 1.3</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Build: Apache Maven 3.8 via Maven Wrapper</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Runtime: GraalVM CE 25 (Java 17 compatible)</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>2. Architecture Summary</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Three-Tier Architecture</b><b></b></p>
+<p class="p9">The application strictly separates concerns across three tiers.</p>
+<p class="p8"><br></p>
+<p class="p9">The presentation tier consists of FXML layout files and their corresponding Java controller classes. Each screen in the kiosk and admin portal has its own FXML file and a dedicated controller. Controllers handle only UI events, validation messages, and scene transitions. No business logic resides in the controllers.</p>
+<p class="p8"><br></p>
+<p class="p9">The business logic tier contains service classes that enforce all business rules including pricing calculations, occupancy checks, loyalty point accumulation, and authentication. This tier also defines the design patterns that structure the system's core behaviour.</p>
+<p class="p8"><br></p>
+<p class="p9">The data tier consists of JPA entity classes mapped to MySQL tables, a singleton entity manager factory, and a utility class for database connection management. All database access goes through the EntityManager API.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Cross-Cutting Concerns</b><b></b></p>
+<p class="p9">Logging is handled at every tier boundary. The LoggerUtil class configures a rotating file handler attached to the root logger. All significant actions including login attempts, reservation creation, errors, and database operations are captured in timestamped log entries.</p>
+<p class="p8"><br></p>
+<p class="p9">Exception handling uses a layered approach. Service methods throw checked exceptions when business rules are violated. Controllers catch these exceptions and display appropriate error messages to the user without exposing internal stack traces.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>MVC, DI, and ORM Usage</b><b></b></p>
+<p class="p9">The Model-View-Controller pattern is applied throughout. FXML files are the views. Controller classes are the controllers. Entity classes and service objects are the models. UIController passes itself as a dependency to sub-controllers using a setMainController method, providing a lightweight manual dependency injection mechanism without a framework.</p>
+<p class="p8"><br></p>
+<p class="p9">Hibernate ORM maps Java entity classes to relational tables. Annotations define column names, constraints, relationships, and cascade behaviour. JPQL queries in service classes retrieve filtered result sets from the database.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>3. Design Artifacts</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Class Diagram Overview</b><b></b></p>
+<p class="p9">The following describes the principal class relationships:</p>
+<p class="p8"><br></p>
+<p class="p9"><span class="Apple-tab-span">	</span>UIController holds BookingData (inner class, acts as session DTO)</p>
+<p class="p9"><span class="Apple-tab-span">	</span>BookingData contains primitive fields for all booking state</p>
+<p class="p9"><span class="Apple-tab-span">	</span>UIController implements PricingStrategy selection based on dates</p>
+<p class="p9"><span class="Apple-tab-span">	</span>AddOnsController.BillComponent is implemented by BaseBill, WiFiDecorator, BreakfastDecorator, ShuttleDecorator, SpaDecorator</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Room is the abstract entity base. SingleRoom, DoubleRoom, PenthouseRoom extend it.</p>
+<p class="p9"><span class="Apple-tab-span">	</span>RoomFactory instantiates concrete Room subclasses by type key</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Reservation has one Guest via foreign key and one list of Room objects</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Payment references a Reservation by foreign key</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Admin is an independent entity with username and BCrypt-hashed password</p>
+<p class="p9"><span class="Apple-tab-span">	</span>JPAUtil is a static singleton managing EntityManagerFactory lifecycle</p>
+<p class="p9"><span class="Apple-tab-span">	</span>AuthService uses JPAUtil to query and register Admin records</p>
+<p class="p9"><span class="Apple-tab-span">	</span>BookingService uses JPAUtil to persist and retrieve Reservation records</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Sequence Diagram: Guest Reservation Flow</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">1. Guest launches application - Launcher initializes JPAUtil, registers admin, launches HotelApp</p>
+<p class="p9">2. HotelApp loads welcome-view.fxml - UIController handles scene</p>
+<p class="p9">3. Guest clicks Begin Reservation - UIController loads search-view.fxml with SearchController</p>
+<p class="p9">4. Guest enters dates, guest count, and contact info - SearchController validates input</p>
+<p class="p9">5. SearchController calls UIController.setSearchData() and triggers goToRoomSelection()</p>
+<p class="p9">6. UIController loads room-selection-view.fxml with RoomSelectionController</p>
+<p class="p9">7. Guest selects room type and quantity - RoomSelectionController validates occupancy</p>
+<p class="p9">8. RoomSelectionController calls UIController.setRoomData() and triggers goToAddOns()</p>
+<p class="p9">9. UIController loads addons-view.fxml with AddOnsController</p>
+<p class="p9">10. Guest selects add-ons - AddOnsController builds decorated bill and previews total</p>
+<p class="p9">11. AddOnsController calls UIController.setAddonsData() and triggers goToLoyalty()</p>
+<p class="p9">12. UIController loads loyalty-view.fxml with LoyaltyController</p>
+<p class="p9">13. Guest chooses enrollment - LoyaltyController calls UIController.setLoyaltyData()</p>
+<p class="p9">14. UIController loads summary-view.fxml with SummaryController</p>
+<p class="p9">15. SummaryController calls UIController.getTotal() and displays full breakdown</p>
+<p class="p9">16. Guest clicks Confirm Booking - UIController calculates total and loads confirmation-view.fxml</p>
+<p class="p9">17. ConfirmationController generates booking reference number</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Deployment Diagram</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">Client Machine (macOS/Windows):</p>
+<p class="p9"><span class="Apple-tab-span">	</span>JavaFX Application (HotelApp, UI Controllers, Service Layer)</p>
+<p class="p9"><span class="Apple-tab-span">	</span>JVM with Java 17 runtime</p>
+<p class="p9"><span class="Apple-tab-span">	</span>MySQL JDBC Driver (mysql-connector-j 8.0.33)</p>
+<p class="p8"><br></p>
+<p class="p9">Database Server (localhost or LAN):</p>
+<p class="p9"><span class="Apple-tab-span">	</span>MySQL 8 instance</p>
+<p class="p9"><span class="Apple-tab-span">	</span>hotel_reservation_db with tables: admin, guest, reservation, room, payment</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Package Diagram</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">com.seneca.hotelreservation_system</p>
+<p class="p9"><span class="Apple-tab-span">	</span>.app - HotelApp (JavaFX Application), Launcher (main entry point)</p>
+<p class="p9"><span class="Apple-tab-span">	</span>.controller - UIController, SearchController, RoomSelectionController, AddOnsController, LoyaltyController, SummaryController, ConfirmationController, AdminController</p>
+<p class="p9"><span class="Apple-tab-span">	</span>.model - Room, SingleRoom, DoubleRoom, PenthouseRoom, RoomFactory, Guest, Reservation, Payment, Admin</p>
+<p class="p9"><span class="Apple-tab-span">	</span>.service - AuthService, BookingService, PricingService</p>
+<p class="p9"><span class="Apple-tab-span">	</span>.util - JPAUtil, LoggerUtil</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>4. Entity and Relationship Mapping</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Entities</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">Admin: Stores administrator credentials. Fields are id (auto-generated primary key), username (unique), password (BCrypt hash), and role.</p>
+<p class="p8"><br></p>
+<p class="p9">Guest: Represents a registered hotel guest. Fields are id, name, email, and phone. The phone number serves as the lookup key for loyalty status.</p>
+<p class="p8"><br></p>
+<p class="p9">Room: Abstract base entity mapped using InheritanceType.JOINED. Subclasses are SingleRoom, DoubleRoom, and PenthouseRoom. Fields are id, roomType (enum string), and pricePerNight.</p>
+<p class="p8"><br></p>
+<p class="p9">Reservation: Represents a booking. Fields are id, checkIn and checkOut dates, numberOfGuests, status, and a reference to the associated Guest. It also holds a list of Room objects.</p>
+<p class="p8"><br></p>
+<p class="p9">Payment: Represents a completed or pending payment. Fields are id, amount, paymentMethod, and paymentDate. It references a Reservation.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Relationships and Annotations</b><b></b></p>
+<p class="p9">Guest to Reservation: One-to-many. A guest can have multiple reservations over time. The Reservation entity holds the foreign key.</p>
+<p class="p8"><br></p>
+<p class="p9">Reservation to Room: Many-to-many. A reservation can include multiple rooms. A room can be included in multiple reservations over different date ranges. This relationship is mapped using a join table.</p>
+<p class="p8"><br></p>
+<p class="p9">Payment to Reservation: One-to-one. Each payment record corresponds to exactly one reservation.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Cascade and Fetch Notes</b><b></b></p>
+<p class="p9">Reservation cascades persist and merge operations to its associated Guest. Fetch type for Room lists is LAZY to avoid loading all room data on every reservation query. Payment uses EAGER fetch of its associated Reservation for billing display.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>5. Design Pattern Usage</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Singleton - JPAUtil</b><b></b></p>
+<p class="p9">The EntityManagerFactory is expensive to create and should exist only once per application lifecycle. JPAUtil uses a static field and a synchronized get method to ensure a single EntityManagerFactory is shared across all service classes. This is the classic thread-safe lazy singleton pattern.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Factory - RoomFactory</b><b></b></p>
+<p class="p9">RoomFactory provides a static createRoom(String type) method that constructs and returns the appropriate Room subclass (SingleRoom, DoubleRoom, or PenthouseRoom) based on the type string. This isolates object creation from business logic and makes it easy to add new room categories without changing existing code.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Strategy - Pricing</b><b></b></p>
+<p class="p9">Three pricing strategies implement the PricingStrategy interface: StandardPricing, WeekendPricing (multiplier 1.2), and PeakSeasonPricing (multiplier 1.3). UIController.getPricingStrategy() inspects the selected dates and returns the appropriate strategy at runtime. The strategy's calculatePrice() method is then called to determine the final room cost. This makes it trivial to add new pricing rules (e.g., holiday surcharges) without altering the pricing calculation entry point.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Decorator - Add-on Billing</b><b></b></p>
+<p class="p9">The BillComponent interface defines getCost() and getDescription() methods. BaseBill holds the base room cost. Each add-on service (WiFiDecorator, BreakfastDecorator, ShuttleDecorator, SpaDecorator) wraps an existing BillComponent and adds the cost of one service on top. The decorators can be stacked in any order, producing a final bill that reflects all selected services. This eliminates conditional branching for pricing and makes adding a new service a matter of writing one new decorator class.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Observer - Waitlist</b><b></b></p>
+<p class="p9">The Observer pattern is planned for the waitlist notification system. When a room type becomes available due to a cancellation, a RoomAvailabilityEvent is fired. All registered WaitlistObserver instances receive the notification and can display an alert to the waiting guest. This pattern decouples the availability check from the notification delivery mechanism.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>6. Business Rules</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Occupancy Limits</b><b></b></p>
+<p class="p9">Single Room: maximum 2 guests</p>
+<p class="p9">Double Room: maximum 4 guests</p>
+<p class="p9">Deluxe Room: maximum 2 guests</p>
+<p class="p9">Penthouse Suite: maximum 2 guests</p>
+<p class="p8"><br></p>
+<p class="p9">Total capacity is calculated as the per-room maximum multiplied by the quantity selected. If the guest count entered on the search screen exceeds total capacity, the room selection screen blocks navigation and displays the exact difference.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Pricing Rules</b><b></b></p>
+<p class="p9">Base rates per night:</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Single Room: 89 CAD</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Double Room: 129 CAD</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Deluxe Room: 199 CAD</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Penthouse Suite: 349 CAD</p>
+<p class="p8"><br></p>
+<p class="p9">Weekend surcharge: 20 percent markup applied when the majority of nights in the stay fall on a Saturday or Sunday.</p>
+<p class="p9">Peak season surcharge: 30 percent markup applied when the stay overlaps with July, August, or December.</p>
+<p class="p8"><br></p>
+<p class="p9">Room base rate multiplied by the applicable strategy factor gives the per-night price. That value is multiplied by room quantity and number of nights.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Add-on Pricing</b><b></b></p>
+<p class="p9">High-Speed WiFi: 9.99 per device per night</p>
+<p class="p9">Daily Breakfast Package: 24.99 per person per night</p>
+<p class="p9">Airport Shuttle: 35.00 per trip (flat fee)</p>
+<p class="p9">Spa and Wellness: 49.99 per session (flat fee)</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Tax</b><b></b></p>
+<p class="p9">13 percent HST is applied to the combined room and add-on subtotal. This matches the Ontario provincial tax rate applicable to hotel accommodations.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Loyalty Program Rules</b><b></b></p>
+<p class="p9">Enrollment is offered at the loyalty step during every booking. Guests earn 1 point for every 10 dollars spent on their stay. A balance of 100 points can be redeemed for a 10 dollar discount on a future booking. Upgrades and exclusive member rates are offered subject to availability.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Cancellation Policy</b><b></b></p>
+<p class="p9">Cancellations must be made at least 24 hours before the scheduled check-in time. Late cancellations or no-shows are subject to a one-night penalty charge.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>7. Security and Logging</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Authentication</b><b></b></p>
+<p class="p9">Admin passwords are never stored in plain text. When a new admin is registered, the password is passed through BCrypt's hash function before being written to the database. During login, the plain-text entry is compared against the stored hash using BCrypt.checkpw(). The Admin entity holds only the hash.</p>
+<p class="p8"><br></p>
+<p class="p9">The initial admin account (username: nikan) is seeded by the Launcher on first run. If the account already exists, the duplicate entry exception is silently caught and ignored.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Logging Configuration</b><b></b></p>
+<p class="p9">LoggerUtil configures a java.util.logging.FileHandler with:</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Log file pattern: system_logs.%g.log</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Maximum file size: 1 MB per file</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Maximum retained files: 10 (rotating)</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Formatter: SimpleFormatter with timestamp, level, and message</p>
+<p class="p8"><br></p>
+<p class="p9">Sample log entry format:</p>
+<p class="p9"><span class="Apple-tab-span">	</span>Apr 07, 2026 12:34:51 AM com.seneca.hotelreservation_system.service.AuthService authenticate</p>
+<p class="p9"><span class="Apple-tab-span">	</span>INFO: Admin login attempt for user: nikan - Result: SUCCESS</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Exception Handling Strategy</b><b></b></p>
+<p class="p9">Service methods declare checked exceptions for recoverable errors (invalid credentials, constraint violations, not-found entities). Controllers wrap service calls in try-catch blocks and display user-friendly Alert dialogs. Unrecoverable errors (database connection failure at startup) cause Launcher to print to System.err and exit before the UI is shown.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>8. Export and Reporting</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>CSV Export</b><b></b></p>
+<p class="p9">From the booking summary screen, guests can export their reservation details to a CSV file. The file is structured in labelled sections: Guest Information, Stay Details, Room Details, Add-ons, and Price Breakdown. Each field is written as a label-value pair on its own row. The file is saved to a user-selected location using a standard file chooser dialog.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>PDF Export</b><b></b></p>
+<p class="p9">The PDF export produces a plain-text receipt formatted with separators and column-aligned values. The header reads GRAND PLAZA HOTEL with the address and establishment year. Sections mirror the CSV structure. The footer thanks the guest and confirms that payment will be collected at the front desk.</p>
+<p class="p8"><br></p>
+<p class="p9">Both export formats use the OpenPDF and OpenCSV libraries included as Maven dependencies.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Admin Reports</b><b></b></p>
+<p class="p9">The admin dashboard provides a reservation table that can be filtered by guest name, phone number, or reservation ID. Revenue and occupancy summary cards appear at the top of the dashboard. Extended reporting modules for billing, feedback, and waitlist management are accessible from the sidebar navigation.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p7"><span class="s1"><b>9. Challenges and Learnings</b><b></b></span></p>
+<p class="p8"><br></p>
+<p class="p9"><b>Technical Challenges</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">The most significant architectural challenge was managing shared state across seven sequential kiosk screens without a framework. JavaFX does not natively support a shared session object between independently loaded FXML controllers. We resolved this by having UIController hold the BookingData inner class and passing itself to each sub-controller via a setMainController method. This was a deliberate compromise between simplicity and strict separation of concerns.</p>
+<p class="p8"><br></p>
+<p class="p9">ToggleGroup elements in FXML caused a runtime crash early in development. JavaFX attempts to add ToggleGroup as a Node child of its parent container, but ToggleGroup is not a Node. The solution is to declare it inside the parent element's resources block, then reference it from RadioButton elements using the dollar sign prefix syntax.</p>
+<p class="p8"><br></p>
+<p class="p9">Hibernate's schema generation on a fresh database required careful management of entity annotations. Missing cascade annotations caused detached entity exceptions during reservation persistence. Understanding which operations should cascade and which should not required iterative testing against a live MySQL instance.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Individual Reflections</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">Working on this project taught the value of establishing a clear data flow early. We spent significant time late in development refactoring because early controller classes were too tightly coupled. A more deliberate upfront design of the BookingData session object would have saved considerable rework.</p>
+<p class="p8"><br></p>
+<p class="p9">The decorator pattern for add-on billing was initially unfamiliar but proved to be one of the most elegant solutions in the codebase. Once the base interface was established, each new add-on type took only minutes to implement without touching existing code.</p>
+<p class="p8"><br></p>
+<p class="p9">JavaFX's approach to scene management differs significantly from web-based frameworks. Loading a new FXML file replaces the entire scene graph, requiring that all stateful data be serialized to the session object before navigation. This constraint reinforced disciplined state management throughout the kiosk flow.</p>
+<p class="p8"><br></p>
+<p class="p9"><b>Suggestions for Improvement</b><b></b></p>
+<p class="p8"><br></p>
+<p class="p9">A dedicated session manager class would replace the current UIController-as-hub approach. Each controller would inject the session manager rather than receiving a reference to UIController, reducing coupling and improving testability.</p>
+<p class="p8"><br></p>
+<p class="p9">Unit tests for the service layer would have caught the pricing calculation bugs earlier. Adding JUnit 5 tests for PricingStrategy, the Decorator chain, and occupancy validation would increase confidence during refactoring.</p>
+<p class="p8"><br></p>
+<p class="p9">The current persistence layer uses Hibernate's built-in connection pool which is not intended for production. A connection pool such as HikariCP should replace it before any real deployment.</p>
+<p class="p8"><br></p>
+<p class="p9">The admin dashboard statistics (total reservations, rooms occupied, pending check-ins, waitlist) currently show placeholder values. Connecting these labels to live JPQL aggregate queries in BookingService would complete the reporting feature.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p10">Grand Plaza Hotel Reservation System - Seneca College APD Project</p>
+<p class="p10">Documentation prepared April 2026</p>
+</body>
+</html>
