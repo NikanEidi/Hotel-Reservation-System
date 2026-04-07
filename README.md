@@ -50,4 +50,4 @@ The codebase extensively enforces modern GoF patterns.
 Please observe the companion `ProjectDocumentation_GrandPlaza.docx` inside the `/docs/` repository branch acting as our official formal report wrapper.
 
 ---
-**Developed By Students**: Nikan Eidi, [Member 2], [Member 3], [Member 4]
+**Developed By Students**: Nikan Eidi, nkhanal6, Yahya Osman
